@@ -49,13 +49,35 @@ class JwtGostController {
                     (ECPublicKey) certificate.getPublicKey(),
                     (ECPrivateKey) privateKey
             );
-            String token = JWT.create()
-                    .withClaim("payload", request.getPayload())
+            var jwtBuilder = JWT.create()
+//                    .withClaim("payload", request.getPayload())
                     .withIssuer("jwt-gost-service")
                     .withSubject("user")
-                    .withIssuedAt(new Date())
-                    .withClaim("custom", "data")
-                    .sign(algorithm);
+                    .withIssuedAt(new Date());
+//                    .withClaim("custom", "data")
+//                    .sign(algorithm);
+            Map<String, Object> payload = request.getPayload();
+            if (payload != null) {
+                for (Map.Entry<String, Object> entry : payload.entrySet()) {
+                    String key = entry.getKey();
+                    Object value = entry.getValue();
+                    // Добавляем в зависимости от типа значения
+                    if (value instanceof String) {
+                        jwtBuilder.withClaim(key, (String) value);
+                    } else if (value instanceof Integer) {
+                        jwtBuilder.withClaim(key, (Integer) value);
+                    } else if (value instanceof Long) {
+                        jwtBuilder.withClaim(key, (Long) value);
+                    } else if (value instanceof Boolean) {
+                        jwtBuilder.withClaim(key, (Boolean) value);
+                    } else {
+                        jwtBuilder.withClaim(key, value.toString()); // по умолчанию строка
+                    }
+                }
+            }
+
+            String token = jwtBuilder.sign(algorithm);
+
 
             // Возвращаем токен и сертификат в base64
             Map<String, String> response = new HashMap<>();
