@@ -19,7 +19,6 @@ import java.security.cert.X509Certificate;
 import java.security.interfaces.ECPrivateKey;
 import java.security.interfaces.ECPublicKey;
 import java.util.Base64;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -44,18 +43,17 @@ class JwtGostController {
             PrivateKey privateKey = (PrivateKey) keyStore.getKey(alias, request.getPassword().toCharArray());
             X509Certificate certificate = (X509Certificate) keyStore.getCertificate(alias);
 
+            // добавили вручную header
+            Map<String, Object> headerClaims = new HashMap<>();
+            headerClaims.put("alg", "GG2015");
+            headerClaims.put("typ", "JWT");
+
             // Генерируем токен с использованием GG2015
             Algorithm algorithm = Algorithm.GG2015(
                     (ECPublicKey) certificate.getPublicKey(),
                     (ECPrivateKey) privateKey
             );
-            var jwtBuilder = JWT.create()
-//                    .withClaim("payload", request.getPayload())
-                    .withIssuer("jwt-gost-service")
-                    .withSubject("user")
-                    .withIssuedAt(new Date());
-//                    .withClaim("custom", "data")
-//                    .sign(algorithm);
+            var jwtBuilder = JWT.create().withHeader(headerClaims);
             Map<String, Object> payload = request.getPayload();
             if (payload != null) {
                 for (Map.Entry<String, Object> entry : payload.entrySet()) {
