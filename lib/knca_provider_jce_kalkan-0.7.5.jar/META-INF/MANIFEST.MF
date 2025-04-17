@@ -1,0 +1,3847 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: kz.gov.pki.kalkan.knca_provider_jce_kalkan
+Implementation-Version: 0.7.5
+Built-By: aslan
+Import-Package: javax.crypto,javax.crypto.interfaces,javax.crypto.spec
+ ,javax.naming,javax.naming.directory,javax.security.auth.x500,javax.s
+ martcardio,sun.security.jca,sun.security.smartcardio
+Export-Package: kz.gov.pki.kalkan,kz.gov.pki.kalkan.asn1,kz.gov.pki.ka
+ lkan.asn1.cmp,kz.gov.pki.kalkan.asn1.cms,kz.gov.pki.kalkan.asn1.cms.e
+ cc,kz.gov.pki.kalkan.asn1.crmf,kz.gov.pki.kalkan.asn1.cryptopro,kz.go
+ v.pki.kalkan.asn1.eac,kz.gov.pki.kalkan.asn1.ess,kz.gov.pki.kalkan.as
+ n1.isismtt,kz.gov.pki.kalkan.asn1.kisa,kz.gov.pki.kalkan.asn1.knca,kz
+ .gov.pki.kalkan.asn1.misc,kz.gov.pki.kalkan.asn1.nist,kz.gov.pki.kalk
+ an.asn1.ntt,kz.gov.pki.kalkan.asn1.ocsp,kz.gov.pki.kalkan.asn1.oiw,kz
+ .gov.pki.kalkan.asn1.pkcs,kz.gov.pki.kalkan.asn1.sec,kz.gov.pki.kalka
+ n.asn1.teletrust,kz.gov.pki.kalkan.asn1.util,kz.gov.pki.kalkan.asn1.x
+ 9,kz.gov.pki.kalkan.asn1.x500,kz.gov.pki.kalkan.asn1.x509,kz.gov.pki.
+ kalkan.asn1.x509.qualified,kz.gov.pki.kalkan.asn1.x509.sigi,kz.gov.pk
+ i.kalkan.crypto,kz.gov.pki.kalkan.crypto.digests,kz.gov.pki.kalkan.cr
+ ypto.encodings,kz.gov.pki.kalkan.crypto.engines,kz.gov.pki.kalkan.cry
+ pto.generators,kz.gov.pki.kalkan.crypto.io,kz.gov.pki.kalkan.crypto.m
+ acs,kz.gov.pki.kalkan.crypto.modes,kz.gov.pki.kalkan.crypto.modes.gcm
+ ,kz.gov.pki.kalkan.crypto.paddings,kz.gov.pki.kalkan.crypto.params,kz
+ .gov.pki.kalkan.crypto.prng,kz.gov.pki.kalkan.crypto.signers,kz.gov.p
+ ki.kalkan.crypto.util,kz.gov.pki.kalkan.exception,kz.gov.pki.kalkan.i
+ 18n,kz.gov.pki.kalkan.i18n.filter,kz.gov.pki.kalkan.jce,kz.gov.pki.ka
+ lkan.jce.exception,kz.gov.pki.kalkan.jce.interfaces,kz.gov.pki.kalkan
+ .jce.provider,kz.gov.pki.kalkan.jce.provider.asymmetric,kz.gov.pki.ka
+ lkan.jce.provider.asymmetric.dsa,kz.gov.pki.kalkan.jce.provider.asymm
+ etric.ec,kz.gov.pki.kalkan.jce.provider.cms,kz.gov.pki.kalkan.jce.pro
+ vider.util,kz.gov.pki.kalkan.jce.spec,kz.gov.pki.kalkan.math.ec,kz.go
+ v.pki.kalkan.ocsp,kz.gov.pki.kalkan.openssl,kz.gov.pki.kalkan.pcsc,kz
+ .gov.pki.kalkan.pcsc.generators,kz.gov.pki.kalkan.pcsc.keystores,kz.g
+ ov.pki.kalkan.pcsc.parsers,kz.gov.pki.kalkan.pcsc.tokens,kz.gov.pki.k
+ alkan.pkix.checker,kz.gov.pki.kalkan.tsp,kz.gov.pki.kalkan.util,kz.go
+ v.pki.kalkan.util.encoders,kz.gov.pki.kalkan.util.io,kz.gov.pki.kalka
+ n.util.test,kz.gov.pki.kalkan.x509,kz.gov.pki.kalkan.x509.extension,k
+ z.gov.pki.kalkan.x509.util
+Bundle-Name: PKI.GOV.KZ JCE Provider
+Bundle-Version: 0.7.5
+SCM-Revision: 3859e1ea03a3d8b2760e62fba351f131aee62cc4
+Build-Time: 26.06.2023 19:17:59
+SCM-Commit-Date: 2023-06-26
+Created-By: Apache Maven 3.9.1
+Build-Jdk: 1.8.0_322
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$18.class
+SHA-256-Digest: RaC4WbN0zNfsE+jcalmPbmYXIoIebreYc4CYWhyZ08g=
+
+Name: kz/gov/pki/kalkan/asn1/DERNumericString.class
+SHA-256-Digest: jxE3AorQd/byGZld0R0MSqyVgZEJnIHmiyO/rKiAcpY=
+
+Name: kz/gov/pki/kalkan/asn1/x509/qualified/RFC3739QCObjectIdentifiers
+ .class
+SHA-256-Digest: CHNILP3YP+8EW5T8Gi6hHd9JXls9z5KLJTyi9fRlKAs=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/CertifiedKeyPair.class
+SHA-256-Digest: ZHlmGGkmAhEYqwcAL8dg8iN78IoSTQ5G9/fX0s7NPMI=
+
+Name: kz/gov/pki/kalkan/crypto/modes/CFBBlockCipher.class
+SHA-256-Digest: 667rzQFveTge4t7geVWtS/EmnNP0ZDzQ9o6MO1nGWpo=
+
+Name: kz/gov/pki/kalkan/jce/provider/BrokenJCEBlockCipher$BrokePBEWith
+ MD5AndDES.class
+SHA-256-Digest: aRBNwmQEtgfqelae2u43gAALbDryDLnWlG7GzQ+gfg4=
+
+Name: kz/gov/pki/kalkan/crypto/digests/GOST3411Digest.class
+SHA-256-Digest: 1aea4E6wDRcaWow1QlISE42/cmI2KKcCETbG9Mvi8YY=
+
+Name: kz/gov/pki/kalkan/asn1/BERApplicationSpecificParser.class
+SHA-256-Digest: sK/H5708Y+6uCs99hedH6/fVsuojYMgJSw6cnr7QCEA=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/dsa/BCDSAPublicKey.cla
+ ss
+SHA-256-Digest: tgfxVHAa9+/KUwUuhiZt3cYOeQxGZ8UQsMDqNpdcyoA=
+
+Name: kz/gov/pki/kalkan/crypto/engines/RC2WrapEngine.class
+SHA-256-Digest: x1m/lbnh+oPF3KOIszN95r4mHeKkB78CqZwgrYOcKpg=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/CertTemplate.class
+SHA-256-Digest: Ai7MFlp3EfOhsaDNAvRN1+QYl6EPVa4vFcs8afJ1TpM=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$7.class
+SHA-256-Digest: DiNlD5IY3v7GUtRjI/YvfgAak83N7mntEeRhHIhUEd8=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1Sequence.class
+SHA-256-Digest: DtcHfMS55TtCVsdeHB8dqCMqL6muDEW5LrqahvDqRgY=
+
+Name: kz/gov/pki/kalkan/pcsc/keystores/AKEToken72KStore.class
+SHA-256-Digest: eOVbOJrRgimgFAS2R09+xv7TUP9SUcbOF/+gGHMxcT0=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$32.class
+SHA-256-Digest: UtiFnBwSaGmSC5mUqKANlqyQ559UULle/l45FYotGo8=
+
+Name: kz/gov/pki/kalkan/jce/provider/RFC3280CertPathUtilities.class
+SHA-256-Digest: 8B7eW5RuLtyGHh4fKF3J4Qt3tslL09UY/08B+HJhbXA=
+
+Name: kz/gov/pki/kalkan/asn1/OIDTokenizer.class
+SHA-256-Digest: mi7ZRchJZs2jnIhCuQHoCtQHDzJWW2NjmVI2OndWsSQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithMD2And
+ RC2.class
+SHA-256-Digest: EltT3kBVvpapmND9Vq2UM/nnyPVVtJGPlJ91+2CjVyw=
+
+Name: kz/gov/pki/kalkan/jce/exception/ExtCertificateEncodingException.
+ class
+SHA-256-Digest: V3RFLiZxmLIZco1yzrDgPXxnK6/X15xI/aJv521FAoQ=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1StreamParser.class
+SHA-256-Digest: 1p/qfvx/VjQFqoLC6LZvngtsc5UvwPJe0PeLFPEHMX0=
+
+Name: kz/gov/pki/kalkan/ocsp/RevokedStatus.class
+SHA-256-Digest: Laht9oxYHIXkKpA85vINf3NbLo/WVbrzcsqXPKOXF6U=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCERSAPrivateCrtKey.class
+SHA-256-Digest: dUOodqMT8AfrQ04khvhkjHu6/dX9GF5SbzE39egnpD0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKPKCS12KeyStore$BCPKCS12KeyStor
+ e3DES.class
+SHA-256-Digest: pFpaudW8Dq7a2D1h7H498vnQABEA3ufCZxjXeATGNtQ=
+
+Name: kz/gov/pki/kalkan/asn1/oiw/OIWObjectIdentifiers.class
+SHA-256-Digest: F1CBfYJIrX+BFyIGOyM9JJJy0nr5vfqqbU/LKkyoYtg=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHA1An
+ dRC2.class
+SHA-256-Digest: iOHlCiXt7QXys88ATN/p5H+HwBeJboOHRdp4n5rpJSg=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$RC2CBC.class
+SHA-256-Digest: JoYED27ZAOhEvcCflWfxlWKclXGUpZvRCGCs8IwcOQs=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithMD5And
+ RC2.class
+SHA-256-Digest: Yoyuy+PGl2aXzHu1l7g0hStlAmqi8U8mozLrzvGh/aw=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$DES.class
+SHA-256-Digest: JK94w86psKMEZ/zb7dpi0JazBZqhmZ8bzxTncF8vHj8=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$24.class
+SHA-256-Digest: 9XX37F8E/7zyuCq1wM3KmqVV86eT9GKjENR6YHzwyUM=
+
+Name: kz/gov/pki/kalkan/tsp/TimeStampResp.class
+SHA-256-Digest: x/k34tXkGWWXwOnXj/DC4H+fpU2CZxXhyLO8tdtM+5c=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKAlgorithmParameters$PBKDF2.cla
+ ss
+SHA-256-Digest: Iw/CBAw/qnEeMAiKtMsnTceEojdLRBTHjolxUtpILPg=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ecgost15/EcGost2015Sig
+ natureSpi$EcGost3410_2015_256.class
+SHA-256-Digest: cn/ylZm1ASdv0vGGkOdyPSKzX7QrH0WKhrn5r2ApVn8=
+
+Name: kz/gov/pki/kalkan/jce/provider/JavaKeyStore$JKS.class
+SHA-256-Digest: X42opWmQj0CKejKALU2dlmfkkFViSN+YwZbI5UsWppM=
+
+Name: kz/gov/pki/kalkan/crypto/modes/AEADBlockCipher.class
+SHA-256-Digest: qWgU/g3i3zNUa47KN6hIISrRvmsiLY/6sHtFuC/mitA=
+
+Name: kz/gov/pki/kalkan/crypto/params/RSAPrivateCrtKeyParameters.class
+SHA-256-Digest: ZbOkyKuEVBohEqA17YZfvqxgEwPxKm3aXAx818N2mks=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCERSAPublicKey.class
+SHA-256-Digest: 5cW9LCz10O7ZBwQ8dtvnXVopJeo/dM4VcCIbb19beto=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$PBEWithMD5AndRC2.c
+ lass
+SHA-256-Digest: Hphg5lkBdg26LYmYArtA7ujUXGJ+RBxyLFH42IJCTnc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$OldSHA512.class
+SHA-256-Digest: jaH4uqyB9ZtpZ+NV7gYzVrJF34D9d/r+qRieElMVqu4=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/SignerInformationStore.class
+SHA-256-Digest: DBDWtTkN6+VsfuKMju0VVRHqgNeoYSPbxbcxr4T38+M=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/CertBag.class
+SHA-256-Digest: RC8P+ctoEp1cJGVN0c3FEF+J+jGhcoavQCdhPAL4pcM=
+
+Name: kz/gov/pki/kalkan/jce/provider/PBEPBKDF2$PBKDF2withSHA256.class
+SHA-256-Digest: plGE9f5uQ6KNZQlQ6jEuRBqjapiYuaqQgiChKj/mYXM=
+
+Name: kz/gov/pki/kalkan/jce/provider/KeyProtector.class
+SHA-256-Digest: xPOcUgyd1+cB8HbILLFj4EevcvJ0CAcNnbDjzNzj1OY=
+
+Name: kz/gov/pki/kalkan/jce/provider/WrapCipherSpi$RFC3211DESedeWrap.c
+ lass
+SHA-256-Digest: RlzbqTo5X+Oa0CZtCp1819mUR9Ao3xuD5aJ1vXhophQ=
+
+Name: kz/gov/pki/kalkan/asn1/cryptopro/GOST3410PublicKeyAlgParameters.
+ class
+SHA-256-Digest: q7xv2ROB5CQNDL/j+lVSH4NDM4FHXPCoQdQmQnjkHG4=
+
+Name: kz/gov/pki/kalkan/asn1/x509/AttCertValidityPeriod.class
+SHA-256-Digest: ovQJEhmVz/Z8ML/8VkpSoINorw1cLs7CiFPwp08cDJs=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedDataParser.class
+SHA-256-Digest: GzwKwBJjrbnandsG/HKEZihwTJo23GPh2nL/qTtM0Wk=
+
+Name: kz/gov/pki/kalkan/asn1/DERTaggedObject.class
+SHA-256-Digest: Qli31VDmlhQIUYJrCix6qROPsq9k4/jTNIgpwUp1v5o=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$13.class
+SHA-256-Digest: qml+1i3iRwc0rTaLn55oFTNyNWUZZygxlwWmSBtehS0=
+
+Name: kz/gov/pki/kalkan/asn1/ess/SigningCertificateV2.class
+SHA-256-Digest: XUaIBEhAgKr01kCFjTrOswTNhjN36QBsU/Fq6vBHwuI=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$SHA256.class
+SHA-256-Digest: bby1OM18Qme+nArmxsJoRPxz5lrqF2MheyHrtSZd5MQ=
+
+Name: kz/gov/pki/kalkan/x509/AttributeCertificateHolder.class
+SHA-256-Digest: QLqHcXN9uSWlklUSOvxeGJdvoVNe7ICIUjZuwhhxtyI=
+
+Name: kz/gov/pki/kalkan/asn1/cms/CMSObjectIdentifiers.class
+SHA-256-Digest: TZz6igov/c//LmqMaDGxaeRRpjS18D5uYpaNFyqoBrw=
+
+Name: kz/gov/pki/kalkan/asn1/cms/AuthenticatedDataParser.class
+SHA-256-Digest: xo07B2Iby+QNx1/cd+I4qxyDFQynC3ZmGCgoGFnHro4=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$PBEWithSHAAndDES3K
+ ey.class
+SHA-256-Digest: qgNpI84ydFBfzGl2cewAC56nuZUAFzyUrDHpLjneI9c=
+
+Name: kz/gov/pki/kalkan/crypto/generators/PKCS5S1ParametersGenerator.c
+ lass
+SHA-256-Digest: 292f/CVGBlMWYff7zaXNykID7qsKtSUqON+RCNO63uc=
+
+Name: kz/gov/pki/kalkan/pcsc/generators/AKAlgorithmParameterSpec.class
+SHA-256-Digest: 3c0urTx6DMS97DjoLfbI/9MY8G4w0vfLeJWl58Z6MxI=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1EncodableVector.class
+SHA-256-Digest: o8aYFi4pt09iP1IN6VnNoct63XSUIGao21ihdqoZjNM=
+
+Name: kz/gov/pki/kalkan/ocsp/CertificateStatus.class
+SHA-256-Digest: O0yULAd7ZW5KfnEnJbADX1Qq2VJneG7z7iK5zibUNFI=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$PBEWithSHAAnd40Bit
+ RC2WithPublic.class
+SHA-256-Digest: OJDb6cWsJnrjyPnVo/8dLvp60+qsviXXYubJStj37Ho=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSEnvelopedData.class
+SHA-256-Digest: K8qaMe+WcuS35nl44uWnSiDx3LkDjbgLG0AsPw01J4A=
+
+Name: kz/gov/pki/kalkan/crypto/io/SignerOutputStream.class
+SHA-256-Digest: ZzFvgsGOUe66Fom0kNspUaw/OWJgiaaGlCbT3WdnoKE=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSException.class
+SHA-256-Digest: qqAoU1/qh6rq0I2mSlJLUJRsrU7IjlGKxBOxLufgnjU=
+
+Name: kz/gov/pki/kalkan/tsp/TimeStampReq.class
+SHA-256-Digest: fTyve+XCbmmIa5jCTAoweaco4rj2cCRyHOhzgv5AksY=
+
+Name: kz/gov/pki/kalkan/jce/provider/PKIXNameConstraintValidatorExcept
+ ion.class
+SHA-256-Digest: ir0SkvpLP9rLx7sSnwJSVQppYWgGA4ZsGLtsVIoijdU=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac.class
+SHA-256-Digest: pAyIRvoUgNJQ93W8EQlANc/a1HsFXTeYqd9QPE9h3TM=
+
+Name: kz/gov/pki/kalkan/asn1/x509/AttributeCertificate.class
+SHA-256-Digest: 1fu7SHXJRuZyLDUFl5mykIpdrHJVXfckhClEnMhfyfM=
+
+Name: kz/gov/pki/kalkan/asn1/DERUnknownTag.class
+SHA-256-Digest: tUZMdx9HaWNlBBpqU77kElZXsKcqXPr2xq5nws0TasY=
+
+Name: kz/gov/pki/kalkan/pkix/checker/KNCAOCSPChecker.class
+SHA-256-Digest: WJI8N/YnhoRAkZzhDQ9AZJrYD13ieKuBxvAHBNOmcXQ=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$29.class
+SHA-256-Digest: BKQtKuxFMyAFE02fhGnZELx1uBTYIj9CrV7UUmM7PaA=
+
+Name: kz/gov/pki/kalkan/crypto/params/AEADParameters.class
+SHA-256-Digest: W+w9kSKoVassf9Nz8cLgXua94Z88e9w3ZhmAO30aoXw=
+
+Name: kz/gov/pki/kalkan/asn1/x509/qualified/QCStatement.class
+SHA-256-Digest: Fuf+7muwIB+3DxxChThi4MNYMNiDG39Jx80SV85Usm8=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$21.class
+SHA-256-Digest: Zrj/BAFqk+KuTBZchYfbja0HACFXOM3x/urMzs/E93Q=
+
+Name: kz/gov/pki/kalkan/x509/X509Util.class
+SHA-256-Digest: 3DwsMN0TymW942PBTWvy7sOJ+PdZ6LtMrhTC0UMe7No=
+
+Name: kz/gov/pki/kalkan/asn1/cms/RecipientIdentifier.class
+SHA-256-Digest: NnXwp7v0dCRvZ6WJxFUL83oodAsWETe31Es5j+qv3v0=
+
+Name: kz/gov/pki/kalkan/exception/KalkanException.class
+SHA-256-Digest: zxalJzPG/0MK6K7iCNwd4ObuHu1IMBErHKmD3KDBV+Y=
+
+Name: kz/gov/pki/kalkan/asn1/BERConstructedSequence.class
+SHA-256-Digest: b7Ns0EiqQ5oGw+nR1uqqKx6o+i7/66AFO8pSjn6un28=
+
+Name: kz/gov/pki/kalkan/pcsc/AKPublicKeyUtil.class
+SHA-256-Digest: 9L/OBZVd2HcTPWZ3WqGz0FUs7jwn4k+Z9dtgFytfzjA=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$9.class
+SHA-256-Digest: iUjNlOYyQbjt28Qz4pSYqFOpWh0Vfz34oc/GUpyuZZc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKISOSignature$MD5WithRSAEncrypt
+ ion.class
+SHA-256-Digest: 4ByBkOt/cahVssME+KoqBMQrbiqwiASUCj43r1qk3fA=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/PBMParameter.class
+SHA-256-Digest: 5bBQfM8dhq+kvwDzLOXtfSn8nJJ0phCCXpKkbQ99LbQ=
+
+Name: kz/gov/pki/kalkan/crypto/signers/RandomDSAKCalculator.class
+SHA-256-Digest: 2VuKSCWDE106QcZIRz6EO1otQS9Fv5vgRqYQP3RvTHs=
+
+Name: kz/gov/pki/kalkan/crypto/generators/PKCS12ParametersGenerator.cl
+ ass
+SHA-256-Digest: m/qprwtweqCHgk35l4J1arTZVhtLQrDV1dbLqC60wD4=
+
+Name: kz/gov/pki/kalkan/crypto/modes/gcm/GCMUtil.class
+SHA-256-Digest: yHrvH7UeMg5AYwIVhUxVGZlP3/mXl9/YzpBTqakYjnw=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSEnvelopedGenerator.class
+SHA-256-Digest: Cec5VibS1mze2EgQVJDCAIJvrEv+F0lynyf0PQa7L4I=
+
+Name: kz/gov/pki/kalkan/asn1/ConstructedOctetStream.class
+SHA-256-Digest: cxP90tCwOIGfPQ7NhtLwt3mw/FvubezgmQBImgA4hPw=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/DHParameter.class
+SHA-256-Digest: JQ1oMeAfb6rO8GEWNl0qwdeW6Ve+2VrzgbV1Z2SzxZQ=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$9.class
+SHA-256-Digest: I2bKBBNUv0zb5poX5y10/88eoyMk334dGmxGaYjm44U=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$11.class
+SHA-256-Digest: eaYpfzetfEQKG+vQoPXSHNsMn/ScCXsnuQ8cYDD5TQM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$RC2.class
+SHA-256-Digest: 1+a7mTY9GafAzPEzhypCEX2ke3SsXNE/k2a3PVYKNLE=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/MQVPublicKey.class
+SHA-256-Digest: rx8+mq+yXSXP/jYxOogTuDpM8C26mZEM8PXl7fdfG2w=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedHelper.class
+SHA-256-Digest: T4dw4VSKSPGWySyA93uiyINIRt5vI3jl8/tuNbKv//A=
+
+Name: kz/gov/pki/kalkan/asn1/DERSetParser.class
+SHA-256-Digest: Vihol5+UqfoKEjQUu5MP1pYLW8/MJ4RdaduWtUPFvIc=
+
+Name: kz/gov/pki/kalkan/jce/PKCS10CertificationRequest.class
+SHA-256-Digest: tLXLZit6VZAruvOF03Sb5a8aAT2haUxjEgWqqOpTRhs=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$AESCFB.class
+SHA-256-Digest: ViCvt1XmZRaL2+XkZmMgl5qQcOEwpm5XWU7u6VlMGYA=
+
+Name: kz/gov/pki/kalkan/asn1/cms/EnvelopedDataParser.class
+SHA-256-Digest: B7fXXvvWAhR3Pp4kjkuBqJRy9KDC/LzkXZuQg0KyVA0=
+
+Name: kz/gov/pki/kalkan/crypto/digests/ShortenedDigest.class
+SHA-256-Digest: 9+wGO5j1rtXz0aWHHBlXXbsYq6P9P3Yp79WHOdkTUQU=
+
+Name: kz/gov/pki/kalkan/jce/provider/JavaKeyStore$1.class
+SHA-256-Digest: A6hUyxLBg9t0S3olx6cZ1pxQoi6AK26duX8POCVMN1Q=
+
+Name: kz/gov/pki/kalkan/x509/PKIXAttrCertChecker.class
+SHA-256-Digest: RbWjCk06ObOm01oQgPsOUT/z09NwrfGgPKI+IOx195M=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/RecipientInformation.class
+SHA-256-Digest: 6ErCFisiH+qNel/jxu0WLRexINqFs9J/03A3AkNu5OA=
+
+Name: kz/gov/pki/kalkan/ocsp/OCSPResp.class
+SHA-256-Digest: PfAbjE/1LAumbQy14oW5WNU9FVUhAche4Y9crPNcP/k=
+
+Name: kz/gov/pki/kalkan/asn1/x509/IssuingDistributionPoint.class
+SHA-256-Digest: ateCjtJobit7VyGJNmFXh40+DUyLenaXj6ThsF7q334=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$SHA224.class
+SHA-256-Digest: CfTOUifFFX1YkJ5/xw5rDvpc0jsHw9u+uLBuwX9jcFg=
+
+Name: kz/gov/pki/kalkan/tsp/TimeStampTokenInfo.class
+SHA-256-Digest: 243UDbo1ks9O1qEqzwhAL7xzZHO8Q8c1ivr88HTF2Dk=
+
+Name: kz/gov/pki/kalkan/crypto/params/ECPrivateKeyParameters.class
+SHA-256-Digest: V6YGqGVy6ImNIVyqfh29HNwKYkYxzBugtAs0V6Tcv2I=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKGOST3410Signer$ecgost3410.clas
+ s
+SHA-256-Digest: vkzBbZZGk1+JBGUSXFaTEup1IxDlt65YHNxFnn7uBlI=
+
+Name: kz/gov/pki/kalkan/asn1/ess/OtherCertID.class
+SHA-256-Digest: Nid4ar8J2JMaGuvIhvTUsqiWO1nZIQAMkQZrJRy8Jaw=
+
+Name: kz/gov/pki/kalkan/exception/OCSPCode.class
+SHA-256-Digest: 6vWzLA32jEgynp2cxJE+x2BpH0Jo5Hkl97Pxui3q8/o=
+
+Name: kz/gov/pki/kalkan/pcsc/parsers/TLVParser.class
+SHA-256-Digest: Ph78g1Y2QxbaNDX099tghRvFc1UavEJulXYkrJgeXJE=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/CrlID.class
+SHA-256-Digest: XyT+/g9ZOl570FBw1SIY/gJSriUCfw7G/e8LqSC4AcY=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$DES.class
+SHA-256-Digest: drSWrYtsu+OCgVSvwxu3MwrtAJ8Qz9h1Wur+UCgVW/A=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithMD5And
+ 256BitAESCBCOpenSSL.class
+SHA-256-Digest: oUUvKutD9A2W1u2db4QwJQ21mWUbnVFoyyGzGt9UZss=
+
+Name: kz/gov/pki/kalkan/x509/X509CRLStoreSelector.class
+SHA-256-Digest: BV5FJoCZIzmiM6ubzCY3rywWfncBBfLS9IWc/eGUBT8=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$2.class
+SHA-256-Digest: agoxRMVTM1+TEnJTuLF6GuWv/bZr2cgw+sQsvZmD9iM=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSEnvelopedDataStreamGenerat
+ or.class
+SHA-256-Digest: VPU6y5jvbGOXYpZGHS+KD7CmEwbtMayKlh1SVLMSme0=
+
+Name: kz/gov/pki/kalkan/crypto/macs/BlockCipherMac.class
+SHA-256-Digest: NQUIs3kIHjBmgUeJTQg+e0tJvWyxtq3J5Ede3UgsuKs=
+
+Name: kz/gov/pki/kalkan/asn1/BERSequence.class
+SHA-256-Digest: /awwFao/c5rfzQP2xQdZXOo0lkWrW9oK6nm56o7h8mw=
+
+Name: kz/gov/pki/kalkan/asn1/x509/GeneralNames.class
+SHA-256-Digest: vH1BMga5lbCWVHlUWfDY7ee7XZ1O5c4zv5UtviScfmQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/PKIXAttrCertPathValidatorSpi.clas
+ s
+SHA-256-Digest: EYQwie71nKedJG31St+G3pynvn8vX6AtDyrqj9MqMxs=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/PrivateKeyInfo.class
+SHA-256-Digest: Mdoys6ZmeSgV6gEwxvj5Dg5LOggv+YX89BPbwK0KYtY=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedDataGenerator$SigOut
+ putStream.class
+SHA-256-Digest: UXZV43w2UhtgMReoQxWr62+mesVCJM6tpUroZLLMPw8=
+
+Name: kz/gov/pki/kalkan/openssl/PEMException.class
+SHA-256-Digest: N0PgaNXeew1LHmChMXiw6wqfzqM4Fo3gg4B1VSJ2v0Q=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/RSAPrivateKeyStructure.class
+SHA-256-Digest: HRTn/h+XZjI+XwqTIBvB5AzcnEV8PMeWNXqYxSk4jYU=
+
+Name: kz/gov/pki/kalkan/asn1/x509/X509Name.class
+SHA-256-Digest: 2kGiWw6REokvyPWWGNRxom2QViJYtavrgYjsoddrPX8=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSCompressedData.class
+SHA-256-Digest: ld0Hm4JWENffR6Q4kLdu7N9TufRD9Kh3+soS6A/tYkE=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1SetParser.class
+SHA-256-Digest: boLTdNbnrG309J1C4K3TzshydCgq7FiNgV+TYbHK0m0=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/PKCS5Scheme2PBEKey.class
+SHA-256-Digest: WwaqhP3o6MnKlRqJ54WmrlAubhbg5rekNkADPAuxYqI=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedDataStreamGenerator$
+ NullOutputStream.class
+SHA-256-Digest: pbiDmrk+BImrHDaU9SrJan9loBUtXzh7frJHPqQ6bW4=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/KeyRecRepContent.class
+SHA-256-Digest: lAnpZkIIrp22JQcM42jhneMTgDqlfHRRg+/uvH2iEVU=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$MD4.class
+SHA-256-Digest: 7+n0YSQDAtWMTMSdfPDVFtSooTeGcz+MG4mjh1zS2Ls=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves.class
+SHA-256-Digest: 0lVApS1MHGOLd60u6vqexETzJ648vu1iyhD57oFCZuA=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509StoreAttrCertCollection.class
+SHA-256-Digest: pkhFDmDEEekSlezCkBFYkoUGLEZ6dRcVXYocWjTz3t0=
+
+Name: kz/gov/pki/kalkan/crypto/util/Pack.class
+SHA-256-Digest: jsC6a68x5Kjn0RYdi89lDL1A1+6AeM1UMg3BafdV+qQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHAAnd
+ 40BitRC4.class
+SHA-256-Digest: 9bkRZcxOrJEfz0CczWnEMwlu8b3SLfYALUx2j2GeN84=
+
+Name: kz/gov/pki/kalkan/asn1/x509/PrivateKeyUsagePeriod.class
+SHA-256-Digest: DYQGVTcjcN+13St77nCpPlFZcQeXsUDK2Uw92hvIyg0=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignableByteArray.class
+SHA-256-Digest: UVL5CwnzY3K+fEbf+r4Efv/JAHlPX6xIoDI5lTFsuNY=
+
+Name: kz/gov/pki/kalkan/asn1/x509/PolicyMappings.class
+SHA-256-Digest: tYBt2bnk/3r7ZenglkYv3AickP4szaClwCGEXISvvAA=
+
+Name: kz/gov/pki/kalkan/ocsp/RespData.class
+SHA-256-Digest: g0D9j3hEeLRzwCMUHZA+R/H0VSNAkwTsj5JIwbghbTo=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/RevDetails.class
+SHA-256-Digest: Kc/wuoeBWxahLDG13ycJmdqnzZAbH5o29nz9jGlJlgM=
+
+Name: kz/gov/pki/kalkan/asn1/cms/OtherRecipientInfo.class
+SHA-256-Digest: QDlMARE6o0OcYnQJipgMc8rUb5dSRAsWpDRE7UbHlCI=
+
+Name: kz/gov/pki/kalkan/jce/spec/GOST28147ParameterSpec.class
+SHA-256-Digest: M/fRiEzuZH8A2CA9xdooYDOd/BsjJPSPEBu9Ahs4/mc=
+
+Name: kz/gov/pki/kalkan/jce/provider/PKIXCertPath.class
+SHA-256-Digest: 8/VehGNmmdaUeT3wrNek5YAluV0NX0ryqM3t9q7a3Fg=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSCompressedDataGenerator.cl
+ ass
+SHA-256-Digest: IUx7w6/uZQ44W3iiWHa6t+pbwsLJZqVtnOd3T8mbfxU=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/OCSPResponse.class
+SHA-256-Digest: rfkgJewZFiFYCjHX2kMA/yPUNjT0UxzySZgUFytdENc=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1ApplicationSpecificParser.class
+SHA-256-Digest: TEulaaVHtekyA7n7QP1xuhFZZ0R1ja0NzkonnaNBtaI=
+
+Name: kz/gov/pki/kalkan/asn1/x509/KeyStoreInfo.class
+SHA-256-Digest: zIV4KNdv84Z9h4OxvgGproXiyl2rz7+QPbEULiIfJ60=
+
+Name: kz/gov/pki/kalkan/asn1/x509/AttCertIssuer.class
+SHA-256-Digest: 7H2NwY99hnEQu6UAGwpknOvhcJP3Ut8ZyRuIiU4hay0=
+
+Name: kz/gov/pki/kalkan/jce/ECNamedCurveTable.class
+SHA-256-Digest: O8jScI1E5zFRd6X9BW0yX/2Rkb1hLSo2ABiSsnCUo90=
+
+Name: kz/gov/pki/kalkan/asn1/x509/V2TBSCertListGenerator.class
+SHA-256-Digest: fSDsWCdON9XZ4z0EtcyuCeIagoItna3y/SfD7W0JIN0=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/GenMsgContent.class
+SHA-256-Digest: kJkziq85LyRDBdT7vlZ7ZcV0vy7aDbAz93A/p8eXMqU=
+
+Name: kz/gov/pki/kalkan/asn1/x509/UserNotice.class
+SHA-256-Digest: 8ALybBXOkpjgpRyLce7Tu6naIU+a68bL8qj59wJ6+bc=
+
+Name: kz/gov/pki/kalkan/pcsc/keystores/AKKaztokenStore.class
+SHA-256-Digest: hAkOG0st7Q1Z5BToW8MsOIAVpU7YvBDWM52vL7JFSe4=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$RIPEMD128HMAC.cla
+ ss
+SHA-256-Digest: rstJU12ypAlZpHa0QsUMdoceYB5a99FvtEoWMT5B/aw=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$22.class
+SHA-256-Digest: G7QydFRW5871oN7avXqJ6WaEAUG6Rjln2bHHN4Kuz4s=
+
+Name: kz/gov/pki/kalkan/crypto/params/DSAKeyParameters.class
+SHA-256-Digest: BAjH/SkLgDTKn0xT00GNTZZCCa4FVeX4Lsk4i/mSiMU=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/SignerId.class
+SHA-256-Digest: Jj23KCx1ODSjL6YnyAEJrOInbPaRijf+kBNIx7mcdCs=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyFactory$RSA.class
+SHA-256-Digest: +n5g+OOSxfUkJsnPTLBy504BvQTViixqgoIV67NX79k=
+
+Name: kz/gov/pki/kalkan/asn1/x509/DSAParameter.class
+SHA-256-Digest: gLrEj8jlXvZk1yBafKrDPOwxarXgCxXZ3HEkqbUGw8g=
+
+Name: kz/gov/pki/kalkan/asn1/sec/ECPrivateKeyStructure.class
+SHA-256-Digest: eTaQRPOm5HMi0000TC7fweJuEVdBPmPNAoFVmUpf+ng=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSUtils.class
+SHA-256-Digest: qlp66Crfj68L04E8lqWQFL4oBzEruuIkpKDgi37rflM=
+
+Name: kz/gov/pki/kalkan/crypto/signers/PSSSigner.class
+SHA-256-Digest: GFxihCYB0kju90iKkuqyk0lRLTffZZRoWvOUIn6yJQk=
+
+Name: kz/gov/pki/kalkan/util/encoders/Base64.class
+SHA-256-Digest: R8p1lkcUslOVlpqVYZhln6moCaktMfmdBgI4cwnCg0M=
+
+Name: kz/gov/pki/kalkan/asn1/nist/NISTObjectIdentifiers.class
+SHA-256-Digest: wLxCj5tp3EniLxLTiG9SwdsdIGgma2jE8E9H/kVYu18=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSEnvelopedDataParser.class
+SHA-256-Digest: zd5D/zKj5En/Vp7eJM+/iGw6MgkV2voWnRvSllqPqUI=
+
+Name: kz/gov/pki/kalkan/x509/X509StoreSpi.class
+SHA-256-Digest: i9DrF/Z1fbVWQDz1j5+/amINsSmqpmjqwPd+shzOTms=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1Generator.class
+SHA-256-Digest: jPFaIL49+W9D7+EQ/Z2rS/HKWbmCGYeZoBXCUGOzB+4=
+
+Name: kz/gov/pki/kalkan/util/IPAddress.class
+SHA-256-Digest: iWUDpbY5Mt/srV08ksicohPgBz+JswBmJVJ6x2Yi2mA=
+
+Name: kz/gov/pki/kalkan/jce/provider/PEMUtil.class
+SHA-256-Digest: iIXb+/VIwGksHXjn8wpCEdWdv1iE59cnKHj4J8MG3s0=
+
+Name: kz/gov/pki/kalkan/asn1/DERT61String.class
+SHA-256-Digest: rdw+mHpzxStRQ13O/vyxkpUvjuE5T+HPmc1WxDjnpuA=
+
+Name: kz/gov/pki/kalkan/crypto/prng/DigestRandomGenerator.class
+SHA-256-Digest: NV5G/oH+qBmiIsDbaTICqPy3aEPqroXiDUID93KOq4s=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyFactory$ECDH.cla
+ ss
+SHA-256-Digest: VHeq3lAtey7FH9UDpURdgYSF/o7qEi63IO/rK7Da1Fw=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/RecipientId.class
+SHA-256-Digest: TDo1x6qYbYTgJ7wPfkU4oxkgcGtKo211Q0zPkhdxQ2Q=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/KeyAgreeRecipientInformation.
+ class
+SHA-256-Digest: icYB9aYyMwSKYeIUllWB1NiIcYscj1PVuc1Y+ZJcCWU=
+
+Name: kz/gov/pki/kalkan/crypto/modes/CCMBlockCipher.class
+SHA-256-Digest: M82Rb3IIWlq2uGnm3eQj3bxh8S/TQi+5smsGalZFKok=
+
+Name: kz/gov/pki/kalkan/jce/ECKeyUtil.class
+SHA-256-Digest: 9r2acuNpw/7P+3dsQbr3vy5qexu4VGdqna92rJcDX/M=
+
+Name: kz/gov/pki/kalkan/crypto/digests/GOST3411_2015_256Digest.class
+SHA-256-Digest: SoncwSfTbs6nDMFm+NSu/YDXk3IdFDrbrz9IglFQn4Q=
+
+Name: kz/gov/pki/kalkan/crypto/generators/RSABlindingFactorGenerator.c
+ lass
+SHA-256-Digest: tsY2XjkgjC7d3sK0RFrQHZHS870bJYRzWONZ6Q/j/cQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKAlgorithmParameterGenerator$DE
+ S.class
+SHA-256-Digest: 2obHMOG13BSVwjilxuFbVFwgMtNpxIK7lZIE8boiT2o=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$GOST28147.class
+SHA-256-Digest: EsEf7SlbhpqwSf1d4vyLjdzqN+6+kCKAX4/FBBisE3w=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKPKCS12KeyStore$IgnoresCaseHash
+ table.class
+SHA-256-Digest: E2+FK6H8NpP3iRAhUUokF6wHDfgjmfddgANtfEPliqg=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKISOSignature.class
+SHA-256-Digest: n2w+fNbK2+CfUGAHUKU1CMrMnDbgzBUzrdJaGtbsUD8=
+
+Name: kz/gov/pki/kalkan/crypto/generators/BaseKDFBytesGenerator.class
+SHA-256-Digest: nj3fjidFuNH6Ii57m1lkeyhtfDZGlqxkr504a25nqCE=
+
+Name: kz/gov/pki/kalkan/jce/spec/GOST3410PublicKeyParameterSetSpec.cla
+ ss
+SHA-256-Digest: uvUJxRkRL0Z2I+028pUcQoNWhe+o9SRtYKs/+HbAAD8=
+
+Name: kz/gov/pki/kalkan/asn1/x509/BasicConstraints.class
+SHA-256-Digest: XcH19ydrMSXhVSmu9UAPUxn6kbdMijwJlTgtrIgNO8M=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/ECKey.class
+SHA-256-Digest: xyguSpRkL/v6xNQ8rcdV30P3NUXddUhTI8+grxTKSX4=
+
+Name: kz/gov/pki/kalkan/asn1/DEROutputStream.class
+SHA-256-Digest: qFu2zQl8Q1wgQXYnteHw0ecB8yO7lJIIKUL5C8l6Tag=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/GenRepContent.class
+SHA-256-Digest: ZZc4UuK/dKl9VwLJQGEAMXtnZtLulVUjCc0KmyNHUOk=
+
+Name: kz/gov/pki/kalkan/crypto/modes/OFBBlockCipher.class
+SHA-256-Digest: OZ5cDfaZtecX/0Wo2gnNpvkpNrIlcmzHxeZJLUhciMA=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKDigestSignature.class
+SHA-256-Digest: qgURtr1mZR72jFnO9ovvJO+NZ9Ure2CxKVBoQMXeoqk=
+
+Name: kz/gov/pki/kalkan/asn1/x509/CertificateList.class
+SHA-256-Digest: +/FVdIfkvugk9cOt5VgNVOXB4KC/ERyUGkmY0QjbTJg=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSContentInfoParser.class
+SHA-256-Digest: 34AXsmTdPS1AKg8EEjODZA9qEgjQmSyRB2duYUyyu00=
+
+Name: kz/gov/pki/kalkan/crypto/modes/gcm/BasicGCMMultiplier.class
+SHA-256-Digest: UR7VTmOGorvn9MGUdaMYZGGH76EK+hz3SlTcY+vB+vs=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$AESOFB.class
+SHA-256-Digest: tUDPYKpQ3nezp5fanyFE69CCfWUSvpmH+PmgiJVJw+U=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/Signature.class
+SHA-256-Digest: hPmT74XwQSaTSG1M0OoRFL4hjHsbcVAE1z3d+43O4As=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509StoreCertCollection.class
+SHA-256-Digest: wOLJVwjfNqvmTGsqCZ71rx9r27gCW0LP8zGpkx3SbOk=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKDigestSignature$noneRSA256.cla
+ ss
+SHA-256-Digest: kpjoEslDMv5d8pkaRJhGAvQINHXTWCnJghzYPJs0/qg=
+
+Name: kz/gov/pki/kalkan/asn1/DERSequenceParser.class
+SHA-256-Digest: HPqhIQ40YGQNb3guWEsfCLktq/A701CiG/8QfCAmxjw=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyFactory$ECDSA.cl
+ ass
+SHA-256-Digest: G93j4oZ53/fmjYX470IJmC0t+G410q0qoibxWoe98Xw=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1Set.class
+SHA-256-Digest: BTZI/kSclcmDEg1ZSYmcyIw8Cq15mJbiTcziDyplUMk=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$SHA384.class
+SHA-256-Digest: 3iXk1EMHncGkBDuQ0P/v3qxxPyJAwiApaNOFYOW7Qng=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$DESedeCBC.class
+SHA-256-Digest: D7aSgHuUaLkomXT2UZvXh2s4VURAKmn03qIjaes6Zwc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHAAnd
+ 128BitAESBC.class
+SHA-256-Digest: e0scpD6zHyP2mMwCIK1eCMnrKTp6lsRcEhCaR0YLtsw=
+
+Name: kz/gov/pki/kalkan/jce/provider/GOST3410Util.class
+SHA-256-Digest: l8UggLEZ1KV6hZfAubhSG1BWUxKW/cysubhT+BEfwSc=
+
+Name: kz/gov/pki/kalkan/crypto/generators/OpenSSLPBEParametersGenerato
+ r.class
+SHA-256-Digest: iTGWLBcNKCXwQP1QP/5x+rBpUyLjrdlBYZkOjUHrUCE=
+
+Name: kz/gov/pki/kalkan/ocsp/BasicOCSPResp.class
+SHA-256-Digest: 5ZmzXexHY95QOF/y+dhgveFH/AdBFZdcva1wZpQRzKU=
+
+Name: kz/gov/pki/kalkan/pcsc/parsers/DG11Parser.class
+SHA-256-Digest: rP1YfoUt4SXHiKAF4rhRFx6hOE0tP7hHXAYwK3rVEbo=
+
+Name: kz/gov/pki/kalkan/crypto/DerivationParameters.class
+SHA-256-Digest: StzZzVG7x0GrFRdw0IytSr9+GBjUroOXKqGF1K+StiQ=
+
+Name: kz/gov/pki/kalkan/crypto/DerivationFunction.class
+SHA-256-Digest: 4BwPr8fVpVRZ/0RtY45eamis3cqRkYWGR7qEozToDZI=
+
+Name: kz/gov/pki/kalkan/tsp/TimeStampRequestGenerator.class
+SHA-256-Digest: y8K/OkRq8oeumsKTZSAuILgn6uFRUQF9J84yPVPOCNM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$DES.class
+SHA-256-Digest: aRTwdxeFqU0JDkDJYMkualdfmwMEi6NdgnkErVqoV74=
+
+Name: kz/gov/pki/kalkan/crypto/params/RSAKeyParameters.class
+SHA-256-Digest: 5CeYSs5LcVkHwJWILuAZhjUJ7gowthoBQAVp7Vmc9f4=
+
+Name: kz/gov/pki/kalkan/asn1/misc/MiscObjectIdentifiers.class
+SHA-256-Digest: Av9u/9Lf8WNlqejqJmiLun5dl7VZTY8T8IFnYeLEDZc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$NULL.class
+SHA-256-Digest: 1zt+NDgXVZU4hx8zf3RnNlw0rMKS/YbLqMFwXLYdzfo=
+
+Name: kz/gov/pki/kalkan/crypto/prng/ThreadedSeedGenerator.class
+SHA-256-Digest: IcKrHEEToZbG7r3yo4WLcCuWyOa/LIA0hOkOo0Nmg7s=
+
+Name: kz/gov/pki/kalkan/pcsc/tokens/AKey$AKeyObjectIdentified.class
+SHA-256-Digest: KLLwxFPYRr3/4NV/blW9480NO78vGWZWXD/lbfqsEVw=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$GOST3411_2015_25
+ 6.class
+SHA-256-Digest: OVVWJo0qDpxHPK3hpcM23fpM7SSF49NIgkfGYMUQ7C4=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/ErrorMsgContent.class
+SHA-256-Digest: KnZ0Ovbh09sb0Nn65U4ud2eG9JI8BcKIbOdEb1er8rs=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKalkanFileKeyStore.class
+SHA-256-Digest: +h8j1/C2mFzwqt9qaI77vAD+cHPJGH8A8B8MMWA8lLQ=
+
+Name: kz/gov/pki/kalkan/pcsc/tokens/JaCarta.class
+SHA-256-Digest: UC0xioOAolCG2Kc25QMICZQIzcppIueoW+IrbR86x8M=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509StoreCRLCollection.class
+SHA-256-Digest: fl/PsmH55kbhKDGNUXJWPeBxUK+9JysK1zDLYVTKFMM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$RC564.class
+SHA-256-Digest: hMHKnj/A9zKi08S4+dAG+pyZWoTKR51w2yvZ3i0Aurk=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKalkanECPrivateKey.class
+SHA-256-Digest: N5i6jOcqz2K8FoGd5e5LT7IEJDNWOOgcI3xk21ihUkk=
+
+Name: kz/gov/pki/kalkan/jce/provider/BrokenJCEBlockCipher.class
+SHA-256-Digest: auPZCDAtngj6sIc/w6L/RciY3ezuM5VYTWGn0gLQDds=
+
+Name: kz/gov/pki/kalkan/asn1/cryptopro/GOST3410NamedParameters.class
+SHA-256-Digest: FhvlMiK220Yr2mUg9vWezQnU3lF9jmQHouz7+gqXJt0=
+
+Name: kz/gov/pki/kalkan/crypto/digests/GeneralDigest.class
+SHA-256-Digest: AJDsbTm88Vx05Er9gTQIVVACHu8wpDEf7nvHQfm7jTw=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHA256
+ And192BitAESBC.class
+SHA-256-Digest: jdW1nufsyA27i/m5OVmcv+bwlC2gixmO2tHuBm2FnrA=
+
+Name: kz/gov/pki/kalkan/asn1/cms/SignerInfo.class
+SHA-256-Digest: BlnF4FkP/+lMiWLCgaPGZCP4wd4ci0aOACR+5KIm5N4=
+
+Name: kz/gov/pki/kalkan/asn1/x509/Time.class
+SHA-256-Digest: rk723uWzkIF37SxoJMlEGP+g8FlNkaJ+dM7l5KqLyhs=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/PasswordRecipientInformation.
+ class
+SHA-256-Digest: Ng7Oweh9mNeUCPmWA3lqqS3N8Vo0YEXvBLE0bPMqXJQ=
+
+Name: kz/gov/pki/kalkan/asn1/x509/qualified/SemanticsInformation.class
+SHA-256-Digest: lbOjWa+ctV0ehUG/LUQhra78ewwwJDYIHC7waRbHpq8=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$8.class
+SHA-256-Digest: 99gQ5PggKxYqijLzzLUY3Qx+oU2D+yyu8SxIQVT/ymk=
+
+Name: kz/gov/pki/kalkan/x509/util/StreamParser.class
+SHA-256-Digest: 2ZeSjxI7wDJC+cWvXVaWiVk7Bi/hqC9mk3wFODQvmCM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$HMACSHA384.class
+SHA-256-Digest: UIwoKOPmcyNhqySGwcPDeT0XI1TzOjXvloFCckSbS18=
+
+Name: kz/gov/pki/kalkan/asn1/x509/NoticeReference.class
+SHA-256-Digest: zFCvjy2RJLxQnDiBTdq/cQMTRitoRo01z7/RtsjD6mQ=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/TBSRequest.class
+SHA-256-Digest: ETa7wTONzyHpOxa5iz5RWCES5pXXb+3aLlI6kgl2C7s=
+
+Name: kz/gov/pki/kalkan/asn1/BERInputStream$1.class
+SHA-256-Digest: vGr9hbixtYillEcOX3o4C69FdQ1jP18ewbFiVo6CjeA=
+
+Name: kz/gov/pki/kalkan/crypto/engines/SEEDEngine.class
+SHA-256-Digest: VpHNTqX47i8CS3J1TlhB2qg/Uss5H7021b+HqG0n0Do=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/CertID.class
+SHA-256-Digest: ZPO248tuUQv0I5i6gwF3GtCnyNxfIYkvtc8VoAFyj70=
+
+Name: kz/gov/pki/kalkan/jce/provider/PBEPBKDF2.class
+SHA-256-Digest: Fwo4FsfUWclLeSODjVdHdmPNQBsqwl7J0WH5lFjRG/8=
+
+Name: kz/gov/pki/kalkan/i18n/LocalizedMessage.class
+SHA-256-Digest: S0OMsqvqyIUM2R7RP7SkN1qtkDlb81mXop8LqLuUEXE=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedDataStreamGenerator$
+ CmsSignedDataOutputStream.class
+SHA-256-Digest: yffcj3NfSumjqqIUkzV+Kmf+6WsUdRm4/6zqocD/bGo=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/ServiceLocator.class
+SHA-256-Digest: LSclkz/bXfsvmSk0exCMySyTIdp62nKiqIOXSo2sZXM=
+
+Name: kz/gov/pki/kalkan/jce/X509V1CertificateGenerator.class
+SHA-256-Digest: rZ17Mb/GFvSih+6vvvzBPUfCbC2k7xXFUBl+omzycBk=
+
+Name: kz/gov/pki/kalkan/asn1/BERTaggedObjectParser.class
+SHA-256-Digest: yS6TJa7UsfwZ85Msm5GI0een5/Gq+SP7cH/4YkfSM2k=
+
+Name: kz/gov/pki/kalkan/crypto/generators/GOST3410ParametersGenerator.
+ class
+SHA-256-Digest: iU9wvrxEW6S2yNG54URBd8gbLEAbQLZUtMW0aFfBg0g=
+
+Name: kz/gov/pki/kalkan/x509/X509CertPairStoreSelector.class
+SHA-256-Digest: wLOZCHBml8pzbTP4nluc/w/DM9OQpPSxD1YN7H1+tVw=
+
+Name: kz/gov/pki/kalkan/asn1/x509/ReasonFlags.class
+SHA-256-Digest: 85cZkGjYSZb5/0LBL5TT3OkKRXdphDraB+H1ZyOF3Dw=
+
+Name: kz/gov/pki/kalkan/asn1/ess/ESSCertID.class
+SHA-256-Digest: Lbp5OZwy3sr0TUMgwTF/B8CYREI2X7dBGkBaPA2eh2w=
+
+Name: kz/gov/pki/kalkan/asn1/x509/ObjectDigestInfo.class
+SHA-256-Digest: xCsB5Um3VIw8EjodJPH9JkhS8IR4HPpeUdTW3CyirK0=
+
+Name: kz/gov/pki/kalkan/crypto/prng/ThreadedSeedGenerator$SeedGenerato
+ r.class
+SHA-256-Digest: v9LllD/+VSWidj1k4IDplz44izIM3ZYkdJ50i4NAbWI=
+
+Name: kz/gov/pki/kalkan/asn1/x509/Target.class
+SHA-256-Digest: xaZC425cQoHudWP35WsCKtFuqpkD34zvyMirsHr4jsM=
+
+Name: kz/gov/pki/kalkan/asn1/knca/KNCAObjectIdentifiers.class
+SHA-256-Digest: bYxNPiqVe68hCcG7gXPp5dHlq5Ve5jc9vC4neePW02E=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/dsa/BCDSAPrivateKey.cl
+ ass
+SHA-256-Digest: J1vzP9X951lTtO9i4PmRF4X8HnAKZxuq+ydXh+20H0E=
+
+Name: kz/gov/pki/kalkan/pcsc/tokens/EToken5110.class
+SHA-256-Digest: b7JE6w9Y+knVr5opVtKnNJMY5cV7FWFgDLY2h9zPI94=
+
+Name: kz/gov/pki/kalkan/crypto/params/RSABlindingParameters.class
+SHA-256-Digest: 8XtfKVMvUx5L5u4frDa3jUTkeKj+gpSUAHJkJSSfaWE=
+
+Name: kz/gov/pki/kalkan/jce/provider/PBEPBKDF2$BasePBKDF2.class
+SHA-256-Digest: +wHcj8WR5voOh1MjM/cCmKIXv1uDgwL0N6HG9Qe1xFc=
+
+Name: kz/gov/pki/kalkan/asn1/x509/X509NameTokenizer.class
+SHA-256-Digest: j5kTwaPaOQTr2ci4XZ1P2niJF3jGBIPj+yKueH7s4LA=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1SequenceParser.class
+SHA-256-Digest: ZMTTpNJhKV9WkZoP4WrPl1zdGBywMD+cAQ2DzyQiG9Y=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher.class
+SHA-256-Digest: 5Wm0+DANTgEiCwqH0DxHBFCV+xaFlolQdLBETP92jjE=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCERSACipher$PKCS1v1_5Padding.cla
+ ss
+SHA-256-Digest: 1PURD3/ZtzvbJtJpXqM9grAFioMKDnglcqZ3QqMJYEw=
+
+Name: kz/gov/pki/kalkan/jce/X509V3CertificateGenerator.class
+SHA-256-Digest: tqT7dqYC2znPQyMSXHDDzB08NfPpQjfdmlumtisGPx8=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEStreamCipher$PBEWithSHAAnd40Bi
+ tRC4.class
+SHA-256-Digest: k7FIVynDoaIpC6vV+WndPtZynGMiSZs6A03IJyCtGKw=
+
+Name: kz/gov/pki/kalkan/math/ec/SimpleBigDecimal.class
+SHA-256-Digest: oVDnhi3nyuSu1zk57NJcSUmjhofvEjmZCokEfQRPKs4=
+
+Name: kz/gov/pki/kalkan/asn1/cms/SignedData.class
+SHA-256-Digest: H+TcVYqtdOrxPTzVn21HJ7R64ez9sbG7YLzbeNPojf8=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKAlgorithmParameterGenerator.cl
+ ass
+SHA-256-Digest: AoxUfbMMBPJdXVoXLdxVj589lW/6M9m4fqo742OqSyc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyPairGenerator$ECGOST3410.cl
+ ass
+SHA-256-Digest: wiyBmOjnwF4zdDcG8IZFAFzl8ob1E3SUOJEcHv2Q8TY=
+
+Name: kz/gov/pki/kalkan/crypto/engines/RSABlindedEngine.class
+SHA-256-Digest: 3z+rpVU8REQG4Gs7sUM7nDc8VqiULDY+7MtC14K92bo=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyPairGenerator$EC
+ DHC.class
+SHA-256-Digest: 9w0dNqi0U14LqqgGNydIl2WrCctnNGpmAuzhMTALE2Q=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$RIPEMD160HMAC.cla
+ ss
+SHA-256-Digest: xzR5rCMz9znrhFpVWLsXSALS7+a94pguPdIr8DkMHVY=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/ResponseData.class
+SHA-256-Digest: z+qA/QmaBQIcMEeAKWdDCCKjWBv8JdyWHzxOSpq3lC4=
+
+Name: kz/gov/pki/kalkan/crypto/engines/RSABlindingEngine.class
+SHA-256-Digest: 1/D6DmlrQKDIiF02yuI0qf7nol1ndhHTyvPtAXxG5C0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$DES9797Alg3with7816d4.clas
+ s
+SHA-256-Digest: 9gf3UpS2dl7Ornr+75bSyTrwsgQnJWiNPVCAaFHP36U=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEKeyFactory
+ .class
+SHA-256-Digest: YNKZ+zazUkr19xIyYdIEPOl3oPjSCovCeleKr2ZXrWs=
+
+Name: kz/gov/pki/kalkan/asn1/cms/Attribute.class
+SHA-256-Digest: O76qbJlBRj/AA7C6DjDwf6AiAZHCixCZ08GJ+4yTpbk=
+
+Name: kz/gov/pki/kalkan/asn1/x509/GeneralSubtree.class
+SHA-256-Digest: upcK1Gqku6rMYsUyGK/SRlHPiZHdn2FCOMLFmsA51J8=
+
+Name: kz/gov/pki/kalkan/asn1/DERIA5String.class
+SHA-256-Digest: aQ0p8DblmB/19FdBG/XKJUPIJO71ONimbC314/S5pS0=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$1.class
+SHA-256-Digest: AnIKt48w6ORtNRyqkZzg0LGCvc6Pv45rJHor/SWkFYE=
+
+Name: kz/gov/pki/kalkan/x509/ExtCertificateEncodingException.class
+SHA-256-Digest: NaonP65dJfiy4tLKy4iLy23nwEEdh2MSF39d+DRr/NA=
+
+Name: kz/gov/pki/kalkan/crypto/signers/GenericSigner.class
+SHA-256-Digest: jqjWejpSLrzwBR22JfbDduTuPWKs8Hk5gEnlkC7e3i4=
+
+Name: kz/gov/pki/kalkan/asn1/cms/ContentInfo.class
+SHA-256-Digest: N0PJ6D1LlWLz18iGu4X5ebzBTvf95wWPlIB6PMw4E2o=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$RC5CFB8.class
+SHA-256-Digest: 1J1l0rIsuctcKqTw/6erwJGsYC5GkJTbfvoozJJ9Z6o=
+
+Name: kz/gov/pki/kalkan/asn1/util/DERDump.class
+SHA-256-Digest: L0uw5Fw4gNp3FbW2hnx1r36JtL64klpGFtDg92q3blA=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSPBEKey.class
+SHA-256-Digest: eJlWN5dEg7YlDZRHGgsMjUUaksheK+w6Qar9AyWK9Fs=
+
+Name: kz/gov/pki/kalkan/asn1/DERApplicationSpecific.class
+SHA-256-Digest: hc1OHcnmDo18T0k+DF3bIO9QQDfX0vp0aQzxiy0zh9g=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$8.class
+SHA-256-Digest: T4HntPpDK4h8J/HX8vnXI34ioO7hjI/0U0SNRSLK4e8=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1Set$1.class
+SHA-256-Digest: EIuHPhP2t5JPbXeyitpvWauvuETdp8WsHATnFQu1+rM=
+
+Name: kz/gov/pki/kalkan/asn1/BERGenerator.class
+SHA-256-Digest: 8Lv8vr0m7xUbEhHV21genAXUPMW5iJwCbUF6LOIqk6A=
+
+Name: kz/gov/pki/kalkan/crypto/signers/RSADigestSigner.class
+SHA-256-Digest: yaX46RrdRJnZXzdU4LGJvl2bg/qL3h9q0Pa27asLOKc=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1Encodable.class
+SHA-256-Digest: fL/oAGID/s8kDSG9yMRrQgHXK3UGzmHX5jLHuOlo4io=
+
+Name: kz/gov/pki/kalkan/asn1/cms/OriginatorIdentifierOrKey.class
+SHA-256-Digest: x+KkEiFoHku2880UK8SKDt65sz7CKwXn/H5kBfmWv7Q=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHAPub
+ lic.class
+SHA-256-Digest: y0VJLRPnY7XsDw6+CL+CShuwD74YIp28ImSmKKT7Z1A=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$RC2.class
+SHA-256-Digest: Z+7hQJ65+/dO8wlVTX5UvstzXnKrXiyNre1pBCbZKBA=
+
+Name: kz/gov/pki/kalkan/asn1/misc/NetscapeRevocationURL.class
+SHA-256-Digest: JmRiDCJ4gK3goxEdvyBJfA13XF0BeMfkbuGP/1DzbZI=
+
+Name: kz/gov/pki/kalkan/jce/MultiCertStoreParameters.class
+SHA-256-Digest: Cav35tZjTYsZfkMN6KtxHR+l1Owqze+lhS3tF3VyazY=
+
+Name: kz/gov/pki/kalkan/math/ec/Tnaf.class
+SHA-256-Digest: Eq+Y5BpX+aUVkHOwDlhUBRdizcZ3KgycYtHnlIG9KNo=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/Request.class
+SHA-256-Digest: /irLLnwVei6b1gAykARTCbstiN/LTOEt/5vS0tLSVnM=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$6.class
+SHA-256-Digest: DkX+FnGac2r8apXVOHPwQ9Mi9+UNtpBljm3qQRrlhLk=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyFactory.class
+SHA-256-Digest: 8jU+sVbwtM6nMlZGvJVj76PkBWv4VwNaC52K0bMZevk=
+
+Name: kz/gov/pki/kalkan/crypto/encodings/ISO9796d1Encoding.class
+SHA-256-Digest: W3ly89DV67R/qAFTmulk1dPLRWbgyaPz1nNx0jTKDNs=
+
+Name: kz/gov/pki/kalkan/x509/X509AttributeCertificate.class
+SHA-256-Digest: x1sWcwzB4Sq3xlbo0wGXeGP2k/o8n701X24cqiqAa8c=
+
+Name: kz/gov/pki/kalkan/util/Strings.class
+SHA-256-Digest: KFwhO0aSGekmtIiX63kDGQNza+13OjEAeSJSaKDnZQE=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/ResponseBytes.class
+SHA-256-Digest: NYErCaoWL2HbsDJDSqdkd2SOCauB6Vy4FvhU8uJSBHY=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyAgreement.class
+SHA-256-Digest: ebZ0XzNI7Fb5cqKyelD3NWlMk6jL49xSzRzCMYGsOPE=
+
+Name: kz/gov/pki/kalkan/asn1/DERSequence.class
+SHA-256-Digest: fpCgtnJY3EPPRPsOt8tYrB7nyLYYuM46yTPP5FcNyoY=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHAAnd
+ 256BitAESBC.class
+SHA-256-Digest: QBjecuoK51g55yrnJjwspbBzJ2ZzFhFhG+MQSIPq5u8=
+
+Name: kz/gov/pki/kalkan/pcsc/tokens/AKToken.class
+SHA-256-Digest: g6Jngi1GSxBmZ/HWcJS2XBoso0cAoF9uFnmHlIGFvFE=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$3.class
+SHA-256-Digest: /DMFk90CCqr4jaZme2JIx59Yu3S1U2Jd7d3hXCV71lE=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedData.class
+SHA-256-Digest: +PfMVfWT96ZHGy+PL0J4yyNQQe45J9id67B05/zyAmM=
+
+Name: kz/gov/pki/kalkan/asn1/DERString.class
+SHA-256-Digest: EnEPw+pCzhUk2VolqGozCbVVB0V4FtX0seRa399qTmg=
+
+Name: kz/gov/pki/kalkan/crypto/paddings/ISO10126d2Padding.class
+SHA-256-Digest: AT4n9MGIv/AtR1jkkzBIM4s3zyKWNPafCUjkpERgjsw=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithMD5And
+ 192BitAESCBCOpenSSL.class
+SHA-256-Digest: ArXX9JtskMSqka0Js5v1lyXWnT4c4pxIjuKNxFzn89I=
+
+Name: kz/gov/pki/kalkan/jce/provider/RSAUtil.class
+SHA-256-Digest: IVIoaR+cF2ikT2q2Ae3elKdtnuiTli53aBNgdj09cJg=
+
+Name: kz/gov/pki/kalkan/asn1/x509/sigi/NameOrPseudonym.class
+SHA-256-Digest: GqVuJDA23tliyq1tRTsP5TP+87u1oQVLui7u1HJZMQI=
+
+Name: kz/gov/pki/kalkan/crypto/macs/CMac.class
+SHA-256-Digest: gnprkqUQJlgHm7mighanonQ41acYHOJxjI2B6MLW+ac=
+
+Name: kz/gov/pki/kalkan/ocsp/OCSPException.class
+SHA-256-Digest: UORhNA/82bFc6L7T+TtkG7//EBNmJ+lx5OTo1E8y+rM=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/SignerInformation.class
+SHA-256-Digest: sM7HUqxw0h/Sfk2UNknlfGqMMfdCweva6RwudagHyq0=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/CRLAnnContent.class
+SHA-256-Digest: 2oFwQ1pIlSWJhs4m0qW0qU5PBg1y1zQSknsEHqXWBwQ=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$25.class
+SHA-256-Digest: y6idQHHgQ3dsAHtvR8kL6/rRLqx1hP4VKLC/G9lDNP4=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/RecipientInformationStore.cla
+ ss
+SHA-256-Digest: CSYHsAu0JNp8JRX13w6ns3m5MRbQ8pUsEaJBq8AyzaM=
+
+Name: kz/gov/pki/kalkan/asn1/LimitedInputStream.class
+SHA-256-Digest: D+yKyeNYG0JMWuyncoktRJK44cQiaNLl8drSvFpAarM=
+
+Name: kz/gov/pki/kalkan/x509/AttributeCertificateIssuer.class
+SHA-256-Digest: BVmp39JaHfUuOOOHgnFYLRfBKyXovHQaW5RauMXEKBQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKalkanRSAPrivateKey.class
+SHA-256-Digest: ILFPDXoXRc2B4y4sp/KrZHr7WQkiHfxgFF2LVbTjvSg=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/AuthenticatedSafe.class
+SHA-256-Digest: SMA5LIXXqLR0alEr07xEPmjHDlhlVegYZEk0/HW1qhs=
+
+Name: kz/gov/pki/kalkan/math/ec/ECPoint$F2m.class
+SHA-256-Digest: y9G5wsWVTLmgwDsVVm1qnRMpEaCE8J5AxRdR9N3bsCo=
+
+Name: kz/gov/pki/kalkan/jce/provider/BrokenJCEBlockCipher$BrokePBEWith
+ SHA1AndDES.class
+SHA-256-Digest: 4LY7nSlcaYWM/5IgNvl1ZKunrwc27HvQkKGyiCCh9AI=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/CertStatus.class
+SHA-256-Digest: 3w0xxRmDMcIT79iWOjN7xLMjXVJSMjUK5js4K44uF9k=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$PBEWithSHAAndDES3K
+ eyWithPublic.class
+SHA-256-Digest: rpET6XspHM8PRuvMxQbdt1eg/19/5p0vm7oRCqSoUAk=
+
+Name: kz/gov/pki/kalkan/util/encoders/Translator.class
+SHA-256-Digest: wgNZu+83QeZVswIfkk+ettSyrDWtos3iHxWJk0fhXCw=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyFactory$ECDHC.cl
+ ass
+SHA-256-Digest: gQbDBEc1nchGrxoDP+H86Mlaqz1ge9eqQ8tPG65rwWY=
+
+Name: kz/gov/pki/kalkan/asn1/x509/V1TBSCertificateGenerator.class
+SHA-256-Digest: zoLd71T51u9g6ucSD8YPcKesEks02z8G3VFnV9zONoY=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$HMACSHA256.class
+SHA-256-Digest: Dlc8uhMAODWK8OkvDVOi2zG1DBNomWUjjzwTBEirDXw=
+
+Name: kz/gov/pki/kalkan/asn1/DERExternal.class
+SHA-256-Digest: AWprfIH44AT6BrkVDYWO2dZu4eDBN9pCrEzGJJuP7m8=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/SingleResponse.class
+SHA-256-Digest: tLsxsUnlG6+rrH0ipZvr63I5WOKje8b1pjRhaH1cumU=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/InfoTypeAndValue.class
+SHA-256-Digest: 8hcwJJL8WvDEgkDFda8Z7FGcHN2LFgOm3YOi27eiDzY=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$6.class
+SHA-256-Digest: Pu/h/L+LD5L2qFgM/mTayeujqjgNl8hPIz4mTgQDRhI=
+
+Name: kz/gov/pki/kalkan/Storage.class
+SHA-256-Digest: GUlj+D5d46vqRGB3jBetGXtni2ZBp3cb1zKayVQRzgo=
+
+Name: kz/gov/pki/kalkan/crypto/generators/KDF2BytesGenerator.class
+SHA-256-Digest: R0zBbM75ImQWpGtldYEHvS48U0GePbYWSycoN52Rjl0=
+
+Name: kz/gov/pki/kalkan/x509/X509CertStoreSelector.class
+SHA-256-Digest: TXvPKgRve7aO+rka2fLBb1WNRDLNtkPltflq6wH18WQ=
+
+Name: kz/gov/pki/kalkan/tsp/TSPAlgorithms.class
+SHA-256-Digest: MTEebHS1TXWPFsNvFCKOnd5DSp7+iGF/ah9Qr8a4N1c=
+
+Name: kz/gov/pki/kalkan/tsp/TimeStampToken.class
+SHA-256-Digest: vU1EqkRLxFGaOl8TLlbOTyvpXS2GT29wRrFs4QZuBq0=
+
+Name: kz/gov/pki/kalkan/i18n/LocaleString.class
+SHA-256-Digest: QarusTcaIvtluQ8wQmcLFjaW/J3LZMzGJdBdzr38VeY=
+
+Name: kz/gov/pki/kalkan/asn1/cms/EncryptedContentInfoParser.class
+SHA-256-Digest: kO273rylfkJxo+kKDfcAFA4zpfsrlDNpmHdWs5gp0KQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/KeyTransRecipientInformation.
+ class
+SHA-256-Digest: 29P8v/R/8zzXI3Xu+TXURTrwVbFrzPCT4NP3s4RN3sU=
+
+Name: kz/gov/pki/kalkan/crypto/BufferedBlockCipher.class
+SHA-256-Digest: IVZp6xJWzuJwirWTpdTk5qInl9yYOR9jn0SR5VIxMBU=
+
+Name: kz/gov/pki/kalkan/util/Store.class
+SHA-256-Digest: /psxrsNpld3efJD/S6+jJ7UUenykwPncWxgedXD4zQU=
+
+Name: kz/gov/pki/kalkan/jce/provider/BrokenJCEBlockCipher$BrokePBEWith
+ SHAAndDES2Key.class
+SHA-256-Digest: aniDJt1J1qgB/PX3P+2/2NAy4jN/i9mzoe+N/9LPil8=
+
+Name: kz/gov/pki/kalkan/asn1/x509/KeyPurposeId.class
+SHA-256-Digest: epI3fzpi7rs2C7xBY0aMWFJmhPQ1czLlfhG1oIyCtx4=
+
+Name: kz/gov/pki/kalkan/crypto/signers/ISO9796d2Signer.class
+SHA-256-Digest: CktPCzuEnHvZnTaW+NiPuvSTW+I3M3bLvHuUPPDkNtg=
+
+Name: kz/gov/pki/kalkan/asn1/x509/GeneralName.class
+SHA-256-Digest: Dgpr0O9GIv1sNe3eNY4zIswFUy0DffhtjRubZ9lsrOY=
+
+Name: kz/gov/pki/kalkan/crypto/params/GOST3410Parameters.class
+SHA-256-Digest: GGUsAKVe7bG0oSoNBai/p8GvVNqdcOaymIs0Ws00tig=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$6.class
+SHA-256-Digest: 6C7AEP/m+66oSiS3GWXRx0yKcpHTg/iyud2jbHZUiBU=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/SignedData.class
+SHA-256-Digest: 0kpjGIojyxRw5coS4BXyIZ/NKHykgQv2mIVpI3BzM9k=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHAAnd
+ Twofish.class
+SHA-256-Digest: Oqz+YV564AktRDEqVWAquJZ5VTKEzJmEtwLBg6/hueM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEStreamCipher$DES_OFB8.class
+SHA-256-Digest: C1V1G9PRYXT9PG0k6scFXFjDUwp59Ln03NWi20NTYdI=
+
+Name: kz/gov/pki/kalkan/crypto/paddings/ISO7816d4Padding.class
+SHA-256-Digest: oUQfWQHGn6zURBuat7XISPlT5eF5JJvZIE/tPXTXNdg=
+
+Name: kz/gov/pki/kalkan/math/ec/ECCurve$Fp.class
+SHA-256-Digest: LvHEovKyyI7VUI10DFaeuTCvqYYe35tRaFACQbQIvG0=
+
+Name: kz/gov/pki/kalkan/asn1/x509/AlgorithmIdentifier.class
+SHA-256-Digest: xnTC1vaaL1Zo1HdSZ75I/SkT/BiDTTvxeIVRJ3DRYIw=
+
+Name: kz/gov/pki/kalkan/crypto/prng/VMPCRandomGenerator.class
+SHA-256-Digest: DG5yErM53jQukIK/17V2jt1WWeI1Jl4SvEcFUh/u1yQ=
+
+Name: kz/gov/pki/kalkan/crypto/modes/SICBlockCipher.class
+SHA-256-Digest: qkC0a1xifTreFwHB8mNn9FtRmKojoRWUcB8DfEQ80kw=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/BasicOCSPResponse.class
+SHA-256-Digest: 0pDInZTtOOqEDqHPHN0woPBHAFRO5j195PZVQMg56Ak=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X9ECParameters.class
+SHA-256-Digest: 9lAnjdEmimk1Vjbl1XnTiIDfMedEu7QfN4tIKTsCIXM=
+
+Name: kz/gov/pki/kalkan/crypto/params/GOST3410KeyGenerationParameters.
+ class
+SHA-256-Digest: Ry3SK+CEkVS1f7MsZSpDlRGioIi5VeQjAZjPkSYT8vU=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyPairGenerator$EC
+ .class
+SHA-256-Digest: AE0gS9/TobPqmBy1AiVfZkgHfceUt+fHXwEK1Xkfq+I=
+
+Name: kz/gov/pki/kalkan/crypto/engines/RC532Engine.class
+SHA-256-Digest: hrsYSP0o+bKpLXexwHM3lxFpqPRtbpDjn/N6yAWyMO0=
+
+Name: kz/gov/pki/kalkan/util/Arrays.class
+SHA-256-Digest: McoS3zbePL8p45Y67o9cldrRGhVt2hCQgKsBjSam0DQ=
+
+Name: kz/gov/pki/kalkan/asn1/BERConstructedOctetString.class
+SHA-256-Digest: Nu+0atpLtwf5SJGzGa39DdHOPhEJ3pIEVe4RDqTnDrM=
+
+Name: kz/gov/pki/kalkan/asn1/DERSequenceGenerator.class
+SHA-256-Digest: Son3CE7RINtkSrrXs4hnKn+M+Cp2GBR+iR5Llgv4gl0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKDigestSignature$MD5WithRSAEncr
+ yption.class
+SHA-256-Digest: ea+CJtVBUniZU5hhKHh1dWFycqkI2YEJ7DpY9pkGig0=
+
+Name: kz/gov/pki/kalkan/jce/provider/BrokenKDF2BytesGenerator.class
+SHA-256-Digest: qQEq9tuEDttnSST6iFFT8j+jd8ZPN3/Mk6KBa8xJsSM=
+
+Name: kz/gov/pki/kalkan/ocsp/OCSPReqGenerator.class
+SHA-256-Digest: 6Pnuw7wzYAPifvmeGrDIqxT6EuIWUcKnfMKeOh5bncI=
+
+Name: kz/gov/pki/kalkan/asn1/kisa/KISAObjectIdentifiers.class
+SHA-256-Digest: w3UIvwOfQXDF8CrR5bAskz/B/jBiR9/zKZ0BWY+tC+Q=
+
+Name: kz/gov/pki/kalkan/jce/provider/KalkanProvider.class
+SHA-256-Digest: fOtJddFPdqzZxYn3LzFWMOfKkOXpFgUh5OqQZLMGF6Q=
+
+Name: kz/gov/pki/kalkan/util/test/TestResult.class
+SHA-256-Digest: L419lSwYK0hmnEkrdsnHIHnhyXfzTyZN8F8cKge3p8M=
+
+Name: kz/gov/pki/kalkan/ocsp/BasicOCSPRespGenerator.class
+SHA-256-Digest: pBl0xMSZ1gZwFYQI84kFPGkRZB7utmaelE07ed5Aypo=
+
+Name: kz/gov/pki/kalkan/crypto/macs/GOST28147Mac.class
+SHA-256-Digest: oIp7lds1jecW059Ym3ZE+zTp3Eq+tp/WKRN46yENOto=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$27.class
+SHA-256-Digest: WHYatkBz8WGPy1j7pe+xz+dROdEPo4AxwFq0o7U56l4=
+
+Name: kz/gov/pki/kalkan/i18n/LocalizedException.class
+SHA-256-Digest: FKKzMRmgNAMqnoT77tEtH0iT0YBMXCYIDOxQj6i6Vd4=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/dsa/DSASigner$dsa224.c
+ lass
+SHA-256-Digest: a6eMKMwlIlLVqvKBt9mGThg3w0z90T//BkmF5GDZSB0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$MD5.class
+SHA-256-Digest: QpI7ccenAqsEoJsD+PyHq+dBDMlpxugKOkBaG4sFMMY=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCERSACipher$NoPadding.class
+SHA-256-Digest: Cp9zoUi/B0Dgfa9rN/NaYgL00KQ638mpQdqbVfH78tc=
+
+Name: kz/gov/pki/kalkan/x509/NoSuchStoreException.class
+SHA-256-Digest: NVu2M7wvk74y7Fb9iizdOsYdVKSmL6rlxHpqpGbVrls=
+
+Name: kz/gov/pki/kalkan/tsp/TimeStampResponse.class
+SHA-256-Digest: jnxctie3pnt6NwJY+PwIjlgnUQ1SELN20ipx6k2EylE=
+
+Name: kz/gov/pki/kalkan/crypto/macs/VMPCMac.class
+SHA-256-Digest: 1d92F9oYBaXxQIKbKA4Z/GwgrFBsYJ34DC2g9Dv/5GI=
+
+Name: kz/gov/pki/kalkan/asn1/DEROctetStringParser.class
+SHA-256-Digest: lrL+Ijf6QjqWQqV/lf6yZRekCBRmOXAy7ZVJkg2wcEg=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSEnvelopableByteArray.class
+SHA-256-Digest: +ylONKZKIsXs5HVgSv3qsdWijQiUZWQEW2+dPGfumA8=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEStreamCipher$DESede_OFB8.class
+SHA-256-Digest: NLWF2O4Pnkh4XzTFixM8VtIQ0pPjHYeohTeBztmNWfQ=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/CAKeyUpdAnnContent.class
+SHA-256-Digest: TtYBDzoOKHh+SgmUQJOzXbCRMNjSO2VTs2k4ZFA8G98=
+
+Name: kz/gov/pki/kalkan/x509/X509Store.class
+SHA-256-Digest: ETdX2AOinrSyQ1/MlmLOAsdJg7SsqyJtN5J/dF1kv0Y=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$20.class
+SHA-256-Digest: 9mwPw9+eqq9CcQY657Um0+HvGPym3m6WVi4R93rQWFo=
+
+Name: kz/gov/pki/kalkan/crypto/io/DigestInputStream.class
+SHA-256-Digest: fGixk7z4IZ58zIBDbl1C87L+LfOZkRz+J4H9F1I67wk=
+
+Name: kz/gov/pki/kalkan/x509/PKIXCertPathReviewer.class
+SHA-256-Digest: SJoT8kaRSSzBdkwkN7XKtegVAejYiVTTB/UTP6S2n5Y=
+
+Name: kz/gov/pki/kalkan/x509/X509AttributeCertStoreSelector.class
+SHA-256-Digest: XaV5idFIML8qBNmIyhAIwMZmu4VtkjYHDI+Ap9RW36Y=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$DESCFB8.class
+SHA-256-Digest: y6AB6Sgb2KpYJmlZ1Q0ZcbiVcKzL7nh3RDVqHErWbZw=
+
+Name: kz/gov/pki/kalkan/jce/spec/GOST3410PublicKeySpec.class
+SHA-256-Digest: lcPW/RoUwuP4udjSaf3L5qE0hXTvHGyxtHLShFNPYYw=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$8.class
+SHA-256-Digest: 8JO45kbwpubQjplnhtuR4Ryh+7CJ5QvCv/TxLMcRxCE=
+
+Name: kz/gov/pki/kalkan/asn1/DEREncodable.class
+SHA-256-Digest: 2L1P3rnhDCjqW/uweB+cfXlz7HTxVm7Kr/ryYCuoKuo=
+
+Name: kz/gov/pki/kalkan/asn1/x509/X509NameEntryConverter.class
+SHA-256-Digest: H8cmn3HzvStQusm142G9U8pduvugOTWSUpmVR4jxGlQ=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$28.class
+SHA-256-Digest: VZjeHzcnDFu/V6HQxIpZ5WM2cMOrlmuFwkgzcsogmFI=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/RC2CBCParameter.class
+SHA-256-Digest: OsbyMI2PeoqpdALFR7mwk7x2gJUgZbmRiQHDmwrl0P8=
+
+Name: kz/gov/pki/kalkan/asn1/BEROctetStringGenerator.class
+SHA-256-Digest: 7O0N4DO6uIcdTmKSqfKD1GDNubBWmGwfvU6EdHW21ic=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$3.class
+SHA-256-Digest: QMm9Kp1uLc4d3sFh1QmICe1uGUDmQ62zqxlAyWBDMQ8=
+
+Name: kz/gov/pki/kalkan/crypto/signers/DSAKCalculator.class
+SHA-256-Digest: yo1pSqFnA5lh7Dczr8893te9GmOrN++JZ7RAANHNiHI=
+
+Name: kz/gov/pki/kalkan/pcsc/keystores/AKAKEYStore.class
+SHA-256-Digest: G9+tffmqN56QwoWWcbMr2I8+AzmzsZ94UxkkWlHgh5M=
+
+Name: kz/gov/pki/kalkan/jce/X509Principal.class
+SHA-256-Digest: LuXG3rcpHqirlfloKmRGWCwf/bvEkLKR0wzXuD1D27U=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1InputStream.class
+SHA-256-Digest: bN0pA+4fIHIvOD918wtfban8Q5l+cEjCP6x7i7mWd5A=
+
+Name: kz/gov/pki/kalkan/crypto/params/ISO18033KDFParameters.class
+SHA-256-Digest: NtbgzNc0UF5VMyAh+u5ag6iltvcGbkXx3ZRdaMybPB0=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1ParsingException.class
+SHA-256-Digest: blh+z2wYNVSaCiGtHv5EAgCT005mPlEHXD7WRrNhM7I=
+
+Name: kz/gov/pki/kalkan/jce/X509LDAPCertStoreParameters$1.class
+SHA-256-Digest: ry4wKxW1sewvR/KjPKbw3cJHRcuoK0yx7lzvj0EiLEU=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1ObjectParser.class
+SHA-256-Digest: ymsVWvmKWkgpAWcrgSYyfl/RMrf9DGmCfNt42top8yM=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1Null.class
+SHA-256-Digest: 1CeEx3CyfZrZr5T3VEfrqni+WJ9ABWyIgJ8wzwuaaWE=
+
+Name: kz/gov/pki/kalkan/asn1/DERObjectIdentifier.class
+SHA-256-Digest: Y2/Xv57/5f+a14CW567pxhwUf05BmRmI7SNwcbSundA=
+
+Name: kz/gov/pki/kalkan/crypto/KeyGenerationParameters.class
+SHA-256-Digest: GmBhtJ6YyDlUtKXl9P6VnTlm7KJ1UJoN9a7UFdZcT3w=
+
+Name: kz/gov/pki/kalkan/crypto/params/ParametersWithSBox.class
+SHA-256-Digest: hRdXJajX37vnX2zWYv/H7FabhXdDNgM3M5JdLw9Qfkg=
+
+Name: kz/gov/pki/kalkan/crypto/AsymmetricCipherKeyPair.class
+SHA-256-Digest: ZSHzqA1znSKKpuGAAMpPOdKLt40IUoUk2DfD5cjTMjA=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/KeyDerivationFunc.class
+SHA-256-Digest: zCatjCkaNT9W9R+DlvIIKdIhlThGtqi1tnzTSw3aDnk=
+
+Name: kz/gov/pki/kalkan/asn1/BERSequenceParser.class
+SHA-256-Digest: g9mDNq8Jqj6TqlgHq1tBLoP3I+N6Asm7dU+ISpiHZ28=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$5.class
+SHA-256-Digest: eQszHPemISMS86pCm+1kLvgCSoI8Cq7AUmLbCaJFglE=
+
+Name: kz/gov/pki/kalkan/crypto/CryptoException.class
+SHA-256-Digest: ccxonKnlrMNe3f/wug14RnCz41T+IqC4a3oqgJuObBI=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHA256
+ And256BitAESBC.class
+SHA-256-Digest: 1uuS8qdyQ3Xk3DYu5NQbyvuyL5wTmBwb7/0WbqxDUQE=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$PBEWithMD5AndDES.c
+ lass
+SHA-256-Digest: EiSmH9kffR0VVwTzveEu1IxrKD3d/q+HRXCRvywsvWs=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/dsa/DSAUtil.class
+SHA-256-Digest: 96X66FYaiK1VV9QR6ZET2UGmPhgXmWfMkgJj3O21qaU=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHAAnd
+ DES3Key.class
+SHA-256-Digest: XnaFiiZvLerwuD2ALSagGG7UMtrHeEU70WeKi00A9I8=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/BCKeyStore.class
+SHA-256-Digest: F5LpITZQarTKMYf49Fo3Q1+6f7IDvzQcKTffjFSkTLY=
+
+Name: kz/gov/pki/kalkan/util/encoders/Encoder.class
+SHA-256-Digest: yBJ02jXUdqgnS/Zp9BIr6hYJwFn4e1Jb4+Z7LwRVubQ=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$22.class
+SHA-256-Digest: XYq9GN/N9QrlX5HBt7Pot7BL6zzsDBkTtWvq/JYFAKw=
+
+Name: kz/gov/pki/kalkan/asn1/x509/PolicyInformation.class
+SHA-256-Digest: OIWFjJt+OU6i3VYgKFlIy8seeiMvsZ5dL/pT7EimNZk=
+
+Name: kz/gov/pki/kalkan/crypto/params/ParametersWithIV.class
+SHA-256-Digest: KcbYmvLjMAKpfqdTD+K1nkasrJNVNnQ/ww33LOHHabQ=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/ResponderID.class
+SHA-256-Digest: xIa7XAjp8SdxT4wtRQAZUsq/istSQ0/U24SXhmrMnl0=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509CertificateObject.class
+SHA-256-Digest: B65/zYX5ghBHw5/8jWWvFU/pkPXY+ot946f8Ohy1Kaw=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyPairGenerator$EC.class
+SHA-256-Digest: NMu7K6qRCSSd88d0LVIBybnlN5jEQLZmHILLEesBqpA=
+
+Name: kz/gov/pki/kalkan/crypto/engines/RSAEngine.class
+SHA-256-Digest: 447GhRAnbTvca2EPZtj7aXv8RVMcFh1uO5PdVtq3q+U=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/ECPointEncoder.class
+SHA-256-Digest: YJ9oDNEVJwF5L8KIo5PljAJv9ALCAZHpgOX5DxkbMQ0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$SHA384.class
+SHA-256-Digest: bOX5CtWWoowF9I5oCCYFUsI/gX8KDlpqSc5LudatckM=
+
+Name: kz/gov/pki/kalkan/crypto/engines/AESLightEngine.class
+SHA-256-Digest: zmnheQ/Re3oVmkuBb2VwLE8tXxln/j7Xp7yMqJ1CZnM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKalkanFileKeyStore$1.class
+SHA-256-Digest: qNEgJsF+C5n6lfLJzHnYK9UYpcTwqPGWMYrg7z/+Ins=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKPKCS12KeyStore$DefPKCS12KeySto
+ re3DES.class
+SHA-256-Digest: owww4c87nXKR3G6CNgxZipLoTNHlgfpS2YK0nWep2FE=
+
+Name: kz/gov/pki/kalkan/x509/CertPathReviewerException.class
+SHA-256-Digest: mcHSKtU1/wzwiEGkgvbKOH+SRRrKk87O6Tyve0Ci4Zc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCERSACipher$ISO9796d1Padding.cla
+ ss
+SHA-256-Digest: UgujTTn70jl+/HG7nCKOTTiu4bzEss+hE8thPV29mEs=
+
+Name: kz/gov/pki/kalkan/asn1/x509/TBSCertList$1.class
+SHA-256-Digest: C5nVAINxQ3LZcLqVsEgru88dPDSr10Vc38K4RddGvxA=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509LDAPCertStoreSpi.class
+SHA-256-Digest: TIghlh6tRRTuPZyPnqCKLb9/RJCX9irxw67204QuHRE=
+
+Name: kz/gov/pki/kalkan/asn1/x509/X509Extensions.class
+SHA-256-Digest: yIREbzw/B8by8D1tBvWlDMwM3b4MHDvkGTkg5r6GJ8I=
+
+Name: kz/gov/pki/kalkan/crypto/params/KDFParameters.class
+SHA-256-Digest: xOhesLlXhjXMPVcPiyjDgUlihI2aO8uh97Io6ISvoWo=
+
+Name: kz/gov/pki/kalkan/i18n/ErrorBundle.class
+SHA-256-Digest: xpkwb/fYHLPM4fOqJgj12bIxBfHAWg6HwUxhzc0DeOA=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/PollRepContent.class
+SHA-256-Digest: 4pJ0ldcex0oyHXMRIcVOwWFsT0ZlvDRcav0j8BJvtKM=
+
+Name: kz/gov/pki/kalkan/crypto/engines/RC6Engine.class
+SHA-256-Digest: xzklYD7XdFmIFRMGtNM1lr/ve89R3bJzNUC1XXooHsU=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCERSACipher$PKCS1v1_5Padding_Pub
+ licOnly.class
+SHA-256-Digest: Lweey2kqn3v29RTUFNJ7JRUVsQuZZAxWjVsvfLZoP8k=
+
+Name: kz/gov/pki/kalkan/asn1/x509/AccessDescription.class
+SHA-256-Digest: acB2xfFNGMvk4YdmswSh5oX7DUckiaffqjlVc3teKlM=
+
+Name: kz/gov/pki/kalkan/x509/extension/X509ExtensionUtil.class
+SHA-256-Digest: lw/nQZGKRivxz731tuCSZzmys4vG9DzOWmXcDBV/4LY=
+
+Name: kz/gov/pki/kalkan/x509/X509CollectionStoreParameters.class
+SHA-256-Digest: yjBKsIHL/7yLAoawMj/PC/thLiut1BUlxOIZuf48+Cg=
+
+Name: kz/gov/pki/kalkan/asn1/DERSet.class
+SHA-256-Digest: 0I4TyssHgRYsF4+OwHzHC0rVx/6bvyJAE2fK8t/4NyI=
+
+Name: kz/gov/pki/kalkan/pcsc/tokens/EToken72K.class
+SHA-256-Digest: fYjeB8Dyo5iIi8mkaQj09tzuPNvBp2j8ka2AAd4heAQ=
+
+Name: kz/gov/pki/kalkan/x509/X509V2AttributeCertificateGenerator.class
+SHA-256-Digest: ps0gNqm3t3xsaSlyY2a80rSzfjdr4LO0hj0sgnFvp5Y=
+
+Name: kz/gov/pki/kalkan/jce/provider/PKIXCertPathValidatorSpi.class
+SHA-256-Digest: 5YaltjhCsRJZu5vtg3LPQ1gYjBTdWs9TwY2UmxkayQ4=
+
+Name: kz/gov/pki/kalkan/asn1/x509/DisplayText.class
+SHA-256-Digest: hxG2PmnIXhrvzBKskRGfaYEZJ8dlGlhuUez7uksOZ1Y=
+
+Name: kz/gov/pki/kalkan/util/encoders/Hex.class
+SHA-256-Digest: Cb3upuXIJ1PIBkeoJ9bdB/6arzdUDgJjVgXcggTrlF0=
+
+Name: kz/gov/pki/kalkan/asn1/cms/KeyAgreeRecipientIdentifier.class
+SHA-256-Digest: TgtPSwdZygt8ouRd6eKMcyiATOl0EiqDdHkWz99XA6A=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$14.class
+SHA-256-Digest: iqYTY6+pUWhbKZImn9couJTp21pZIQzPEo//WgQVDNo=
+
+Name: kz/gov/pki/kalkan/asn1/x509/X509ExtensionsGenerator.class
+SHA-256-Digest: tvzt+iyaeB/HuyosXR02miZlP5YlfYBik4MPychiclc=
+
+Name: kz/gov/pki/kalkan/x509/X509StoreParameters.class
+SHA-256-Digest: 6wqSuHWZj1gZlKzBFqqrLd66MNB212yIdArgzB9r7LM=
+
+Name: kz/gov/pki/kalkan/asn1/cms/KEKRecipientInfo.class
+SHA-256-Digest: Rn/lOnfgQZPxsX1CSQzRTNwEdK6wBjnppwJ5VAr7Obc=
+
+Name: kz/gov/pki/kalkan/crypto/encodings/PKCS1Encoding$1.class
+SHA-256-Digest: NAwgAXEMj70dnMWDl59Mesa/P57LlFdDrYBIaIT6hOQ=
+
+Name: kz/gov/pki/kalkan/jce/spec/ECPrivateKeySpec.class
+SHA-256-Digest: bpb2cisRiExRzECx2/K/bj7dK4d+ZSgEl3n6ZWSxh7I=
+
+Name: kz/gov/pki/kalkan/jce/provider/BrokenPBE.class
+SHA-256-Digest: cD/tn+wlhsbzITxKqK4RHkjJJJawMu/u0xGA5YZf5eE=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedGenerator.class
+SHA-256-Digest: iRidsGaGnNE5ak8gpIYb5tPPOPE7HRjh17pnDUhYGhg=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$DESPBEKeyFact
+ ory.class
+SHA-256-Digest: RJDYwNL1cfAogLSaTr/DX0cOzBbVV6S2WVaPNhRkpgk=
+
+Name: kz/gov/pki/kalkan/crypto/BlockCipher.class
+SHA-256-Digest: O+L9OtV5ZODnGpMlszSdOtoN9vB7Z8ObMQpfZoYRPJE=
+
+Name: kz/gov/pki/kalkan/asn1/DERUniversalString.class
+SHA-256-Digest: FBehRHXO5smHj7L7Uyq7x0GixjsLG/st3N6C7RYK6ac=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1TaggedObjectParser.class
+SHA-256-Digest: qUl410ah0Dj0+HzG7lErFwMrJGRltn0onzLndawRW60=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/PKIHeader.class
+SHA-256-Digest: lLLYEvUGiE3Q0LSvBzFIc85QW6rEz+J03ZNb9J/ZNcw=
+
+Name: kz/gov/pki/kalkan/crypto/paddings/X923Padding.class
+SHA-256-Digest: 9KQEYqFCJZIAG1AN1ri4Qwg5XIV/FllSnNEnX3uLm3Q=
+
+Name: kz/gov/pki/kalkan/math/ec/ECMultiplier.class
+SHA-256-Digest: xF+JEVSWje9S5v8UTIzaoZEmTaKhymHnczptxZ/X/Og=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$4.class
+SHA-256-Digest: GdNmlVlh9Mium6JPZ5+hDzr3+7TBxCQx9Ila5V5gdJI=
+
+Name: kz/gov/pki/kalkan/crypto/params/DSAParameters.class
+SHA-256-Digest: bVshx0S29+eSE2L34+EPrX7tFlE3cJggzDla9GLjaR0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHA.cl
+ ass
+SHA-256-Digest: oHxEWQMsRVJaeXUhFXdnmqhxMnRN/hktqwoAzvoHWrU=
+
+Name: kz/gov/pki/kalkan/crypto/prng/RandomGenerator.class
+SHA-256-Digest: j2os/hehhUrNVJuI31oFdif+7hzdthoNnEPJ04WbEHA=
+
+Name: kz/gov/pki/kalkan/openssl/PEMReader.class
+SHA-256-Digest: 4jvzv7fF+8NhayJ7bT6hv7ugOGdgfAbhmPT08JGQJOY=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$AEADGenericBlockCi
+ pher.class
+SHA-256-Digest: cRfjFn87O7oBqofVsbI2EQLtmtMNVGGO/2B22pX5PcQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509SignatureUtil.class
+SHA-256-Digest: mWVSNYlK2nV+GMYDt65oxeprY2FnLf63AzBWg7WstP8=
+
+Name: kz/gov/pki/kalkan/pcsc/keystores/AbstractTokenKeyStore.class
+SHA-256-Digest: JyfP6dMSJ4wjmp7IlK+aHDRp1YjaOltDlWtULJYhQOs=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyFactory$GOST3410.class
+SHA-256-Digest: QiQRo+8YF8L5n57UE3vu6VVkp7Iuz6v+EkGFuIek8JE=
+
+Name: kz/gov/pki/kalkan/jce/provider/CertPathValidatorUtilities.class
+SHA-256-Digest: 2a8JBY4KLXTntUGRqxMwMeFerqbF2p4z93q6i0nBt/s=
+
+Name: kz/gov/pki/kalkan/asn1/x509/DigestInfo.class
+SHA-256-Digest: rGrvxlk8Y+2XqLj9fq0hPWccc3yi0nHHXk1f9qWlSH4=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$13.class
+SHA-256-Digest: Tqi+E2X++3kHfxjaiCD6TNF0W+nUERVVULEBCblX9f8=
+
+Name: kz/gov/pki/kalkan/jce/provider/symmetric/util/BaseAlgorithmParam
+ eters.class
+SHA-256-Digest: d3D4IC3SCDn1IA66B4D25tWlEg9IcXGvhy8jDhrBpHw=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$5.class
+SHA-256-Digest: ZKdSb5PrASBirAz57Zrfln2U+b7ZZtQlhg5txBAfjyI=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$DES9797Alg3.class
+SHA-256-Digest: LduzEY6SU7r0BcfevCk+8l9KXyPDV+eIl6CJEiY+/Ho=
+
+Name: kz/gov/pki/kalkan/math/ec/IntArray.class
+SHA-256-Digest: grMTAdguHfcQBzuYE7MnavuH9bvLCTsDbC18EJPqp08=
+
+Name: kz/gov/pki/kalkan/crypto/engines/DESedeEngine.class
+SHA-256-Digest: llYdIk03vUY88x37bbrEU2CQ7hJ5uvDuqt9YIqW+OIY=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedDataGenerator$Signer
+ Inf.class
+SHA-256-Digest: 3VPxeA8dUM8P8cK05i+7JGXkQVU5S50tz7sH8R/GlvU=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCERSAPrivateKey.class
+SHA-256-Digest: 94/mAMVQ3yVyQzD3zARGHYDlpljGeWyhbnONPZvqZOg=
+
+Name: kz/gov/pki/kalkan/tsp/Accuracy.class
+SHA-256-Digest: MJvNb+GwZ1cIC0EJJ2DbBYh52EMVJKcXAMe2d8YIglo=
+
+Name: kz/gov/pki/kalkan/jce/provider/PKIXPolicyNode.class
+SHA-256-Digest: tWWXT2IO0Jp/I57/fQ2drjANFu+H9Gx/wpLLg2lvsuY=
+
+Name: kz/gov/pki/kalkan/ocsp/BasicOCSPRespGenerator$ResponseObject.cla
+ ss
+SHA-256-Digest: nu+FwqReNtCaEGV/ZxOjDRmnK4Y75TG11fISm/ktu4w=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithMD5And
+ DES.class
+SHA-256-Digest: u6uX6k3CaO6enrREYsGXI+LY/1108xglZKlDAtySaC0=
+
+Name: kz/gov/pki/kalkan/util/KALKANUtils.class
+SHA-256-Digest: mXsaY67nhBVJcmhHmUsGG6+lAmyNapCv31+SZdz88SI=
+
+Name: kz/gov/pki/kalkan/x509/X509V2CRLGenerator$ExtCRLException.class
+SHA-256-Digest: zZU+FyI9uSisDmDw0OnK9cgEB2tgNv6Djk5SrSRU9mk=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$4.class
+SHA-256-Digest: fEsn/pPU9RsWc6LafLHzQGE6nfybC/FSUZBR4TW8lDc=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ecgost15/EcGost3410_20
+ 15PublicKey.class
+SHA-256-Digest: TZprVxd9eQAUMS1/CpuPqYSBeEvgpUmeNubiL/ooeME=
+
+Name: kz/gov/pki/kalkan/asn1/cms/AuthenticatedData.class
+SHA-256-Digest: 8NikcIB15Gz4DK9B/H2zFs6Rc9avYo4BKFFNAerVd0s=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X9ECParametersHolder.class
+SHA-256-Digest: IpoOWpdyputJBngWHtQqU4UU2wjPxu2t601yV1zXuWc=
+
+Name: kz/gov/pki/kalkan/crypto/params/RSAKeyGenerationParameters.class
+SHA-256-Digest: eRqkwdFbHOctjcC9uMdf7SxU16bZnQpahPPdkDKhCCs=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKGOST3410Signer$noneECGOST34310
+ .class
+SHA-256-Digest: 1IJ2r/zQMS4gxxK0xFgyzNMrNix/xsZn9DlH0PBptXI=
+
+Name: kz/gov/pki/kalkan/asn1/LazyDERConstructionEnumeration.class
+SHA-256-Digest: sI17VdP/PTTPKjfCRtOeCHKq4oJdIgLlFl+tD2vaXrc=
+
+Name: kz/gov/pki/kalkan/asn1/cms/OtherKeyAttribute.class
+SHA-256-Digest: Qxrp+OrJ+8ntAB1wld533VfZ+fpGLMPFzEJHV+aFNIo=
+
+Name: kz/gov/pki/kalkan/asn1/x509/AuthorityInformationAccess.class
+SHA-256-Digest: 6VN1fo4/dCe0OGcm8LTpx6itP0ho93gHcF1ZbNgTPG8=
+
+Name: kz/gov/pki/kalkan/tsp/TimeStampToken$CertID.class
+SHA-256-Digest: XpgomCbYwF5K79e3QJzqwTa8nzW+o10wkZSj26vXYg0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithMD2And
+ DES.class
+SHA-256-Digest: CIKV3SaUxb4bluIPidppdlMj3KTp0zMCkTIgTjXNr8s=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/CertStatus.class
+SHA-256-Digest: ckUcIO3I8kup6HxXCfENGxxr5Pmck/4ELiTlIUxueHs=
+
+Name: kz/gov/pki/kalkan/asn1/cms/CMSAttributes.class
+SHA-256-Digest: cryubRHqf9TchyUH/CsJKz0IiHvmUOgafn8zVFcIOIo=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509CertParser.class
+SHA-256-Digest: c+B5RUVOtfYEaij9paoaQUEvGFOyPB6loMaJ0W8YjH8=
+
+Name: kz/gov/pki/kalkan/asn1/x509/sigi/SigIObjectIdentifiers.class
+SHA-256-Digest: jLCEA1LJPvJsBPN8gN6PpZMpG3AK0R05GaPgEb+oeDg=
+
+Name: kz/gov/pki/kalkan/crypto/params/GOST3410PublicKeyParameters.clas
+ s
+SHA-256-Digest: AWvMEFMjM4TJeBwhett5qssPlAJLqUo/+JXjDlBTDXs=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedDataGenerator.class
+SHA-256-Digest: D8JXnkxkFddIwwrFHAKe4U/29HYe2jkw/4f+uKbSZwY=
+
+Name: kz/gov/pki/kalkan/util/test/SimpleTest.class
+SHA-256-Digest: k9vEe1PHJDhkIIhZcoybmZNRZ1AePK4LBKXalFMyQic=
+
+Name: kz/gov/pki/kalkan/crypto/params/RC2Parameters.class
+SHA-256-Digest: TJWYRyupIvZKi+9qjVYHop/XybEXezE2DSksfzxQ8lI=
+
+Name: kz/gov/pki/kalkan/crypto/io/MacInputStream.class
+SHA-256-Digest: +hm1FWw3y2cBqTaXINtd+/wxXb+k+tJsu6hTRT//xGI=
+
+Name: kz/gov/pki/kalkan/asn1/cms/ContentInfoParser.class
+SHA-256-Digest: WjBRTeNKW0zegYdTrwcvSJj6K0OinfhIhAslg5e5B9g=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/RevRepContent.class
+SHA-256-Digest: mv2J815afnpipB47MDcKtuL97XO+8al+GaFfYCH28ao=
+
+Name: kz/gov/pki/kalkan/crypto/AsymmetricCipherKeyPairGenerator.class
+SHA-256-Digest: Ch9hdph4KopUsf2y2XQ8+rUouNUnx1PiXzrFGcKqrBs=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$12.class
+SHA-256-Digest: BLaQiYH+lWbIUDfnZZ2TJOJ5S2aICE1OsEQtKqf9Tcg=
+
+Name: kz/gov/pki/kalkan/asn1/DEREncodableVector.class
+SHA-256-Digest: AJJH/58L5onatE+8Y0b2kZoeJOe4WfkVMCmF0coUlp0=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/RevAnnContent.class
+SHA-256-Digest: zBMnfOCnsNFK5oX6Sz9UKbksNuTjUt8e5Euoi7CdCL8=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyFactory$ECGOST3410.class
+SHA-256-Digest: lNRnNVRArKLF7Hibf8UZf8KVCYFRInmyAVjz91LlwFw=
+
+Name: kz/gov/pki/kalkan/i18n/filter/Filter.class
+SHA-256-Digest: uRZx3KuJfkeDoXDAiNcrEIrcisL7NU7OWtfAHKep0Vo=
+
+Name: kz/gov/pki/kalkan/crypto/prng/ThreadedSeedGenerator$1.class
+SHA-256-Digest: 35/6rHn6W8T8Rab1Kfi3ATNKV3B48lyQ0datJNVbhB0=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/DefaultSignedAttributeTableGe
+ nerator.class
+SHA-256-Digest: zb5vuTm+rAvZr7AJq4h+M3mLC2TpI6Q3WiJl+X0mLpo=
+
+Name: kz/gov/pki/kalkan/ocsp/RespID.class
+SHA-256-Digest: +wwF+kyHzj6hkBrrVs7p1WSFjFHYgyYDH19YtWJbCMw=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1OctetString.class
+SHA-256-Digest: xHo1sVAvCmb4g2TNR2aibf6G9UOXsmLOfcGBlMBilJU=
+
+Name: kz/gov/pki/kalkan/x509/X509V2CRLGenerator.class
+SHA-256-Digest: jnhsOqrZlLPsiJ3S+ozF7BpyAeghEJuZuvjK1r1lQPk=
+
+Name: kz/gov/pki/kalkan/crypto/RuntimeCryptoException.class
+SHA-256-Digest: gtRmVG130U8ojdtIkiIw/+r0jbETQAYPiEPmZ9Xlmko=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$20.class
+SHA-256-Digest: WzlQG9T1Pa5WcO1d1xe1yxDgrMnisRyppQjXVt/B8F4=
+
+Name: kz/gov/pki/kalkan/jce/provider/KalkanProvider$1.class
+SHA-256-Digest: TZhE4npRGkeqHOKTrA70bt4GYQmfuOuq92gH+yoT178=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$3.class
+SHA-256-Digest: 8bKn38kH5bs692fNAHrUsWK0hjBGncKGjTdW6jV8RyY=
+
+Name: kz/gov/pki/kalkan/crypto/digests/SHA256Digest.class
+SHA-256-Digest: kkhAmttdXDtTKHOlRpGdXdIrqCq5qkAH8Xjwipv/Z+I=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEStreamCipher$DES_CFB8.class
+SHA-256-Digest: v8RasbiJfzRZI88YSuvLryduavlvhtIhpb2HvxzXzcw=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$23.class
+SHA-256-Digest: dJB0ZaTcdBQT13/dY45YO+LgIgo9sDsLfU2PubjN9Vg=
+
+Name: kz/gov/pki/kalkan/crypto/BufferedAsymmetricBlockCipher.class
+SHA-256-Digest: KHSxPia82DmHaBMgeF89foCfpsf53cSpnTe4V6hioS8=
+
+Name: kz/gov/pki/kalkan/asn1/cms/RecipientEncryptedKey.class
+SHA-256-Digest: 46AyJW2gQEYIykHRbYmeDpNLRGhzhHc9JUOVsQjs2z4=
+
+Name: kz/gov/pki/kalkan/asn1/DERVisibleString.class
+SHA-256-Digest: U4AvvX3S75HCBRMDklRbjGioRxzrffSVApJZMNrwz4Y=
+
+Name: kz/gov/pki/kalkan/crypto/AsymmetricBlockCipher.class
+SHA-256-Digest: gbnMw4/tr/U9Rprg/aVdmJKibnV4e1c/3bIqKQhWB78=
+
+Name: kz/gov/pki/kalkan/asn1/eac/EACObjectIdentifiers.class
+SHA-256-Digest: M9sEaLPTkAuBQwalBS2l1+in9sKxYhS59CI0Lzd0XEo=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKPKCS12KeyStore$BCPKCS12KeyStor
+ e.class
+SHA-256-Digest: UTQVxtf4BpKWqUB/7pBNB6aj/2KYxoBb8rHllyXg22E=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves.class
+SHA-256-Digest: D+AesXuCEH5eYAccoOcT24LoMxXrTGrql7sYwxYf0IU=
+
+Name: kz/gov/pki/kalkan/jce/provider/KalkanGOST3410GTPublicKey.class
+SHA-256-Digest: He/ogXWSX3vyo9bj1hxB1FA9q3Y3TE6/l+J6lUC2nlY=
+
+Name: kz/gov/pki/kalkan/x509/extension/AuthorityKeyIdentifierStructure
+ .class
+SHA-256-Digest: 1t9f92fJYqQJ/NZqvRMNkoJQL5Lq0SiHUmh9J/MTTHg=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$1.class
+SHA-256-Digest: 5BTHn4kf9KdWiFEYrmZeWNQGlNO0Bq6lYFqQ4zyreCA=
+
+Name: kz/gov/pki/kalkan/jce/spec/ECPublicKeySpec.class
+SHA-256-Digest: VGea54Nafr0LQKs5rWye0NK+wC+UIKoKJi9I5r90GsI=
+
+Name: kz/gov/pki/kalkan/crypto/params/AsymmetricKeyParameter.class
+SHA-256-Digest: Z9QlX0UGLJK0TzyNQU0AnX3laZOnFDWKIZ2bUxihaj8=
+
+Name: kz/gov/pki/kalkan/crypto/io/MacOutputStream.class
+SHA-256-Digest: GNxWjxpFq4QK6LTcqguUNiDyqeKnGEuOIJUWGzs5LHs=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$10.class
+SHA-256-Digest: siKDjNrthtL7fXkquHuHR7OAG/I8cjumI3EGjBjOXow=
+
+Name: kz/gov/pki/kalkan/jce/provider/WrapCipherSpi$RC2Wrap.class
+SHA-256-Digest: nwlMyae5/FJIgm/Gbm43dr28Ly+KhMgD3LpyKy0OnOk=
+
+Name: kz/gov/pki/kalkan/jce/provider/AnnotatedException.class
+SHA-256-Digest: VizB1SAbmah0Pd/YV0CSt5DrFOUAX8cTmG+XPs9wPQo=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/dsa/DSASigner.class
+SHA-256-Digest: BCN5EnIzF38XOP3fad2c6A0CBOXIgk977xsQHaKzEL0=
+
+Name: kz/gov/pki/kalkan/tsp/TSPUtil.class
+SHA-256-Digest: hCf7ODJam0E1w+k0jWNc6EKigcjXBoIucMCkGfl7LRI=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/GOST3410PrivateKey.class
+SHA-256-Digest: 3/kY65V5CqE+i10FeuL9J0AOr7IZRYWcfFQyWZ5AwBQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/PKIXNameConstraintValidator.class
+SHA-256-Digest: TGk/O/lgQnhx1kOHYDKrIA9IyR4d9t3nnhN8gWhZkWo=
+
+Name: kz/gov/pki/kalkan/crypto/DSA.class
+SHA-256-Digest: jzk0Ly/tF1tp7oDWuy8yLdjefONdv6A4Y5w5AiWWvJg=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/POPOPrivKey.class
+SHA-256-Digest: 8JawYN73k63H2T6sz1UPyw5OPkKeePqKc0PjhBKuMgY=
+
+Name: kz/gov/pki/kalkan/asn1/x509/X509DefaultEntryConverter.class
+SHA-256-Digest: 64SX9X8NnA8tG8J0j2eCdG/r9nhVMsMAukClIS93Y8k=
+
+Name: kz/gov/pki/kalkan/crypto/util/PrivateKeyFactory.class
+SHA-256-Digest: jWZj6jz2A9OmsdlvS3PIAkR6t3v9P/9W0CrIKTOj3KQ=
+
+Name: kz/gov/pki/kalkan/asn1/x509/V3TBSCertificateGenerator.class
+SHA-256-Digest: vZPgKJYuckst8gze5U31KbPFYll44hfU4tlaw2SHdxo=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEStreamCipher$DESede_CFB8.class
+SHA-256-Digest: GImrITKj8eI3d6Uj/O8KPn7cMZlFjfklgB9FD0WKcWA=
+
+Name: kz/gov/pki/kalkan/crypto/CipherParameters.class
+SHA-256-Digest: Ay+TWD+RXF01hIM3vnz5FtbzXOlDAMr2eyf92HO3kB8=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$1.class
+SHA-256-Digest: /JkBYIYi7LHMqLRdjkxldPzJD8JCsXAz7hvqMaHzg0M=
+
+Name: kz/gov/pki/kalkan/jce/provider/ReasonsMask.class
+SHA-256-Digest: mZuZAGbvGByqDiS/IuKz8b39GqThBkIFped5emJxnUA=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$2.class
+SHA-256-Digest: jJHrwmJpvJWlVxFpLgdDzmy85zsTD73+PhQDPvxA7tk=
+
+Name: kz/gov/pki/kalkan/pcsc/PCSCUtils.class
+SHA-256-Digest: 3RpMf1kXV4LkkWwLgVy2HDu/K8fCYCyhwOmU7r+pjbM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKGOST3410Signer.class
+SHA-256-Digest: Z7sh22lXGVPms7MSWiulsTwBy3O1pzpEkjtYpy5GmUA=
+
+Name: kz/gov/pki/kalkan/jce/provider/util/TumarBinStoreUtils.class
+SHA-256-Digest: L9oM6H6dRm0ybg5FtyhzlWp9Feq8RgDQ4MNfPDZxqCY=
+
+Name: kz/gov/pki/kalkan/i18n/MessageBundle.class
+SHA-256-Digest: k5op8eIntvwBrzu/j66mexHwNlbeElWxT+uBHuM1bNI=
+
+Name: kz/gov/pki/kalkan/util/encoders/BufferedEncoder.class
+SHA-256-Digest: SGe/l7XGvpNRv7WvuiZ3+L5llGQj1B9twzTImPfb+/Q=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$21.class
+SHA-256-Digest: dJ0E+aQOVade6GtJrpiHCwu5JkrNZGw9I+M3jw3oY1c=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSEnvelopedDataGenerator.cla
+ ss
+SHA-256-Digest: ZL1m9LsN4EjA2IfbcfryTkAwPzBTzduB6x3yiCnD6Hs=
+
+Name: kz/gov/pki/kalkan/crypto/params/KeyParameter.class
+SHA-256-Digest: +KGvClc0htV+HfkpDRjJRpUwmFG7ir5/oolPmzWBscc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKalkanFileKeyStore$StoreEntry.
+ class
+SHA-256-Digest: 1K5M3GqileBR6pGzwm0LC+TcHUdqvgtaLQur1Z/0t8c=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedDataStreamGenerator.
+ class
+SHA-256-Digest: 95L2j55WDg++d+MrS2chsNHRcllWL5tuOopW96U84QA=
+
+Name: kz/gov/pki/kalkan/crypto/params/DSAValidationParameters.class
+SHA-256-Digest: Sqm8M1H+leXoyfVE8+4Wzkx+VxAP7Ey4cBPDYKDF8qM=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/OCSPResponseStatus.class
+SHA-256-Digest: w3+L7ANhj9K0AVm0T/DmtKKbDnDxfNDZZ81fbc38sCA=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/POPODecKeyRespContent.class
+SHA-256-Digest: 0LB0WjB7eghsvb3YLMIXIxwkHrgjyJGS48aLfpN4wQA=
+
+Name: kz/gov/pki/kalkan/asn1/ess/ContentHints.class
+SHA-256-Digest: CiuomDMHDAKfqXz4PQKjXw3eBjdBNGKBoGHrCO297SY=
+
+Name: kz/gov/pki/kalkan/ocsp/OCSPUtil.class
+SHA-256-Digest: afgsG6rbnaBk0jE6H+eO8LR3COaKUw9tOHvixPBtgok=
+
+Name: kz/gov/pki/kalkan/asn1/BEROctetStringGenerator$BufferedBEROctetS
+ tream.class
+SHA-256-Digest: QEfkVLKIXwb8qKcfWbMpGrx1ctD76OF7bV6hKs2GAXA=
+
+Name: kz/gov/pki/kalkan/asn1/x509/X509CertificateStructure.class
+SHA-256-Digest: PjJO9Pj2rXUFLZrFWofjx8fxzFXb8t59MKsQku/uu4s=
+
+Name: kz/gov/pki/kalkan/crypto/PasswordConverter.class
+SHA-256-Digest: 0h16+ejbrzddCgom80LBkkuDy+WBHkIAXuryea9Xxi8=
+
+Name: kz/gov/pki/kalkan/jce/provider/JavaKeyStore.class
+SHA-256-Digest: 6NviGVun7Whfeab6q46Af6apgLP9NNReZxNhGBtHHrM=
+
+Name: kz/gov/pki/kalkan/i18n/filter/SQLFilter.class
+SHA-256-Digest: kEI2ELozKMO39nMZV7/qF9xRipQ3VFx4sgzsMJHSAuA=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithTiger.
+ class
+SHA-256-Digest: 5yIPxmcxuebaFppPCBjDHDjIISfmRQ4WVuyyyEKpxnM=
+
+Name: kz/gov/pki/kalkan/crypto/DataLengthException.class
+SHA-256-Digest: NhatwnSS00CmI65oPfRqMCAIsqijeIsrcdy32PrTQpk=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithMD5And
+ 128BitAESCBCOpenSSL.class
+SHA-256-Digest: bwXJ8i1qifmEYEGeTPehLCDMEUoEXWIAm97Op93d9AU=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/PKIFreeText.class
+SHA-256-Digest: a5iCDZrqwHAw4FdvUvtQLmmZOLPAS5MgUaBG5rxQsFY=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ecgost15/EcGost2015Sig
+ natureSpi.class
+SHA-256-Digest: U82/homuG7rJFJC+A3EpVTce8W4mzRRmHhTe0vGvJlk=
+
+Name: kz/gov/pki/kalkan/asn1/DERBMPString.class
+SHA-256-Digest: mNVHWyZ2V2sJmyJy/YNp4tsC7wI/JvYT2I1nOGXCqQY=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyFactory$X509.class
+SHA-256-Digest: xttafde5uTsjAI/4fHf7jb0NsVY6I0iqcrwKO1G5Gsw=
+
+Name: kz/gov/pki/kalkan/crypto/params/MQVPrivateParameters.class
+SHA-256-Digest: c7injEIGdkAzA0RY/UWPERHnALlGNVTRVJK5ei2JSWc=
+
+Name: kz/gov/pki/kalkan/x509/X509Util$Implementation.class
+SHA-256-Digest: KVYnlzRPfj4f8CM+tfmaBhpN499s4ueF0/Fn2p74jWM=
+
+Name: kz/gov/pki/kalkan/asn1/x509/RSAPublicKeyStructure.class
+SHA-256-Digest: LjDcw4RkG1YYut/r3cTnWcTfPKp2Ee1fxGOyj4UgXDQ=
+
+Name: kz/gov/pki/kalkan/asn1/DERExternalParser.class
+SHA-256-Digest: YhSUQpnJxhcG2CVGAoJMJ5LYQvp3hCAAJ47oA+6nPrs=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$SHA256.class
+SHA-256-Digest: al+ReIxpgrXKf4F3JxrCPP7AlshZ3KnFJ5BAHMcW8+M=
+
+Name: kz/gov/pki/kalkan/asn1/BERInputStream.class
+SHA-256-Digest: dnrh5VsgxDM9F9rieFDXoruockB2SUzjcWdFqAaYd40=
+
+Name: kz/gov/pki/kalkan/ocsp/SingleResp.class
+SHA-256-Digest: EVOK3HaNeJU+kaHcJKI+bBV5pxypQC9JH6kjEix9P08=
+
+Name: kz/gov/pki/kalkan/ocsp/UnknownStatus.class
+SHA-256-Digest: DMZ3cXFEbefIrmz7Vybuw2+HO89QxtAzeKFD4Lf73pk=
+
+Name: kz/gov/pki/kalkan/asn1/x509/TBSCertList.class
+SHA-256-Digest: 0fgegr6jyQMwXMCFfluz32uarvxDTe9x4yY+hdvulqU=
+
+Name: kz/gov/pki/kalkan/crypto/modes/gcm/GCMMultiplier.class
+SHA-256-Digest: H6xMqSxdLhppC6y9QDCr3g4Yk9TGvYcXtMsaC3az7TA=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/dsa/DSASigner$noneDSA.
+ class
+SHA-256-Digest: wAMWAMXUU4sVRZKavdDJ4RmwX/24z2S+gZXIbfTmPhs=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$11.class
+SHA-256-Digest: Zzms3cM+yfyuXuYHDw7H9dWrpOer4HSlXJI0ecfNjVI=
+
+Name: kz/gov/pki/kalkan/crypto/macs/OldHMac.class
+SHA-256-Digest: Li1R4FXdG+q8CWHt3BAfjTk4TJ+s3R4S4lmhsjIesRM=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$7.class
+SHA-256-Digest: AXGNzIyUh41qaaMmMLpLiqlQZyJBm4mPriTuzHD8Hbk=
+
+Name: kz/gov/pki/kalkan/math/ec/ReferenceMultiplier.class
+SHA-256-Digest: sUlVFvmiRdDY9oiHWCFqpUlvc88ZA6vPOvhxmeVbAjM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKDigestSignature$SHA1WithRSAEnc
+ ryption.class
+SHA-256-Digest: bvySMULxn4UM/D0+oGOXJ0CVKAsdKgGlYmN2XbZpFpk=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$18.class
+SHA-256-Digest: Mu1lsm17FwTobxI2FbVNBYRMDeoxSIuypBNX5okCoaQ=
+
+Name: kz/gov/pki/kalkan/asn1/BERSequenceGenerator.class
+SHA-256-Digest: 803bgqV2ww8XvaOVs0XbCodY2ASRX6A0A4n2onMPVT8=
+
+Name: kz/gov/pki/kalkan/asn1/DEREnumerated.class
+SHA-256-Digest: W8zRkI8X9MeyPI0XE1WmD2WTg6/ArynFdMSTf2K2dvc=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$2.class
+SHA-256-Digest: TDmHzNYCK1DtGWN6kq+7qC1upkJv9W8QbulZ+KeGcA4=
+
+Name: kz/gov/pki/kalkan/util/StreamParsingException.class
+SHA-256-Digest: 8tKFGB4LHsRvdvPJ2Q3Uyntc5F53/WJQq0/722seOvg=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$PBEWithSHA1AndRC2.
+ class
+SHA-256-Digest: Fk7l2fE8exPEMvy0lE0C4+YoeeK9xf6ktnETkRjURi4=
+
+Name: kz/gov/pki/kalkan/asn1/DERBoolean.class
+SHA-256-Digest: n2cf3RVguq14w5pXIfQP+Flrt+U5t9s0T7eWY38yyuw=
+
+Name: kz/gov/pki/kalkan/jce/PKCS7SignedData.class
+SHA-256-Digest: K29jQyK71n56g3nakljDIA/JSdt3kEHB0P8q03Lzi5s=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyPairGenerator$EC
+ DH.class
+SHA-256-Digest: fBMjE8ywDI97vDA+EY7REpm9wBCHC2usm1IG/ZYDzYM=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/CertReqMessages.class
+SHA-256-Digest: tDSO92kKSSgOK0vOd6qHK6+CwyX/PQmxxVKY4GEoCOg=
+
+Name: kz/gov/pki/kalkan/crypto/params/ECDomainParameters.class
+SHA-256-Digest: 44PpupoWby6mq+ofJaOh1IFIjkINLmfUtv3A0ZuCAJ8=
+
+Name: kz/gov/pki/kalkan/crypto/modes/GCMBlockCipher.class
+SHA-256-Digest: 2GA98/TcT31e6BcXMLlyG17pbFkArnX+hGA6+cW0+yA=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyPairGenerator$EC
+ GOST3410.class
+SHA-256-Digest: zxL/xFz7LhbaY3PumrO+J5QAoyHcAd0o8S1jaiuN9gs=
+
+Name: kz/gov/pki/kalkan/asn1/x509/qualified/TypeOfBiometricData.class
+SHA-256-Digest: 6VvzFPgaw7KUJU1Vi0zeJrqAZRWgLDBdtFLQ1kDu5nY=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSProcessable.class
+SHA-256-Digest: 9qtNS+pTrYsScBJ1ECXKblHuZNd45DlK1S50MSNq4xc=
+
+Name: kz/gov/pki/kalkan/tsp/TimeStampRequest.class
+SHA-256-Digest: FGP+aabFg/216t1nk9O1zeteohwguEF0snaBM93Bq34=
+
+Name: kz/gov/pki/kalkan/asn1/x509/DistributionPoint.class
+SHA-256-Digest: eSJQgaXQGLdEjRbZ+H+Vl+f7z9+LtAxb3B+13cWQzS0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$DESCBC.class
+SHA-256-Digest: M3aWPsJ/+TJ04lZ7VBhc/5NSSlQnTyw22uynP3JBGNk=
+
+Name: kz/gov/pki/kalkan/jce/provider/PBEPBKDF2$PBKDF2withUTF8.class
+SHA-256-Digest: GqzGM7Wpw5zdvEhpF31uWm/G+mtdTNKUt0MtprR/Aok=
+
+Name: kz/gov/pki/kalkan/util/encoders/BufferedDecoder.class
+SHA-256-Digest: P0jKurpjW7lJE2uIdk2PzflJJUtKVHq3+xNaIFxQye0=
+
+Name: kz/gov/pki/kalkan/asn1/cms/CompressedData.class
+SHA-256-Digest: yq7DMCh+tVjqJEwvmdAGI1pX2jUzjk6Bgt3FfUjGVzU=
+
+Name: kz/gov/pki/kalkan/asn1/DERTags.class
+SHA-256-Digest: dOpwFJBJhnI+KsKqFvwaR3Bcw2Sxhk36/c0KVsb/QYo=
+
+Name: kz/gov/pki/kalkan/asn1/cms/IssuerAndSerialNumber.class
+SHA-256-Digest: dRaqrnAjk31SgD03mA4mTUjOvvl0N/onYzZDZNZoo9A=
+
+Name: kz/gov/pki/kalkan/x509/util/StreamParsingException.class
+SHA-256-Digest: 9QT+BrcoqDqploMo1yf+JmxgTpmYgA0UyyQR8ZMlFL4=
+
+Name: kz/gov/pki/kalkan/crypto/io/SignerInputStream.class
+SHA-256-Digest: ZZG+jR9mqNPPwuWpqr9oBM8TdikKq87jX5tuI2c7XO8=
+
+Name: kz/gov/pki/kalkan/util/StoreException.class
+SHA-256-Digest: XTG6Oq+rB+/nDlEZAp5zskbKlDIOd/Etpo04EVB8Gaw=
+
+Name: kz/gov/pki/kalkan/asn1/ess/ESSCertIDv2.class
+SHA-256-Digest: fAk1erhdJUmNtZ9TNHJw3zv8LZDKWCJL5SVeUIRLddQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$GenericBlockCipher
+ .class
+SHA-256-Digest: SBUPr4VdVAZCvEMiWXdUUAorrkAoKxNjSV33gFdrm7c=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECObjectIdentifiers.class
+SHA-256-Digest: 4Lug2JhU585TffytBTU2759KZBpRrGjwAx8cjgW6JDo=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/MQVPrivateKey.class
+SHA-256-Digest: crzxTT0GOWu09wUAMI+fOnkFDX9fA0CrEPvaF/r3jzM=
+
+Name: kz/gov/pki/kalkan/crypto/params/GOST3410KeyParameters.class
+SHA-256-Digest: ZYgSVTeYTwcIEdFYqqI5tepgwiZu2xynv4ze6h8Ac5I=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$GOST3411_2015_51
+ 2.class
+SHA-256-Digest: 7pKjs1nlWTbllecEo1vwx2pb2/07vDn62cm6QQMZCEk=
+
+Name: kz/gov/pki/kalkan/tsp/TSPValidationException.class
+SHA-256-Digest: dQm8g94Smi6aD2QIVUKMaDRoTBtHZRuC4ERZC4PPKoM=
+
+Name: kz/gov/pki/kalkan/crypto/modes/PGPCFBBlockCipher.class
+SHA-256-Digest: nOxhiq2AQHBTGKzGfGQgE/Lmn3mN7dYc6TREx/6E+dY=
+
+Name: kz/gov/pki/kalkan/crypto/signers/ECDSASigner.class
+SHA-256-Digest: /EeUrf1ikkTQ0SmtCSgf6CY+seFNoHsunnItswJwBX4=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$13.class
+SHA-256-Digest: 5lVnMUJbiHvX+0Y3EENyBGGn5K5oFHiQrHhOj/fxdus=
+
+Name: kz/gov/pki/kalkan/pcsc/keystores/AKEToken5110Store.class
+SHA-256-Digest: ORhNLLTs1JbGG8AM6lPTiOaj/4r+WiZxQtrYZ9fvPxk=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/CertRequest.class
+SHA-256-Digest: rKP6pyjhCH3bu8bcFJ/hKZnbJas93MB1pK/2bslos/o=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyPairGenerator$RSA.class
+SHA-256-Digest: 8oRjdZkVKNPsf3oIdNkfNlBYQAVs1HFtdAQJY8BkqLk=
+
+Name: kz/gov/pki/kalkan/jce/provider/PKCS12BagAttributeCarrierImpl.cla
+ ss
+SHA-256-Digest: MMTfyGBDbYlSQ1WTQasMmiFKQ+PZCjkXsaczyB0Lbpg=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/SignerInfo.class
+SHA-256-Digest: sNZnfNTQ5WHdH4gRr/EtGqWucdflzB6NgH2p5Gr1k3E=
+
+Name: kz/gov/pki/kalkan/jce/exception/ExtCertPathValidatorException.cl
+ ass
+SHA-256-Digest: eTQ+HewdjDS4FylYrgHFM/Rc0awfzdwdAQgiaY8lt0g=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/OCSPRequest.class
+SHA-256-Digest: SDr8nAnbR4edZS2Csqt9iUlvRO6htU2mUXlCJ40O8N4=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTObjectIdentifiers.clas
+ s
+SHA-256-Digest: ffbBuWIwCqfEwtg4iNIvlNH7sHrMtJLwW6G6IvFvlPc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$RC2CFB8.class
+SHA-256-Digest: +X7nJdd48ZlcERn6xX1WYm6BzxVLwckNzXPrKHl3L3M=
+
+Name: kz/gov/pki/kalkan/jce/provider/OldPKCS12ParametersGenerator.clas
+ s
+SHA-256-Digest: hvw0lZKBEH9dMeUokWMPctyTfHok8O3VM8/wZhCOnaE=
+
+Name: kz/gov/pki/kalkan/jce/provider/CertStoreCollectionSpi.class
+SHA-256-Digest: b9SW8WYTeDnEwUegIYz/0Ea1u4rvdK5b/1EimfgbDaQ=
+
+Name: kz/gov/pki/kalkan/crypto/digests/NullDigest.class
+SHA-256-Digest: YbzxKkoD1dlS7Om0mqyubn60QiNxuoBp3w3HhDxdHjA=
+
+Name: kz/gov/pki/kalkan/crypto/Wrapper.class
+SHA-256-Digest: oqZR6tBFJO9g0nYMszBFO3c8+LXc+xDUdh+R3I6409g=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKAlgorithmParameters$PKCS12PBE.
+ class
+SHA-256-Digest: 7395V0A667YZBSqIK5JwayqQcKcU77OII4k7N6q6HYo=
+
+Name: kz/gov/pki/kalkan/crypto/params/DSAPrivateKeyParameters.class
+SHA-256-Digest: iUeDtnya4Ak3H3LawYDZ7aNLPXrKd/CO17WGObOMvxE=
+
+Name: kz/gov/pki/kalkan/crypto/params/ParametersWithSalt.class
+SHA-256-Digest: a298tDWGKujqvkId2I2F2ne2v9qp30DrmRM7WMCluCE=
+
+Name: kz/gov/pki/kalkan/asn1/x509/PolicyQualifierInfo.class
+SHA-256-Digest: Bd3xaeeWqXzZDUStj1H38uyv6jz0BwxDEioCt3zZSv8=
+
+Name: kz/gov/pki/kalkan/crypto/digests/MD2Digest.class
+SHA-256-Digest: qnGeldDA42XeiVZnbYumhFOxyu37xu2xeG/EQr5c3rY=
+
+Name: kz/gov/pki/kalkan/crypto/generators/ECKeyPairGenerator.class
+SHA-256-Digest: OMSWGOxKxbamYUGP9WYG7pPxxhb4zX4QsLPJKICfzrY=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/CertReqMsg.class
+SHA-256-Digest: T3ptdVmI68+NkvOU5cRmFmLxdvKoIwKH4dxBj5eBMCs=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$BufferedGenericBlo
+ ckCipher.class
+SHA-256-Digest: MTA2/+A1x9B7wv+9QyW+qJAHOQ9ZQ2JmumivWOGHeGE=
+
+Name: kz/gov/pki/kalkan/jce/ECGOST3410NamedCurveTable.class
+SHA-256-Digest: kCErHt8SphVySutxFRlZaGv2dhE3soa0A7/sJswX8GU=
+
+Name: kz/gov/pki/kalkan/asn1/x509/IssuerSerial.class
+SHA-256-Digest: 8Ipf1a2ZbjQBXYOPXE10WUdrNgLqEjCgBhMS7lgLfgo=
+
+Name: kz/gov/pki/kalkan/pcsc/tokens/Kaztoken.class
+SHA-256-Digest: BUV8Ksw6WmizWFcuDwkkCTKHniXfa2n23dOBlp7KTjc=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSCompressedDataStreamGenera
+ tor$CmsCompressedOutputStream.class
+SHA-256-Digest: wtaz5EiJ/l4h4CGO5k7bM1C1xtcxpaJKB0zI5DrTimQ=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/ECPrivateKey.class
+SHA-256-Digest: J8GwVrgy9Mqy1iP9J4kTrQ4winVfv/B44Tb7vc39S8Y=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/POPODecKeyChallContent.class
+SHA-256-Digest: T80dJvIEgnfKFpZPwn/slb+gLGlC0L7a14A6BVUxcmA=
+
+Name: kz/gov/pki/kalkan/tsp/MessageImprint.class
+SHA-256-Digest: phuxs/0zAjgTRfD3CXiVSD3T+7XkFSGQhGjW6uq2O2s=
+
+Name: kz/gov/pki/kalkan/crypto/digests/MD4Digest.class
+SHA-256-Digest: WjSJ4vBMuOnFwZRtRx50kagi6g1u2CGZFSGrimSwaOo=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKPKCS12KeyStore$CertId.class
+SHA-256-Digest: dyo+sk8Im9Tf3jwalyBNOap5bDOgS31EpLM9j9M0Ygs=
+
+Name: kz/gov/pki/kalkan/ocsp/OCSPReqGenerator$RequestObject.class
+SHA-256-Digest: NZQDBhBRM61orM8j1GWKLpJxav9lXp/IKqssPvOE7MM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEECPublicKey.class
+SHA-256-Digest: EPV7qWjDTluTtXRZqkQeIQiKPOMHrvOIJzU69t9ppeM=
+
+Name: kz/gov/pki/kalkan/asn1/x509/TBSCertList$EmptyEnumeration.class
+SHA-256-Digest: RXs2WqlGrS08i+L3IcymZ4f7ulaaBpyg9CbKETobetk=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/ProofOfPossession.class
+SHA-256-Digest: pv/j3sismM8wSUsnx1CSXx21XKx5TIAxcGKWaFXh7R0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$HMACTIGER.class
+SHA-256-Digest: STRuqJiVjFJ20svl830nSHTRiju2eyeFtyDruDJUqWU=
+
+Name: kz/gov/pki/kalkan/crypto/modes/gcm/Tables64kGCMMultiplier.class
+SHA-256-Digest: QdS5s04gVGsadurNNOqPYq9T4r4hpesIJj9MRMl6h70=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSEnvelopedDataStreamGenerat
+ or$CmsEnvelopedDataOutputStream.class
+SHA-256-Digest: dMr28tcwJPubEEtbg/IIqFsmZeWNaMfZP7wL5HY7kmk=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$5.class
+SHA-256-Digest: c8CfW0HJIrffN2k2AlE5Dz7pi8EioIRuLiJIgFGc8Mk=
+
+Name: kz/gov/pki/kalkan/openssl/PasswordFinder.class
+SHA-256-Digest: 6+8bs1dORBh2hb7aYnxWTILubWxW2cf57bF5RBR6+3k=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$HMACSHA512.class
+SHA-256-Digest: mpXhaq1yoc3xGb4IXD5x6sdoco64w8GOgQPVNj5ZH7k=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/CertId.class
+SHA-256-Digest: Fk1isSZqphBw4DKfM5/YJpFN/xbcSLfRcMOi1aJUEXg=
+
+Name: kz/gov/pki/kalkan/i18n/MissingEntryException.class
+SHA-256-Digest: BypgEiEV2JOk7gYQ/d8rMYDV+8Ee9n15RUTy2Nr8Drk=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ecgost15/EcGost2015Sig
+ natureSpi$RawEcGost3410_2015_512.class
+SHA-256-Digest: Y+DMGjUxqW56tv54agB22PnMr1h1RzclZ2GeEjFEvFQ=
+
+Name: kz/gov/pki/kalkan/crypto/StreamBlockCipher.class
+SHA-256-Digest: E91mmWJ7RdJRtHLP2cIXp6csAU0TpDMO2T1ZkLgDaDg=
+
+Name: kz/gov/pki/kalkan/i18n/filter/HTMLFilter.class
+SHA-256-Digest: BR/evBjw/Ff+ETaKn1LPyvuHy42GbK++E7yjkyBzFC8=
+
+Name: kz/gov/pki/kalkan/asn1/x509/TBSCertList$RevokedCertificatesEnume
+ ration.class
+SHA-256-Digest: xajL0ruq2VGMLWkurnhbzJiLChiT/cIEJ+raEQRDbD8=
+
+Name: kz/gov/pki/kalkan/crypto/engines/AESEngine.class
+SHA-256-Digest: yajLpJf/ZGf1W4hnlWGiIYdbomIP47HIfqr1kgJGzvc=
+
+Name: kz/gov/pki/kalkan/jce/ECPointUtil.class
+SHA-256-Digest: LfLwBAx4XZk9y0/CBMoVycbBtI/2KgEyKNMMcBqX4ic=
+
+Name: kz/gov/pki/kalkan/x509/X509V3CertificateGenerator.class
+SHA-256-Digest: 5EIzLcKBZ9ViMEYf0RJPbAaCM/UGn93jhPMXtBZo2Ds=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$26.class
+SHA-256-Digest: K40m68eSdyFWO7owHNHnYkXEuvqNLOJjxHJpGA74sIQ=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/PKCSObjectIdentifiers.class
+SHA-256-Digest: rkO9+Yl5II3jvld3FQ/n3U9rche5tR0NlygnL3/FOjw=
+
+Name: kz/gov/pki/kalkan/asn1/nist/NISTNamedCurves.class
+SHA-256-Digest: Ps3wn3/B9ztKCcJXscREBMsBnWwLjAMSAKwXLC230uA=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$RC6.class
+SHA-256-Digest: rcD803B6E8PwTFtkLietavMBOuhMmkHS0id5+HTApqk=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKAlgorithmParameters$IVAlgorith
+ mParameters.class
+SHA-256-Digest: IKB3MOupi615N4uVy8M56UTD0Zesdk2lzFH2HTY2pek=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/SinglePubInfo.class
+SHA-256-Digest: bT9yolpd7W8zYMlVV1QlQT1Om8MTIGxjCNYZdTSzSxI=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKX509CertificateFactory.class
+SHA-256-Digest: KDP0PjSuGbuLMHv/MD25Ghpzpu7mWOlEl+cCDOYYd7w=
+
+Name: kz/gov/pki/kalkan/jce/provider/ExtCRLException.class
+SHA-256-Digest: y+DF401rJbzJ21ybvsknd1+9Gp0FYYP3t/oXaSItfVA=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509AttrCertParser.class
+SHA-256-Digest: VC2nBVZerySAfeIaCuzYqSiVMNmTifg5HxmlXigQHMA=
+
+Name: kz/gov/pki/kalkan/asn1/x509/X509Extension.class
+SHA-256-Digest: 4JbVgmOif6bjzzmeI+SLYsuJ55G8ygLnYmdAK5a02SU=
+
+Name: kz/gov/pki/kalkan/asn1/IndefiniteLengthInputStream.class
+SHA-256-Digest: LFO9wnocAc/x34Dfx6xhl0/heVIWa4leRrLFPUkD8GM=
+
+Name: kz/gov/pki/kalkan/jce/provider/MultiCertStoreSpi.class
+SHA-256-Digest: PmcvSzFQi5za+DRecfUNpoypPkJJyyeckGb7+qMuOjA=
+
+Name: kz/gov/pki/kalkan/pcsc/generators/AKSecureRandom.class
+SHA-256-Digest: rEw8zwSycQw/jEhM6w6W+bMKNJx6ZSYjzjw6RtWvMY0=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/Challenge.class
+SHA-256-Digest: YWiiteul2T9zkFYFBu/Zj6w1BinVx5SpQ9BVsLGUH5c=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$GOST28147.class
+SHA-256-Digest: Ku9aeWpUNTF2nno1LiSaJIrtnDKCplt3et80Cpj2Ebk=
+
+Name: kz/gov/pki/kalkan/util/Selector.class
+SHA-256-Digest: WVQZTbkFEp2eUnVi4TH30eGskYFWVduyw3mkV4WLFi4=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$SHA224.class
+SHA-256-Digest: oLTtJy2dJ3oWplWOjvbilmbmxinz9Q/F8UtWoyHJttU=
+
+Name: kz/gov/pki/kalkan/asn1/cms/SignedDataParser.class
+SHA-256-Digest: zMWXEKCXURvKVwFIUcvSL5cuRqV/Z3AKZQrKRMfYJ54=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/PKIStatusInfo.class
+SHA-256-Digest: wK7ZVXsYIySjd7tO2JacRbl9suPFPC6H/SC225QXl3M=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$16.class
+SHA-256-Digest: fA1NyzDM4TbIHE5IFVAtzdOZ2dyjOUbLkszEZusKmSc=
+
+Name: kz/gov/pki/kalkan/crypto/params/GOST3410PrivateKeyParameters.cla
+ ss
+SHA-256-Digest: QxjkGFBEB1nnkx/esX1Al9C1BJWH2TZZ92VjUU6Mph0=
+
+Name: kz/gov/pki/kalkan/crypto/prng/ReversedWindowGenerator.class
+SHA-256-Digest: Ro3KVEwJxZBiZJKV+XNRdQFTfitQcFCk6hKN+xMUaUY=
+
+Name: kz/gov/pki/kalkan/crypto/engines/DESEngine.class
+SHA-256-Digest: qplW3U+B7r2m7UaT6m7Donmz64S3InjBxnmtFbdmEeY=
+
+Name: kz/gov/pki/kalkan/asn1/DERObject.class
+SHA-256-Digest: /7fA6PZugHo+DPeqCLvPJ9A1uepw7W+VU5WYevAKc7Y=
+
+Name: kz/gov/pki/kalkan/asn1/cryptopro/GOST3410ParamSetParameters.clas
+ s
+SHA-256-Digest: UZ251nVqSF0Ezo/GMvAjGlGdr9R+AM2mnZYjgVQIInA=
+
+Name: kz/gov/pki/kalkan/exception/PCSCCode.class
+SHA-256-Digest: wdbPi+25tltVwPcp36trhFmxHUMJGmlJn0nNMeJ4OJc=
+
+Name: kz/gov/pki/kalkan/crypto/Mac.class
+SHA-256-Digest: GXUjWI2QweIYoPp05yYLWmHAs7rUQm89hEd+o4eoCDg=
+
+Name: kz/gov/pki/kalkan/asn1/x9/KeySpecificInfo.class
+SHA-256-Digest: 1bWAB80APvsMVtEocrxG5PD9Q1IJxfcGmgSubMTzvhE=
+
+Name: kz/gov/pki/kalkan/asn1/x509/TBSCertList$CRLEntry.class
+SHA-256-Digest: wXrpwlB3WEugXrIXssL3Ef2XTDHWLiyCuxAr/z5MRj8=
+
+Name: kz/gov/pki/kalkan/asn1/x509/CRLDistPoint.class
+SHA-256-Digest: aycEz2vauemB9zsqTCtVwErSRX0Jyt7q3aitmjnk8Bk=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithRIPEMD
+ 160.class
+SHA-256-Digest: gpCBFooWHWjHUkdiY57bbiDgtfW0Ldnr+3IUN2gpFqQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$PBEWithSHA.class
+SHA-256-Digest: FBsGt6lgYyRknF02KtDfigbSFgMrhg9dX09AtX7ElYA=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$MD5HMAC.class
+SHA-256-Digest: Jr8fCnZcS/Rwwb7zkp+SscY7NBSfNZaHq2muuSXLiSM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$DESede.class
+SHA-256-Digest: 09K9D54EcHduVB1OcL+KxrO/GBzDZel6qS4sDH01J+0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyPairGenerator$GOST3410.clas
+ s
+SHA-256-Digest: BMhRL0ZyGkZUKt9ZSeSl8jinLDwcZcYubPytclBGCys=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHAAnd
+ 192BitAESBC.class
+SHA-256-Digest: U/Ka+ErcAx1Ln8TSEt26Zys++xeKDNgPpbnnPvvuTi0=
+
+Name: kz/gov/pki/kalkan/asn1/cms/ecc/MQVuserKeyingMaterial.class
+SHA-256-Digest: s4tU4Xj6JYqkclK6zyTlBXf+uTF4E5kAz7BWgjSwgBI=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/Attribute.class
+SHA-256-Digest: 5R8pHraLeLolDQojcEvkn4633E6UK7kqfN8GMXwI7xo=
+
+Name: kz/gov/pki/kalkan/asn1/teletrust/TeleTrusTNamedCurves$7.class
+SHA-256-Digest: gEcrtAbYwJxxfz7lR1Dr23F05gBeBzMdX2Azbf0STXM=
+
+Name: kz/gov/pki/kalkan/asn1/ess/OtherSigningCertificate.class
+SHA-256-Digest: OmyjT6kOAZgrlElTa6yS1XffYWy0Ax3esh/+pGFbgto=
+
+Name: kz/gov/pki/kalkan/crypto/generators/RSAKeyPairGenerator.class
+SHA-256-Digest: rYVlqRlw0KwWFFsHlZFDEqij21mJQ6DS6ZufGGSQqrQ=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/GOST3410Params.class
+SHA-256-Digest: YYbUx2Dw0b+/IdKRNYm1yd5VV7LcoOZAJrt++HXdNiE=
+
+Name: kz/gov/pki/kalkan/crypto/params/GOST3410ValidationParameters.cla
+ ss
+SHA-256-Digest: oPKnKz9jlTKiYL2pDD/6qveUi/Ff8Kch60vEiQwNfQc=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/dsa/DSASigner$dsa384.c
+ lass
+SHA-256-Digest: hH9nGWavzcro5WmXdvIbgbMQc925tZeWtfFjhh6vqGA=
+
+Name: kz/gov/pki/kalkan/jce/provider/PKIXAttrCertPathBuilderSpi.class
+SHA-256-Digest: Ob35a8EfZVeaBc153vg2yx0PAXT3POMIY743zT8nJ9E=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$DESede.class
+SHA-256-Digest: 6UqaizV/BenCsOhkLQCbxJFBNT47Ll3UA98XAujfh6s=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/EC5Util.class
+SHA-256-Digest: VHFZrAEqOhFcSmx/NCCgpM0SiXP41AVVEsfAQeo1o3k=
+
+Name: kz/gov/pki/kalkan/math/ec/ECCurve.class
+SHA-256-Digest: 7UrhKlflRwOkInHsRoKZbMqEvFeC0n1CBv3KJrjQf6c=
+
+Name: kz/gov/pki/kalkan/exception/ErrorCode.class
+SHA-256-Digest: tqL/VM1iXEYWDePRM/DW46kG7afXe1GMCIge7TqJsg0=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$4.class
+SHA-256-Digest: W0fVaXgDyH25ewx2XGPsdrMv0jVjuW8MZkeMXy75Bvk=
+
+Name: kz/gov/pki/kalkan/util/test/TestFailedException.class
+SHA-256-Digest: 1HxAD1TffBhwI9gY5h7UBpcVJ3xzX9pmgfFvFlBlEBg=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKDigestSignature$SHA512WithRSAE
+ ncryption.class
+SHA-256-Digest: p88UNOJcNZ47DxpO8XAhvO4XPTyuueDgUt+krqa7PKs=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509CertPairParser.class
+SHA-256-Digest: 8eTH/M4x1W8di+mv+0IjyeozCA5Ixxt+KSunZ3PMIPI=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCERSACipher.class
+SHA-256-Digest: JteiW/tep45dTgzB63AL7o1qjuFyRy3/l5Sy75h/2kk=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKAlgorithmParameters$GOST3410.c
+ lass
+SHA-256-Digest: bszDWlmolXJKgJpu7Ee2XnjzGnWRhHr9x4aN15eh36U=
+
+Name: kz/gov/pki/kalkan/math/ec/FpNafMultiplier.class
+SHA-256-Digest: KWKglQ4W7PXO8u2mi2DB9dv1+ayHpeAVhrtGZsRlt4U=
+
+Name: kz/gov/pki/kalkan/crypto/engines/GOST28147Engine.class
+SHA-256-Digest: erfA5BVT7WxzkIxJDnC9ctl0zz0cVwWIS1iuWU4k9Po=
+
+Name: kz/gov/pki/kalkan/math/ec/PreCompInfo.class
+SHA-256-Digest: M5FJEW9Oolc7wPM70G1mVMarGRBOoUAL64osdkFgedQ=
+
+Name: kz/gov/pki/kalkan/asn1/x509/Attribute.class
+SHA-256-Digest: X1Ik+Laf40QdLM+HKO8bBa8ya1m1LaFsSxZQc5MINzI=
+
+Name: kz/gov/pki/kalkan/x509/X509StreamParserSpi.class
+SHA-256-Digest: 1xPAMxM9X+F5qd8ULlq2xeixZXY4i4hOzU0QXq/hjOY=
+
+Name: kz/gov/pki/kalkan/x509/ExtendedPKIXParameters.class
+SHA-256-Digest: wWxWpWbg0N+s4GN4omW2hGCa71gRFwX/+lfR8fN3cQg=
+
+Name: kz/gov/pki/kalkan/crypto/engines/RFC3211WrapEngine.class
+SHA-256-Digest: KABq3hL/b5Uzjp9Eq0ZNhvfRmVseoJ7y8mzUTZV1Ze4=
+
+Name: kz/gov/pki/kalkan/asn1/cms/RecipientInfo.class
+SHA-256-Digest: Y0rqXg6u/xEiqx8jsywJsXom1llkjGvBgRS8NAjN8R0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKPKCS12KeyStore.class
+SHA-256-Digest: dzV4rqYHkBv4axtn546DAafcQS7MoL63Sqr8l/4q7wQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$GOST3411.class
+SHA-256-Digest: lmj3KX83XhL5ri94lwuXftCWssKEJAYPbuHGmem7sxI=
+
+Name: kz/gov/pki/kalkan/asn1/DERBitString.class
+SHA-256-Digest: lDGFbXlykAaaD9dtHqmL0OYwB/l2j7WOjWj4OSq4XAA=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKDigestSignature$MD2WithRSAEncr
+ yption.class
+SHA-256-Digest: vJY4Q9Y/xH2+JGwB9nvJ69pVOzMEnefR8uEfz79AFHs=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/RevokedInfo.class
+SHA-256-Digest: 7PW+dHXLdIlK1AvW68hrhzBppJW2ErFX7ZTJ95dlwn8=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSEnvelopedGenerator$Recipie
+ ntInf.class
+SHA-256-Digest: w4f+hhkWjQN5pOPPz6FcMCG6CCSmhtKA63QP+Arx2Mo=
+
+Name: kz/gov/pki/kalkan/util/io/StreamOverflowException.class
+SHA-256-Digest: VSviJe9iXpe0XdwO9R6ipzw5ZW9sjGEUFYYE+PSMVyM=
+
+Name: kz/gov/pki/kalkan/asn1/x509/Holder.class
+SHA-256-Digest: 7e8LvzUv2h7ecVX4t3/V5HTMxt6n+IiYIY1x2p1QLk4=
+
+Name: kz/gov/pki/kalkan/jce/provider/PKIXCertPathBuilderSpi.class
+SHA-256-Digest: BMNj6taRK+QXoq2ZGkdqFOcnIKwtrkEcGQ8WQIhGxfg=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEStreamCipher$PBEWithSHAAnd128B
+ itRC4.class
+SHA-256-Digest: LhUdH6Tj78BvVCnicUzd3I7+OVdiAGxOesbBqDJXPnU=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$MD2.class
+SHA-256-Digest: w13iVO0ZZFumP0gRuUV7Zd0j2mMbyy5CUQQNGq0SSp8=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSAttributeTableGenerator.cl
+ ass
+SHA-256-Digest: ERQCboHV8v4dflUndtP0LG5StyVL4eGpbskPd0vxcHU=
+
+Name: kz/gov/pki/kalkan/crypto/engines/RC4Engine.class
+SHA-256-Digest: T/7S7mGtd5uAAg1gVu90RXyw8w2nDJEyc+5qLh/YTHw=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSCompressedDataParser.class
+SHA-256-Digest: yKVIphSiWOv30FAqt6Y1Ebdf5ZN0cIDqwBO06QApR/k=
+
+Name: kz/gov/pki/kalkan/crypto/io/DigestOutputStream.class
+SHA-256-Digest: 5VIwMYXOMLRAENd15KnOq6Il8AmX+Crs6L83jW5XNhE=
+
+Name: kz/gov/pki/kalkan/asn1/LazyDERSequence.class
+SHA-256-Digest: 5Mx58qZ/9XPE+R7FHN6N7sV/tJVvLQcwurxD/y+bTNM=
+
+Name: kz/gov/pki/kalkan/asn1/x509/CertificatePolicies.class
+SHA-256-Digest: hdygUt7fs7DuUw3HTcNFdSb+Js1EZ2TW0QQz16TOCvs=
+
+Name: kz/gov/pki/kalkan/asn1/x500/DirectoryString.class
+SHA-256-Digest: UIzDKrwN8lT6AgrhW0400+ig3VWb74pkuRRRz5niBR8=
+
+Name: kz/gov/pki/kalkan/asn1/misc/NetscapeCertType.class
+SHA-256-Digest: HOfcQXmwv+tKjSOD2QtdkGfbe4BeZWMnLX23R5Y2Iu4=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyFactory$ECGOST34
+ 10.class
+SHA-256-Digest: 7oPKleQhq04la+45o0xWt1SSXmF85Z5zLW4DOK6lYqU=
+
+Name: kz/gov/pki/kalkan/crypto/digests/GOST3411_2015Digest.class
+SHA-256-Digest: muEnX6PNASyOdnYJlFdofNZ5b3tZe2djw5tfe1V4Ct4=
+
+Name: kz/gov/pki/kalkan/crypto/generators/GOST3410KeyPairGenerator.cla
+ ss
+SHA-256-Digest: s/lSSkRZxNMgEG15AICKfT0OCCnZFn9QVQglIbsS5hM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$RC5.class
+SHA-256-Digest: T7AFCiut+JwTXVNldZalhocG5yrJ1rEqLDoyCfGnSr4=
+
+Name: kz/gov/pki/kalkan/jce/spec/ECParameterSpec.class
+SHA-256-Digest: qPRj5ct0fNEQu0cg01Zt4OEWmgYqZgz2XZVRgVkerlw=
+
+Name: kz/gov/pki/kalkan/util/ByteUtils.class
+SHA-256-Digest: GSiz+hYRkv6uSV1MvyhpcADlHP6/7+WW5CIgaalpqcY=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$DESede.class
+SHA-256-Digest: d1KEy9V2J9zVbiOQpEV3Y4EWuCSEd2OYxOcuuLMNBSU=
+
+Name: kz/gov/pki/kalkan/math/ec/ECFieldElement.class
+SHA-256-Digest: Yp+InNVg+GRCe6CfQY/Is0mVZV6+Mqd15X8ayhWD1Ik=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCERSACipher$OAEPPadding.class
+SHA-256-Digest: 3oTO/NcEvFAERbcwENqtNCxu8VBGNg5Ta3/ssx+0CVc=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedDataGenerator$DigOut
+ putStream.class
+SHA-256-Digest: fH6L8KyZTcmDJt7dJRHcRpRlao90RGpMcdH3XPwyIcs=
+
+Name: kz/gov/pki/kalkan/i18n/filter/UntrustedUrlInput.class
+SHA-256-Digest: wSZfORDzG5bZjhukJCeaJl6cIwENPXc/xgZ3OeWACxA=
+
+Name: kz/gov/pki/kalkan/asn1/cryptopro/CryptoProObjectIdentifiers.clas
+ s
+SHA-256-Digest: GAARgWd8EPMh2uBYCOxLsEX5iXLSNJmGINJymrcrVcA=
+
+Name: kz/gov/pki/kalkan/x509/X509V1CertificateGenerator.class
+SHA-256-Digest: tr4foh1f9bqn5Xfc48Kaq8TbSb05mh2YLprn56IdE7s=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKAlgorithmParameters.class
+SHA-256-Digest: z66bMrfhCTy7XXOKDS2BZR78gKxDkkaKNMHIF4+FRA8=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKGOST3410PublicKey.class
+SHA-256-Digest: gGVdktqdVfiP0UYYBti8BjFgtKkFx7ogCHw2Q4BF7ZU=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/CertificationRequestInfo.class
+SHA-256-Digest: 4DzX78tsbT8GyB3qpKzNQq/d03MY1zGaXXR1SAZ24t4=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/CertConfirmContent.class
+SHA-256-Digest: uuiv2lqsGcfQgh6ACXLUROhrdCie1EHiYX+etP4l3Pk=
+
+Name: kz/gov/pki/kalkan/jce/spec/KalkanRSAPrivateKeySpec.class
+SHA-256-Digest: cshhyFtxk/Q2Ub5wosl6bah2UAEAcYjy8k+edckSchA=
+
+Name: kz/gov/pki/kalkan/crypto/signers/DSADigestSigner.class
+SHA-256-Digest: u0ugLLSvWVCSiJPVHyNCVrX+sCmARSodVKLi0TRqXrc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory.class
+SHA-256-Digest: Uu9h/5mDTehDIZntqtlr5FpEKDK6c6UeQKLWG+vi2ws=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$SHA512.class
+SHA-256-Digest: HLj4O6gtTxZnU2OK4xrkwWD2lriyc/+Dsh1F7rzQM+A=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/Controls.class
+SHA-256-Digest: uxMyrrxG7dSyJO7bhqX4BtKnFF+eMTDh6EbO0oOWnPk=
+
+Name: kz/gov/pki/kalkan/math/ec/ECConstants.class
+SHA-256-Digest: 1L6vk74EYYIqAxF3adnRK1H/zZIvij9tgBmADpV5jK4=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSTypedStream$FullReaderStre
+ am.class
+SHA-256-Digest: Lxde4Me9bGl2Wf3gX4jhjhK0nLlzmHP07NcYIY6U6XI=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$23.class
+SHA-256-Digest: 01r/gYBzzcQL0hQAVXYyDkxwe2yokHc487FCU1oJShA=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyFactory$ECMQV.cl
+ ass
+SHA-256-Digest: b9hu5EfnUG7eJxddzfgiz1IPHMd30toIHycr+12vWlU=
+
+Name: kz/gov/pki/kalkan/asn1/x509/NameConstraints.class
+SHA-256-Digest: FedOa4HYNQs09J6XJrjQd8m1b69d6+atTBdhzuq7YbY=
+
+Name: kz/gov/pki/kalkan/asn1/BERApplicationSpecific.class
+SHA-256-Digest: 4RoHxs6T3OxZhBiVoIJSWustCVWmn9muz33JN4K4N9c=
+
+Name: kz/gov/pki/kalkan/asn1/BEROutputStream.class
+SHA-256-Digest: m+hBoqhnaFfvRnexIde3/GQ+KQR4w9/Daz7fKksXsYM=
+
+Name: kz/gov/pki/kalkan/crypto/paddings/PKCS7Padding.class
+SHA-256-Digest: x++7eII8Zj8gWuGXA5utCbEm1V60wu8DqfnSKxdleqM=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/EncryptionScheme.class
+SHA-256-Digest: Au4pPYZy2EzCEdjEJTKmKsR/DrZApQ+EChVXZHXYOk0=
+
+Name: kz/gov/pki/kalkan/pcsc/AKRSAPrivateKey.class
+SHA-256-Digest: uiSsfjzzJUJBXZO8PgZfOQp/8gkLIfJvDMB3EnjhBaM=
+
+Name: kz/gov/pki/kalkan/asn1/BERSet.class
+SHA-256-Digest: ZtfzOxTyjJOEACi04XHCxZ4Dw+bg/SaCkDCKLYqVOZg=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/CMPCertificate.class
+SHA-256-Digest: EKcZsi7IW65OC4sMQU4obD5DKDCoPnBS56BYc9qBfk0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEPBEKey.class
+SHA-256-Digest: q59HCijqPCPLf/hAyCTc0im0t01/lYxeTZQU1E86hNA=
+
+Name: kz/gov/pki/kalkan/crypto/engines/RFC3394WrapEngine.class
+SHA-256-Digest: S73AsB3dWp75qvdKGEn/09pxtAIFcjBx+u5WJXQmgTs=
+
+Name: kz/gov/pki/kalkan/util/encoders/UrlBase64.class
+SHA-256-Digest: Pr1XZG1SER7StZ4yEZc0WyzOrhGsJ/Y572wVmPlQtog=
+
+Name: kz/gov/pki/kalkan/jce/ECKeyUtil$UnexpectedException.class
+SHA-256-Digest: fSOkLgSMa5CDyOJwlkWlkwfoefedq/GeBjaA4IqQ9r4=
+
+Name: kz/gov/pki/kalkan/asn1/cms/KEKIdentifier.class
+SHA-256-Digest: m6Cis0u4V6jzGi5g3O/rDShKC8/wZkEvDh0LWDQte+A=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/PKIMessages.class
+SHA-256-Digest: QaMBw6pr1pjKcK2dzlp0vrDtdwoN/SIZEzpJEtPBN6c=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$SHA1.class
+SHA-256-Digest: Tf9Syzi3otjERBfmPKafNamPRVf+vvnmc17Y4EMajO8=
+
+Name: kz/gov/pki/kalkan/pcsc/parsers/MapFileParser.class
+SHA-256-Digest: ZJQgUsMaUTKznlYfYdPqh09Ryzy//HtC0zOk3hPrSBk=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedDataStreamGenerator$
+ SignerInf.class
+SHA-256-Digest: shr/t5odfq3WmcmzboO3rg+IBKlV7YkCUjMcqDpvYHw=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$DESedeCFB8.class
+SHA-256-Digest: bRp8cjnmEAFwbmtURo4S6hFlb8ipOR9/NbYBhrTSHfE=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHA1An
+ dDES.class
+SHA-256-Digest: /2Qamp94c+MO0iClteJLA4IUrsVBDPyFGHk9A8KImz8=
+
+Name: kz/gov/pki/kalkan/x509/CertPathReviewerMessages.properties
+SHA-256-Digest: ySg5To7Sxmr8lMyNGblQu7mA3nSO8M5SdevRWgO3mCo=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/PKIFailureInfo.class
+SHA-256-Digest: gnsR5uG6IbnuKkQ8Hx79O4JegY4XTRTpbigc+rWBCUA=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/OOBCertHash.class
+SHA-256-Digest: VWS+l+JRES+Dxm1dzTEDt1Ywa3/3GagqV3sSthhsGcs=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$MD5.class
+SHA-256-Digest: d51jEgUfKGGuZZtk1rb8LAVgIqU2WDfjdrVvQTv5E2U=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$DESede.class
+SHA-256-Digest: zaqz3xuw+UsOZP8oEoTEIaBqJn2UQEzmSqb5AfTVtBo=
+
+Name: kz/gov/pki/kalkan/asn1/x509/CertificatePair.class
+SHA-256-Digest: degdBc5N0B3Npa7/kcFyEZz/GLk5CKDv/bdiXa5YFVg=
+
+Name: kz/gov/pki/kalkan/asn1/DEROctetString.class
+SHA-256-Digest: nVxQYM2C2Pr6scBAhS9C151qqN/v15TVLqNcDo3DKbE=
+
+Name: kz/gov/pki/kalkan/util/test/SimpleTestResult.class
+SHA-256-Digest: h4M4a8u6FLO1jcLLsQ1+inuBcXxIOrBBFURmcLlCMfw=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$MD2HMAC.class
+SHA-256-Digest: pYnDB7xtqbBE5SR9t17eI8bPztjZUVhxVBLIx8+dQnw=
+
+Name: kz/gov/pki/kalkan/crypto/paddings/BlockCipherPadding.class
+SHA-256-Digest: zcX229WIm74uodRz5dpEUnaHD75OqpAUdOivGAfZv5o=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/PKIStatus.class
+SHA-256-Digest: smlT+mFOgfd2YAIrya7kFP0xXrBiQqdHlz9tx6WUYRo=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/OptionalValidity.class
+SHA-256-Digest: 0zR4Gq44g3fwlWYP2+NiWKbfgHjfbf3rsxEOkVV9IYU=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ecgost15/EcGost3410_20
+ 15PrivateKey.class
+SHA-256-Digest: bCVlEP8xL99hHpqxMhMvl1NbJzg9pa3nW3P3K/dJMxk=
+
+Name: kz/gov/pki/kalkan/asn1/cms/Time.class
+SHA-256-Digest: T2Z+dJjfeG/jesN3B5hNV5DdSSjBDUbMExA8mT9liQI=
+
+Name: kz/gov/pki/kalkan/jce/provider/PBE.class
+SHA-256-Digest: b1rSpqSORdLiNvAxLVHwybBij5X49ymxn8wHwtKNFQ8=
+
+Name: kz/gov/pki/kalkan/jce/provider/PBKDFKey.class
+SHA-256-Digest: ETtQtzGyW23PU3anhclDAgkZY19QO5UMIi9ala8XTVU=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1Object.class
+SHA-256-Digest: X7m+Yp/Tkhr7apWYpa+clcFEsqEt4TopsglF6yX/Sf8=
+
+Name: kz/gov/pki/kalkan/i18n/TextBundle.class
+SHA-256-Digest: OL2mj7mI0rWMEgaUFrR7xMgsETAQMDgukbqQ9QTuvd4=
+
+Name: kz/gov/pki/kalkan/asn1/x509/V2Form.class
+SHA-256-Digest: MtpI7x4FS5Y+rAxL+a2ZwlVFpjsdDz+wCO0dWM4Yhyk=
+
+Name: kz/gov/pki/kalkan/asn1/x509/X509ObjectIdentifiers.class
+SHA-256-Digest: 8javzb79LHm+51ssfZBRisWMt/VYc4LveVSnMUDP/ug=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/PKIMessage.class
+SHA-256-Digest: Z7xsKiDdpwDn1+4DfqQ5RLniwYRus9cQcD0rQ7X78Hc=
+
+Name: kz/gov/pki/kalkan/util/encoders/HexTranslator.class
+SHA-256-Digest: avptQ0+lcSyyiOL0fuqXVaLZNkfQ45wcmc8AqsFKQWs=
+
+Name: kz/gov/pki/kalkan/asn1/x509/SubjectDirectoryAttributes.class
+SHA-256-Digest: Vr8syEecPPM3gDDl09MoMk8KBZwAdOWxrbFkuuLWCSE=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$GOST28147.class
+SHA-256-Digest: g5FqQ9LyaH7pub9/WqhUAapPIFgG6H41FvhS3MYR1bo=
+
+Name: kz/gov/pki/kalkan/asn1/DefiniteLengthInputStream.class
+SHA-256-Digest: 6wgljBQaPjh3lH62HJlA5VCcCAF4pg0LUJWoYQMNbqc=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSAttributeTableGenerationEx
+ ception.class
+SHA-256-Digest: HMnTJQZtsXj4AjrucIQ++aAtfMSTTQHrFTZXZ+/erZs=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$PBEWithAESCBC.clas
+ s
+SHA-256-Digest: Gnb38x7rUfjwg0uE1Po50qpJLnurbCjWJUBNvgG0Hug=
+
+Name: kz/gov/pki/kalkan/pcsc/tokens/AKey.class
+SHA-256-Digest: d1/TpsZfL4rnwEFLAQr4ltzWFmNvGSzxIKqriWjEp6U=
+
+Name: kz/gov/pki/kalkan/x509/X509StreamParser.class
+SHA-256-Digest: nr3SsuUqQwj3FCW65+dVOXAH1ik8SEjRxOvjeVyiNi4=
+
+Name: kz/gov/pki/kalkan/crypto/params/DESParameters.class
+SHA-256-Digest: +/lYwiY3zfYEF9JldvuWNa5OJznOwu9eWG/usJZ3Kdc=
+
+Name: kz/gov/pki/kalkan/asn1/DERGeneralizedTime.class
+SHA-256-Digest: yrFr88IC7dww/llCS4hZdqAwoY+JkL6ETxZ8JE+sXao=
+
+Name: kz/gov/pki/kalkan/asn1/misc/VerisignCzagExtension.class
+SHA-256-Digest: XaNhWdPqEbFEMhpvTlZ5nRCZYRvT/53XCqME5wQ7PRI=
+
+Name: kz/gov/pki/kalkan/jce/spec/GOST3410PrivateKeySpec.class
+SHA-256-Digest: ieBdQaDGPmTHZxIzYCndwzmz7TF+/2+1g2HrS6bfOTQ=
+
+Name: kz/gov/pki/kalkan/pcsc/tokens/KZIDCard.class
+SHA-256-Digest: ZvbGjnjVZAKQA5LpG55E6XupCXPAm9tYaS7JV4F+hEc=
+
+Name: kz/gov/pki/kalkan/asn1/DERPrintableString.class
+SHA-256-Digest: UEkBwmcbgKIUdKxoLojsD78pKFW3jmnIlnjlC2N8bPs=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSRuntimeException.class
+SHA-256-Digest: z9tg41Gn1UGSuEz8XHMImvHKYEYG5Jrhhu6OLUrE/KU=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X9IntegerConverter.class
+SHA-256-Digest: Cz3Pt8F6K6g/C2djCvxwjPKD569k8+SrV33H7q7OQrg=
+
+Name: kz/gov/pki/kalkan/asn1/x509/TBSCertificateStructure.class
+SHA-256-Digest: RlWl6Dnc/4ppHx8k0S8Y7/fQUI7XzppQ1R51RmyBf/U=
+
+Name: kz/gov/pki/kalkan/asn1/BERNull.class
+SHA-256-Digest: TR37GtI/VA2F6LYB+b9fSX807cynSpTZM0fB1OxdWKc=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/EncryptedValue.class
+SHA-256-Digest: wP+1vHaGoNm/F9nBI4/ISftvzNDmDbYx8VWcFwegiq0=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509CRLEntryObject.class
+SHA-256-Digest: SANSaRRqBif+DJEq8IOGD4UIGCzuwGTJeiGBkG7lnHc=
+
+Name: kz/gov/pki/kalkan/openssl/PasswordException.class
+SHA-256-Digest: gd4lR6b5VCVyHB9EoR81vDMlt4eQiqgNNEL5OLInoWk=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKDigestSignature$SHA224WithRSAE
+ ncryption.class
+SHA-256-Digest: 2NL9tF5AEGrT/wrZ8tmNhykeUi97lUbzVpGylAQj0T4=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyPairGenerator$EC
+ DSA.class
+SHA-256-Digest: zxhpMsDf9S7/tlshUDXSBjMvZ0eQY43fRJsDDJPi8x0=
+
+Name: kz/gov/pki/kalkan/asn1/x509/DistributionPointName.class
+SHA-256-Digest: MgJXeKEKVRttwvJp7dHlzHfP3i0Rr3DnBXMDRQBwT40=
+
+Name: kz/gov/pki/kalkan/crypto/modes/PaddedBlockCipher.class
+SHA-256-Digest: o8SupxWotX9LH/gVQr38Fzd6nmpcv5ZawkxLEXaXyZU=
+
+Name: kz/gov/pki/kalkan/jce/provider/JavaKeyStore$KeyEntry.class
+SHA-256-Digest: h5zyBQdZSf2CRyx3Mr+eZJv46MjV6OY2gfZkbXi+0Vs=
+
+Name: kz/gov/pki/kalkan/asn1/x509/V2AttributeCertificateInfoGenerator.
+ class
+SHA-256-Digest: jpmWq5OHiu7f/3saVibUPd5nCDLmZnEtfOziUMB3+uY=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ecgost15/KeyPairGenera
+ torSpi.class
+SHA-256-Digest: olYUMG/SkubWGGFXpTUqUABWrbntuVEjDmonlcutjUk=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKPKCS12KeyStore$1.class
+SHA-256-Digest: GRCTsOPLc+Ec0n5K8EbDqtdxW1/bw0mbVPQslIrj57c=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHAAnd
+ DES2Key.class
+SHA-256-Digest: EF9ha7QJ084Cr56XhbzHAUOdyd7Pgmz2g9bGYb02gqE=
+
+Name: kz/gov/pki/kalkan/asn1/cryptopro/ECGOST3410ParamSetParameters.cl
+ ass
+SHA-256-Digest: RGo2KVwZJ6tlxdXbu6+LP3RJXkRlNYl6/UmoJADRMeE=
+
+Name: kz/gov/pki/kalkan/jce/provider/symmetric/util/BaseSecretKeyFacto
+ ry.class
+SHA-256-Digest: o++/BfWLmEEvwCElRUrRzFh9FAqkilWoJrk8yswVPi0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$AES.class
+SHA-256-Digest: BrheV90ana1AAYFfaqSI1hmfDzGqw/ki4V5XLLS4C7c=
+
+Name: kz/gov/pki/kalkan/math/ec/ECAlgorithms.class
+SHA-256-Digest: 4dgw7hTC/YacwaUhI/AUxIoe+JvOIzSIRi5Rz6ngoTs=
+
+Name: kz/gov/pki/kalkan/pcsc/TokenDispatcher.class
+SHA-256-Digest: pArS/JT5FBICc+JtJQR1Mydh3mfKf0r/zRI/FP++Kkk=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/EncryptedData.class
+SHA-256-Digest: mrK5O0z1qoTSqADUDh8ExoMWSDoFtrnVN+oJ5djYxpM=
+
+Name: kz/gov/pki/kalkan/crypto/encodings/OAEPEncoding.class
+SHA-256-Digest: D169UAcGQjyT15MgXNU6faF34WgU1bJ/kBZmpjVw4tw=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHAAnd
+ 40BitRC2.class
+SHA-256-Digest: ot3VRAlx6iNdGKBbOYJj8bja5E3ArI12PuXMhH471d8=
+
+Name: kz/gov/pki/kalkan/asn1/x509/KeyUsage.class
+SHA-256-Digest: jzDWo5VSGJwKnfTaT8S9wo4VDNJWyfx+Wo+sSsZNh+o=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKAlgorithmParameterGenerator$RC
+ 2.class
+SHA-256-Digest: llG04aEeOf/TaloaCzGhB4OOXJwPGzPyKPFn9N4ktYU=
+
+Name: kz/gov/pki/kalkan/jce/spec/ECKeySpec.class
+SHA-256-Digest: ejyLv0RdPuBPcvFxri/21IIOCAdKj7xbtAM41JAi85M=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyFactory.class
+SHA-256-Digest: dlL3WA2XbG0jQJxoRxyvlr2y2G5a+OI75hJ8/MKS62E=
+
+Name: kz/gov/pki/kalkan/jce/exception/ExtException.class
+SHA-256-Digest: vZmyVKqBiqRM+nBs6fww0OpDtfAaN/1X1qtDNhkjt9U=
+
+Name: kz/gov/pki/kalkan/crypto/CipherKeyGenerator.class
+SHA-256-Digest: WKzW6pZ9VTteMdixagAvZpvhYmzpW4PLEqqGgdpe6XQ=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/RSASSAPSSparams.class
+SHA-256-Digest: NEVqW+K6A7/cdcV9N3KPo0g+mvtwnumMbuHvguEBevk=
+
+Name: kz/gov/pki/kalkan/asn1/isismtt/ISISMTTObjectIdentifiers.class
+SHA-256-Digest: 3Hrv6f/Yow/tdcFOT5lqqPbAKLwBfRHXvIWeuXi1moU=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyPairGenerator.cl
+ ass
+SHA-256-Digest: 3WQS3e3ddxf0Dt9QGFJU1S2sU33gOs6S2F67twQ/Rt8=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/EncryptedPrivateKeyInfo.class
+SHA-256-Digest: uPXApcULkHNPcCYbkO4Luyf7yAy59ljEgGkNqj2idds=
+
+Name: kz/gov/pki/kalkan/crypto/params/ParametersWithRandom.class
+SHA-256-Digest: cB2sARQbO2mOcFQj2wJoYS3bAt76Eyr5T7vCWHkKT/A=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$HMACSHA224.class
+SHA-256-Digest: CT9xLU+s0lBXDsiF8l9E8DUYf4pJ5ha3q7FaPOz+lFs=
+
+Name: kz/gov/pki/kalkan/asn1/x509/X509Attributes.class
+SHA-256-Digest: 9mO5StuyOrQrqui/GjFXRSvhfsqv8cyuGIBqD6iAqjQ=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1Sequence$1.class
+SHA-256-Digest: PFCAN1d/OrwXuofF6PGkE0jTJ9JtOu9iHFnTKUIFVK0=
+
+Name: kz/gov/pki/kalkan/jce/PrincipalUtil.class
+SHA-256-Digest: qhxgw2ZYH1+4xuesww3IyGu1yLVrKLAkDN71r9o3aB8=
+
+Name: kz/gov/pki/kalkan/ocsp/OCSPRespGenerator.class
+SHA-256-Digest: +/41u2YOBLIkRTLiD+/r35OUlz0yhZUJLr6QTm0xBWo=
+
+Name: kz/gov/pki/kalkan/crypto/digests/SHA512Digest.class
+SHA-256-Digest: VMBwiaQWAGKfX+UUQl6G+cpCCcpxt+SM/zfNZcoA8h4=
+
+Name: kz/gov/pki/kalkan/crypto/params/ECPublicKeyParameters.class
+SHA-256-Digest: wEtmtx0QaKkDDcvMLQJYKnS49nX3j7oADO4ImEkX2Aw=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$9.class
+SHA-256-Digest: erMqY85bbDI7JZmDGjMnd09tSeSSzGUQZcCd9FRTIR4=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/PKIBody.class
+SHA-256-Digest: Cmo3Igtv0Wr2ruT074cRls6FTqQm4iMDT4mU+cL2QoY=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/CertificationRequest.class
+SHA-256-Digest: bIkNclgrcv+jmn+5aYyCZqTSo9/cZvKWBDWBbi0Cpkg=
+
+Name: kz/gov/pki/kalkan/crypto/ExtendedDigest.class
+SHA-256-Digest: SUm3GXsxEBoxahd1+V46GOedKaEeBCaU5smwsBejwa8=
+
+Name: kz/gov/pki/kalkan/jce/provider/WrapCipherSpi$DESEDEWrap.class
+SHA-256-Digest: I58PpqwiKGPnpQhQS5MB0EJmLiPHO1jbgMk2oDvK0jg=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$PBEWithSHAAndDES2K
+ ey.class
+SHA-256-Digest: kYq47TFLZv8580DPVg0GzvwGM5+Ya9ysFOUKEyJP314=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/POPOSigningKey.class
+SHA-256-Digest: qIDdhxEKuf3E8TPDjyclcx4ZSygZlF5c862IrYGiDbw=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKDigestSignature$SHA384WithRSAE
+ ncryption.class
+SHA-256-Digest: vcZ+3byoN+wCfD9BKgQgBj8lQiEbwzWA/+JuYKVX918=
+
+Name: kz/gov/pki/kalkan/asn1/DERUTF8String.class
+SHA-256-Digest: vCoL5c4ol8uBawxLwK7v0OuZSObBEGbHHUililrgQc0=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/dsa/DSASigner$dsa256.c
+ lass
+SHA-256-Digest: WEKOYHVrZWWB02gUMHDeiCkQ5HvnkctpQj46EmJXkB4=
+
+Name: kz/gov/pki/kalkan/crypto/Digest.class
+SHA-256-Digest: ld3BDjvueI0koydUDzdI9rWpQcY5tnfXvWvPjeLj0h8=
+
+Name: kz/gov/pki/kalkan/asn1/BERTaggedObject.class
+SHA-256-Digest: QdQs6CXeZLiggSSL7jyDk75rrRP652F6NXEYlCgWRvk=
+
+Name: kz/gov/pki/kalkan/asn1/cms/OriginatorInfo.class
+SHA-256-Digest: FnEOGHbh8m/JkKjYqMJ1B76wKGJCftFnJ0plx7diqwQ=
+
+Name: kz/gov/pki/kalkan/util/test/Test.class
+SHA-256-Digest: lL2dkb00q+5e86HyUuSDaHY70QDXRlUxcBJj3+FPWt4=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/ECPublicKey.class
+SHA-256-Digest: /wbdpia+KERhol9dXi1AHc4GkL0JOx8pCudkdgnjvWk=
+
+Name: kz/gov/pki/kalkan/asn1/ess/SigningCertificate.class
+SHA-256-Digest: fJ/DXX3RD3sfbaiE6Zq9RNrLpd1NTW8me9vv+p66wDE=
+
+Name: kz/gov/pki/kalkan/crypto/params/MQVPublicParameters.class
+SHA-256-Digest: 7v0lvYfIDizOf8FEf1tobKVEussLKWgUVeFaFrqq7Lk=
+
+Name: kz/gov/pki/kalkan/crypto/modes/gcm/Tables8kGCMMultiplier.class
+SHA-256-Digest: BYGXvyPK9KFZrIfVE6HQJP0O1c5qYOd+l7jEiFETF4M=
+
+Name: kz/gov/pki/kalkan/crypto/BasicAgreement.class
+SHA-256-Digest: B1rCc5JQT0w0usYPsXriNA8HzWYNpLbP0gsO9YF0aQo=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKGOST3410PrivateKey.class
+SHA-256-Digest: yaZu1JZcWByMqbSjTPwYX3WrUAe+m1ZcGRZUIh56yqU=
+
+Name: kz/gov/pki/kalkan/tsp/TSPException.class
+SHA-256-Digest: q0M2yeviwXQ+FDun0kKmneYu0ccnB5TkZTOwR3t1ZB4=
+
+Name: kz/gov/pki/kalkan/asn1/cms/AuthEnvelopedDataParser.class
+SHA-256-Digest: z3+IsUa3fK9iIPTmPeqKWLbwomF5Wq2hZ3eQLpdZ8ME=
+
+Name: kz/gov/pki/kalkan/asn1/cryptopro/GOST28147Parameters.class
+SHA-256-Digest: 8QsCa5FXomQ6dIOdHh/XkbfiCnI7kOnPe7YqILfrBj0=
+
+Name: kz/gov/pki/kalkan/ocsp/OCSPRespStatus.class
+SHA-256-Digest: eY24XEPakmMAN5nPxoRBRTpPG0NAjyvnvSlw0u2Wn1U=
+
+Name: kz/gov/pki/kalkan/crypto/macs/HMac.class
+SHA-256-Digest: jly7A46x8TGT3SijXRIWlFst5Jx4eV4T2M6xpb9JUTE=
+
+Name: kz/gov/pki/kalkan/jce/provider/PBEPBKDF2$AlgParams.class
+SHA-256-Digest: 3IyKoP8k1X1a/nx3isIH7re+d7ytwsD+55+FH2WSf5M=
+
+Name: kz/gov/pki/kalkan/asn1/cms/AuthEnvelopedData.class
+SHA-256-Digest: 7A9T91C8d1y7iK64eclr+FFUyQzdFt8wmhrRoeTD+/0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$RC6.class
+SHA-256-Digest: HOFhEd1tCN/NhFNEMS16EzBS7+wkJoy5wGG+MXrOjk0=
+
+Name: kz/gov/pki/kalkan/asn1/x509/IetfAttrSyntax.class
+SHA-256-Digest: qfh8arHHBonAuOcjhqWQs0Fo1p+JynUWnFsIQsJO3Ew=
+
+Name: kz/gov/pki/kalkan/crypto/PBEParametersGenerator.class
+SHA-256-Digest: IBH9eL8CozfikyXK8x/9dg965tGu4x8CXGdMZjJgjbY=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$12.class
+SHA-256-Digest: zcBjzibpxHYLj6ocSG9skLOr+CYvGQU3Kxw3M0RnPVA=
+
+Name: kz/gov/pki/kalkan/asn1/cms/RecipientKeyIdentifier.class
+SHA-256-Digest: xykGXibb0QyTxMDvBCzTAnClcDJdfcMH7HMU/Uqepz8=
+
+Name: kz/gov/pki/kalkan/asn1/x509/AuthorityKeyIdentifier.class
+SHA-256-Digest: dO51K+SF+R6wC0aT9GkJbc246ABGvAZK69YzZnUKygs=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/SafeBag.class
+SHA-256-Digest: LY/7fe3H0DOt1BN7sdq5RphYB87hqPJ7xxFULJcpq30=
+
+Name: kz/gov/pki/kalkan/exception/GeneralException.class
+SHA-256-Digest: EDpzP83SUurRsQiuo8oMgkm8Ds1qBTcbS8RBAL+UrJU=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X9ECPoint.class
+SHA-256-Digest: nO6HTypZjTyISC9mTlIDf+6ajO0l98DfupivuSoU9WA=
+
+Name: kz/gov/pki/kalkan/asn1/cms/KeyTransRecipientInfo.class
+SHA-256-Digest: dP1qlBqFWiv87gYsUN6RgkwuehDbgSmBQDuILQyiv2g=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSTypedStream.class
+SHA-256-Digest: v+b9BChiefFDYyyALoDiQfUADQl8P0X4sPuEf/s5R0c=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/ContentInfo.class
+SHA-256-Digest: a6C7s/hDkVJ2KPerv8FITTm7TBSTBMte6eE+Y7Bee0c=
+
+Name: kz/gov/pki/kalkan/asn1/DERConstructedSet.class
+SHA-256-Digest: MudDlEYfTHS5YYTaPxM63F7p1Uw+rqry6xbFZYAxEoI=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKDigestSignature$SHA256WithRSAE
+ ncryption.class
+SHA-256-Digest: /WBqNIQ5czQw6K7HPw59QDDFgnDKiMJ/WgaCEX5aBPk=
+
+Name: kz/gov/pki/kalkan/crypto/paddings/ZeroBytePadding.class
+SHA-256-Digest: tzwHgp5KvYCNfJ0vuzGyrMswsz4VWs+uACgxHeuEHjY=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/CertOrEncCert.class
+SHA-256-Digest: mwmLDkN/SM5whhAtuK1Hmv+eYo3ufli+0++L8CQ5Dqk=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/AttributeTypeAndValue.class
+SHA-256-Digest: kJNN9ewzbNmRr/h4KuGxJIO8gH+Ngs6lYSNGDYuJ5v4=
+
+Name: kz/gov/pki/kalkan/crypto/modes/GOFBBlockCipher.class
+SHA-256-Digest: sJ8urZp0c/xASNHubdqChgAire1nKzHebU4IxBq30sc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKAlgorithmParameterGenerator$GO
+ ST3410.class
+SHA-256-Digest: A0XNW68nghfqti5j13KuD2VHA9yk1j9dTtummF3I0no=
+
+Name: kz/gov/pki/kalkan/pcsc/keystores/AKKZIDCardStore.class
+SHA-256-Digest: WriyiW508FDnGqa1Ac4VfAsinT3gmgIEVJj5Uq9HEno=
+
+Name: kz/gov/pki/kalkan/asn1/cms/OriginatorPublicKey.class
+SHA-256-Digest: a2vUbBOwvqMYez6s16K/77fWUAiShWfYAm50vplB2Dg=
+
+Name: kz/gov/pki/kalkan/x509/CertPathReviewerMessages_de.properties
+SHA-256-Digest: OKOeMtg1i5SYdKOMyjmvIw+4MlBXUAz0r/8p0VDdCqg=
+
+Name: kz/gov/pki/kalkan/jce/X509LDAPCertStoreParameters$Builder.class
+SHA-256-Digest: xSjPaFMF41SebJ6ByTX+3fLpm3gBq+06EATGSyekjt4=
+
+Name: kz/gov/pki/kalkan/util/test/NumberParsing.class
+SHA-256-Digest: 7iIaUIyIbp5CSfviJG6wMpp9/yJu1y79m91N2fHE+Ks=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$PBEWithSHAAnd128Bi
+ tRC2.class
+SHA-256-Digest: fF3lp2Sb67hiaGj2wkoHaJyDgO44Un44Plcu9Ey3wyM=
+
+Name: kz/gov/pki/kalkan/util/test/UncloseableOutputStream.class
+SHA-256-Digest: WWWIH+ma9OUs/N6gaoR5YgDjiFQdy9G2JPf0XfpWBsQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$SHA1.class
+SHA-256-Digest: AVOba5oEcJI85R0Qns9cenQKOruAxL4JRtIH9el258A=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyFactory$ECGOST3410_2015.cla
+ ss
+SHA-256-Digest: 6h3v/16Df11fIb8PzSjBqyc8QqhoN7tFmSeMaefLlOk=
+
+Name: kz/gov/pki/kalkan/jce/spec/ECNamedCurveParameterSpec.class
+SHA-256-Digest: 1r+IJixnQHVYigPb9Ud77wh7pj6cC3g9awFzLV5kNh4=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$MD4HMAC.class
+SHA-256-Digest: AT2pIL3fcOAeFHgSzZUqBMCcv6h0QhgB+1VKFy2OgFw=
+
+Name: kz/gov/pki/kalkan/crypto/paddings/TBCPadding.class
+SHA-256-Digest: coX3ALA71IZDQVcYBzgNs3Gfchzeo3DSDgBJy4cx/hE=
+
+Name: kz/gov/pki/kalkan/crypto/params/DESedeParameters.class
+SHA-256-Digest: tjeLwU6TB6n2OEXLwTXunQSZsXaKN7mNTDtSFVrxK5M=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCERSACipher$PKCS1v1_5Padding_Pri
+ vateOnly.class
+SHA-256-Digest: L9TpJIomwryBH3uA1YoHN6k2n+S1ZZQq7rYlZS58eFk=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509CRLParser.class
+SHA-256-Digest: cEENMwkPCQFk+5Sc/flGCEpclAutiHuhkECDUjj1+lI=
+
+Name: kz/gov/pki/kalkan/jce/provider/JavaKeyStore$TrustedCertEntry.cla
+ ss
+SHA-256-Digest: tznSXF9RN23fqpXjGK85ehC4xgTpfa0uIBUY3bttSZs=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/ProtectedPart.class
+SHA-256-Digest: s5mhX45fCV3ZAxzWBQ4Ad6Dwx3Yn9RZVgJsttEbwcaw=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHAAnd
+ 128BitRC4.class
+SHA-256-Digest: kEuf7UrlcIkuZTqMBwFaFptZgd2fq6w1y2sNZHChrUQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$RC2.class
+SHA-256-Digest: Tttma/r1UBQJVDDnlmQyjzfOvucnQkXwqvuECdXkFhc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$PBEWithSHAAnd40Bit
+ RC2.class
+SHA-256-Digest: VN/8t/5IId0XSVN+lF7O2adBLXFiIOzbk0thMOyFROQ=
+
+Name: kz/gov/pki/kalkan/pcsc/AKGOST3410_2015PrivateKey.class
+SHA-256-Digest: UaNn5oWMu/nQMBb2cA21RakAcxufwUaxjZiYQcYcXQY=
+
+Name: kz/gov/pki/kalkan/crypto/modes/OpenPGPCFBBlockCipher.class
+SHA-256-Digest: AZPiU8vMXFDFzu+3w2KmVQRINz/3BpHBW/QkK3hJ2R8=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$GOST28147cbc.class
+SHA-256-Digest: yGaq4DN5n8fXbbp29fhlt0Cwl/REqquSzsxePzF1cfc=
+
+Name: kz/gov/pki/kalkan/asn1/ess/ContentIdentifier.class
+SHA-256-Digest: Wi2LkXsxr4mCM1pr8uAWGtSCUjbRuQ8vGwWRN51DcXo=
+
+Name: kz/gov/pki/kalkan/tsp/TSTInfo.class
+SHA-256-Digest: SyKh1p3XSowF2N9s00dlBGRHe/Ood8UKv/iZ0UvRT3g=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$19.class
+SHA-256-Digest: jOYoptOZPo9gvz2YM337VZCvVTHg36YLO06hv8baoHs=
+
+Name: kz/gov/pki/kalkan/crypto/engines/AESWrapEngine.class
+SHA-256-Digest: 48M/5xJ+8puIbgcN6aXe7ElbtrSlEJkBF7TxZ9nNDVs=
+
+Name: kz/gov/pki/kalkan/crypto/generators/PKCS5S2ParametersGenerator.c
+ lass
+SHA-256-Digest: UYlQ+hOYxK7CV+zCsjGV6pq/AlDubQcp7iiDrcQ7qUE=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$12.class
+SHA-256-Digest: umJ4OwuzUV7aO5iaj/kDlIXab0IRDVKSaI3HTqC4UqY=
+
+Name: kz/gov/pki/kalkan/asn1/x9/OtherInfo.class
+SHA-256-Digest: ZgGhcjdqmFr8jx1CfyHMi40jVuy1dOh7dksjFmGj+pA=
+
+Name: kz/gov/pki/kalkan/asn1/cms/SignerIdentifier.class
+SHA-256-Digest: k74WZIkm4QKf/BA5sPA5JhMHTZdbJ/XC21JfbIro9yU=
+
+Name: kz/gov/pki/kalkan/asn1/DERGeneralString.class
+SHA-256-Digest: sV6aN3n4/NqqFDK0kIWKefHlxlOFe6O1rV9g03mYPME=
+
+Name: kz/gov/pki/kalkan/tsp/TimeStampResponseGenerator.class
+SHA-256-Digest: tbah1DQ2sWWa9dbBrB0jEz5c6tqu70YYGXP6Dbqe4TA=
+
+Name: kz/gov/pki/kalkan/crypto/CharToByteConverter.class
+SHA-256-Digest: wNYkXrzF3KxUfFPf2jpVGQMcQhU9GRT2u6On3gRKviU=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/IssuerAndSerialNumber.class
+SHA-256-Digest: H/BTfFN7pz6O5NhN04wTilylGP0JWkXxE3njZUYSEAY=
+
+Name: kz/gov/pki/kalkan/crypto/macs/CBCBlockCipherMac.class
+SHA-256-Digest: aleHvJEesZHGbk9ySxVjyC/A7gMVjPirIttHCfACl1s=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$MD4.class
+SHA-256-Digest: KpSQ0nVVCkmI/T+jY+Z6kzAWTcV18JR/pZYRcEr0rCA=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyPairGenerator$ECGOST34310.c
+ lass
+SHA-256-Digest: kqIv5MgTrfIHzkUANiU53X1kv8VVj7isLVaff+yBTUI=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/KEKRecipientInformation.class
+SHA-256-Digest: D0dE3Z3JfEgwYpnMCeiBUlWVwHafuWQCzuEk92FNywo=
+
+Name: kz/gov/pki/kalkan/asn1/BERFactory.class
+SHA-256-Digest: GpVQCXz/oOuEvVhX32282Pxusfvsb+G4r30qweFWils=
+
+Name: kz/gov/pki/kalkan/asn1/BERSetParser.class
+SHA-256-Digest: IddOXnd3J3E/Y855aZ+G+bXKOEXS0vmeCkLsKdncRBk=
+
+Name: kz/gov/pki/kalkan/crypto/signers/DSASigner.class
+SHA-256-Digest: fWa7UnYYr1h9uQOe5RMR6Ue3+7XbLGwr5K5+zUiurI8=
+
+Name: kz/gov/pki/kalkan/crypto/StreamCipher.class
+SHA-256-Digest: 3I2bmhOmYzfROABgyT2IXakNVftyJkg9Lkh6XwUjUqc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest.class
+SHA-256-Digest: W1SukbKhAhZTry2Srohj1ZjnmE4NaOBasVptnFxcx0E=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEStreamCipher.class
+SHA-256-Digest: y974GEtRZXJ3Xs2uD+A+99/8wTdXIEH/MpDTpzCSR3s=
+
+Name: kz/gov/pki/kalkan/asn1/DERInputStream.class
+SHA-256-Digest: TE/5+ah1cmuSHdx8evW8bblgS2FCGnc1mZVm38ns3sE=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSEnvelopedHelper.class
+SHA-256-Digest: Xi+ACiGW8ro4zmxFBalouijowL4WciQgbMgVtb0jw9w=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X9ObjectIdentifiers.class
+SHA-256-Digest: 4aCm1HDgk7oIMUZEvlfI0k3ZIFtH6tHkPofRPL+a4pI=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/ConfigurableProvider.class
+SHA-256-Digest: gFXtUWWGItZe5eTDSNyUaJ6GnDOCJZmhrdGB2Zs6/XI=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$DESede64.class
+SHA-256-Digest: VbnYvJ22Vv+GewNslxbwxjzthM1sCQJbWyV4KF6iKJs=
+
+Name: kz/gov/pki/kalkan/asn1/ocsp/OCSPObjectIdentifiers.class
+SHA-256-Digest: 4G0+SvOJPyowDT4i/xFvhZd8+ynyD9GVRtVTXyc40VA=
+
+Name: kz/gov/pki/kalkan/tsp/TimeStampResponseGenerator$FailInfo.class
+SHA-256-Digest: Ih28XPJVPpOoOglVBFSTdd7Jyr92Layy+reOq2Gde1k=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$OldSHA384.class
+SHA-256-Digest: vKAJw1c2TxdIfG11IJDpJIdYnH40Trfa2emZBB9jICM=
+
+Name: kz/gov/pki/kalkan/crypto/digests/GOSTR341194Digest.class
+SHA-256-Digest: T7Yeqst2al+71TbcmrGNB5xHokbKKdla8r26LHyeezc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JavaKeyStore$CaseExactJKS.class
+SHA-256-Digest: aBnc6xq0fC8i2Ry0C3pzOY/ysjV8MBJvmbUEluS+szw=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/PKIPublicationInfo.class
+SHA-256-Digest: 09YkUOljfBkothzzQ5eJZAmIx+4nkVfpPwE4Llkg+tE=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$14.class
+SHA-256-Digest: EzHA2N00ijfFybmcdNToaFlKJro2hrXmYWQ/0u+PD1s=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSProcessableFile.class
+SHA-256-Digest: OZW8Hqdn84xJ9/HDvDPJznz2x+JE5R63UMJxvQRQ5pc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKGOST3410Signer$gost3410.class
+SHA-256-Digest: zKRmbVnsbD9drjTFNIR9hWtIV78HDFo87bsHbtYclzY=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEDigestUtil.class
+SHA-256-Digest: ktViajK6crzWhIjTcPhNQKngFPxrthcf+wnzBOfXXxg=
+
+Name: kz/gov/pki/kalkan/i18n/LocalizedMessage$FilteredArguments.class
+SHA-256-Digest: nbIKPJ0QK7sLpFSS81Q48TIni0ZtnbrXDopBc2G8kwg=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$RC5.class
+SHA-256-Digest: mPJ0esLs2E+XctnHxhJOpzkUAMzP65kIviJo/bH8OIc=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1Choice.class
+SHA-256-Digest: z1D7jxHyMxU3lYcdx8D56gxvKWFd8WclB7QOVBEkt4E=
+
+Name: kz/gov/pki/kalkan/math/ec/ECFieldElement$F2m.class
+SHA-256-Digest: QL3qkGANmKwerwwrQXmYUKehRmfBTyW2xntcj9lodtc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$MD2.class
+SHA-256-Digest: 96q82mZas6kK1tjpB1b73QoPrrjOO8G+BB6BSo4W0SY=
+
+Name: kz/gov/pki/kalkan/jce/provider/BrokenPBE$Util.class
+SHA-256-Digest: XFPrYOe458J4AtkJWM3qktC1aI+3Kg6ihHJHz9s36IY=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$31.class
+SHA-256-Digest: STZQU1jqzyP+NUBw84dbWKKEVa4fni1tNgJn4SDcrVg=
+
+Name: kz/gov/pki/kalkan/crypto/digests/SHA224Digest.class
+SHA-256-Digest: uo3WkJRuvrd7gnfdvYqSc4riP2wQSyyMoDLxjNsia10=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$17.class
+SHA-256-Digest: v8lXsMYlduuG8XMnoTm0lI1KgJZK9ykcELyGNk5KXQA=
+
+Name: kz/gov/pki/kalkan/asn1/DERUTCTime.class
+SHA-256-Digest: ySVdoaYeJ0f/JQGVmXja4kCIuXhkmja/jwbFdJarnNI=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1TaggedObject.class
+SHA-256-Digest: oeNgFCBx6xt2oa2iFz5df7u2UExbAWHKNvLXWYUmrHA=
+
+Name: kz/gov/pki/kalkan/crypto/params/ECKeyGenerationParameters.class
+SHA-256-Digest: ppCcwkR0XAhvhlHA08Txq7jOb4bYpepu5tVU2pgj4F4=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$DESede64with7816d4.class
+SHA-256-Digest: DpMM+3YwWocb2WQIKJs7e5YPDbDirBSbFxxs2B2tyHc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$SEED.class
+SHA-256-Digest: AWtfUUUs2zjwEw7UPANUUXgOXlg8Qd+NslbvRYd3StI=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X9Curve.class
+SHA-256-Digest: V9wWg+/8bFQsZGZnmeZGl6Cv2EObWuL6vdGneqO9Xq0=
+
+Name: kz/gov/pki/kalkan/math/ec/ECPoint$Fp.class
+SHA-256-Digest: /ALqLmKetb4xE7bRqX+CGHAlL/gfN2W6FgOBp2GQXiA=
+
+Name: kz/gov/pki/kalkan/pcsc/keystores/AKJaCartaStore.class
+SHA-256-Digest: jr7wiadBuXXUka1aGBR+qqhdg5TfzRSV+KGmrvm5X2I=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKDigestSignature$noneRSA.class
+SHA-256-Digest: lLwLVj7amamkAkjYb0WYD8jUEBWh13T5mxXF/pEYHhU=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/RSAESOAEPparams.class
+SHA-256-Digest: fbSBZKW/pXUnHFeTS0s8xilxx6xDv47/fJhsOGz88z4=
+
+Name: kz/gov/pki/kalkan/asn1/x509/CRLNumber.class
+SHA-256-Digest: fdnK7BWZx8jzv1p3Hlw5+5803RlPXoLpAZL1PdYcWZg=
+
+Name: kz/gov/pki/kalkan/jce/ProviderConfigurationPermission.class
+SHA-256-Digest: 7lgesqGZKrWgdIW3ebjSaIgrFobdYS9YdcxIVnTx13Q=
+
+Name: kz/gov/pki/kalkan/asn1/x509/TargetInformation.class
+SHA-256-Digest: ymlWBSUKneiZTuWREv01PjQOaWYSRQ+cTECs8q8T14o=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/PKCS12PBEParams.class
+SHA-256-Digest: hVpAmXHoAE88tNj31YeHN1fYd8gep8LMDYVJXGVb3LQ=
+
+Name: kz/gov/pki/kalkan/asn1/cms/EncryptedContentInfo.class
+SHA-256-Digest: l76gzAK5k1b6I8KTdoTEjSiiEi5rbS0OSW1x0xStQL4=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEECPrivateKey.class
+SHA-256-Digest: PnJ0cKUeDugerGgSXwT25bj5UEHqj+6NXw9bAjszYGw=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyPairGenerator$EC
+ MQV.class
+SHA-256-Digest: B6ETaxpkLWiFCI5Mb4F4he8WGsog3wf/s8oCuM8iIdM=
+
+Name: kz/gov/pki/kalkan/tsp/TimeStampTokenGenerator.class
+SHA-256-Digest: 2WzKrmGLoTEJoPQKxLChlZu8oGnZTzlAp6YunOlU9U0=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$33.class
+SHA-256-Digest: l0UD7e3jCOKJAv/jdPTbneUW7Gma8DmckhMb2Ciwu9A=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHA256
+ And128BitAESBC.class
+SHA-256-Digest: xc1l2MAHry48eZcl/47hnaumcjTGsSFDnDEspLQvGlo=
+
+Name: kz/gov/pki/kalkan/asn1/x509/qualified/ETSIQCObjectIdentifiers.cl
+ ass
+SHA-256-Digest: ai6riDNr3V4UO+c8pDP77X6APeRDWBjpYdOkExQk0fs=
+
+Name: kz/gov/pki/kalkan/util/test/FixedSecureRandom.class
+SHA-256-Digest: E8Yait+Rtezg8Bl8StzWyVVYCIV18HTel3H5y1v4A6Q=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$DESede3.class
+SHA-256-Digest: +2SCyR0IcXMDAvwzfz9yHBcq4/gvCVVtL4HBgYJRJNI=
+
+Name: kz/gov/pki/kalkan/crypto/macs/MacCFBBlockCipher.class
+SHA-256-Digest: a9kgPwMpKaBM2IBZbwGwVTWlJzfvxdfwxqgDpXSQTP0=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/GOST3410PublicKey.class
+SHA-256-Digest: R/jX0Vz57iIsM88MmSjdYSXv3DTKN50m77eZUdLuK3Q=
+
+Name: kz/gov/pki/kalkan/jce/X509V2CRLGenerator.class
+SHA-256-Digest: rz977taf2qcBGChwbUh2bMSEt8NYSy6Za98R9L7G2Vk=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$10.class
+SHA-256-Digest: t6QbM5T/4m/Effk8GzXyy9af5M3a5xcwA7RgFukK6K8=
+
+Name: kz/gov/pki/kalkan/jce/provider/BrokenJCEBlockCipher$OldPBEWithSH
+ AAndDES3Key.class
+SHA-256-Digest: mYPAXxUlDO8WQZ44GzPkuHvh47caoCHYdhNTtn4j6X4=
+
+Name: kz/gov/pki/kalkan/openssl/EncryptionException.class
+SHA-256-Digest: Tm4Kh2g74g2eKMvCY32Go2YCdTJ9zed441Cs39LVQ/I=
+
+Name: kz/gov/pki/kalkan/asn1/BEROctetStringParser.class
+SHA-256-Digest: 15VgKLhbuG7OFMTVBEhyYY0FJ7lWs7JLgrcDSrUY0I0=
+
+Name: kz/gov/pki/kalkan/jce/spec/ECKalkanPrivateKeySpec.class
+SHA-256-Digest: 0fV2zwq7IbkB2VCgI6AXl6Kyo+JLHZJ6xfl/laP4j58=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1OutputStream.class
+SHA-256-Digest: Moey+MJGQ1GlLW+OcjpW6OhR4CojO8eQfTu4qc8Pay0=
+
+Name: kz/gov/pki/kalkan/crypto/macs/CFBBlockCipherMac.class
+SHA-256-Digest: h0rIh5HNbBRZxPwW/ncpkOT8WNREwLKdOWeIh5BAKF8=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/MacData.class
+SHA-256-Digest: iTYSwtYMf+1ytmRjFEdrtG5TrDfO6B2dtReGfh9K9co=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/PBES2Parameters.class
+SHA-256-Digest: i5Z9UI0orRB06Yoj0r4cJXx/53dOlPDbeVb8J0yoKvM=
+
+Name: kz/gov/pki/kalkan/util/encoders/UrlBase64Encoder.class
+SHA-256-Digest: ji1tdbEkbmymewBoL+xlVsolsBHVlLfjDKzDd3fVr/E=
+
+Name: kz/gov/pki/kalkan/asn1/ASN1OctetStringParser.class
+SHA-256-Digest: P+aHXZZFU9RrdeXUxVWZYtuF+Er4d2RjVBrguP56ofo=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X9FieldID.class
+SHA-256-Digest: cKdrjXRKod7yHN1FOA4kJXQMyiMNRiuRXV50cNO8MU0=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/PKCS12BagAttributeCarrier.class
+SHA-256-Digest: Cu1MgBmzCOrVz2DwrABJUeDM2kn714/nTxHOGbjUe8U=
+
+Name: kz/gov/pki/kalkan/asn1/x509/SubjectKeyIdentifier.class
+SHA-256-Digest: RUdirL0WI4Yhsnr6hf7CAN15yYf1XwHDjd7j+7WZa+0=
+
+Name: kz/gov/pki/kalkan/crypto/digests/LongDigest.class
+SHA-256-Digest: CwO149CtdUcHuyBOLc94LWdXrmT2rMVO/x1vFAtWkBo=
+
+Name: kz/gov/pki/kalkan/asn1/cms/AttributeTable.class
+SHA-256-Digest: TiQR3nd+pg7QNfeLqggH3MSdxz3CBJmYbI5gCHbT5/8=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$15.class
+SHA-256-Digest: tkIqOlckRJw+zPVRwICYOdCxFGk7J5Ws2hRoVTeHthA=
+
+Name: kz/gov/pki/kalkan/asn1/x509/CertPolicyId.class
+SHA-256-Digest: fTS2aDbikvz6ymNlRqNyCHV77anLH6S2LILMZLynG0Q=
+
+Name: kz/gov/pki/kalkan/crypto/util/PublicKeyFactory.class
+SHA-256-Digest: w1B31tzNUqFeKIuqfbc0x8Cd4IrsgmuyS8kr7IjGPRA=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ECMappings.class
+SHA-256-Digest: kSgd5FgwR+VK0lt6Vuf9RDgxBVLkypmXAW6AClxz0i8=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$RC4.class
+SHA-256-Digest: GhC7L5mohCMypnI+cVxNLnmkZzOb2acfarN9TLgV44Y=
+
+Name: kz/gov/pki/kalkan/math/ec/ECPoint.class
+SHA-256-Digest: qIVmX7arTQM5BSfCrkG5bwhnG2U6EMc1k/poTEimQIg=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509StoreCertPairCollection.class
+SHA-256-Digest: VdSkCNBNizldNEoPZIHXY4KtoujAQOUndJDPyIeQx9k=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves.class
+SHA-256-Digest: kvgb8jU+QkeR7MAaHdAZG6g+jj8kfy5ivGm7hDNAlRY=
+
+Name: kz/gov/pki/kalkan/ocsp/Req.class
+SHA-256-Digest: wokfh6f++1RFtV49mtJ33PGZ9EKCLkZGRiWSnBT3QYc=
+
+Name: kz/gov/pki/kalkan/jce/provider/WrapCipherSpi.class
+SHA-256-Digest: HKN8sKNYc98AK5szF6cMeqm/xJkbzz1qWqoVb0mrP9M=
+
+Name: kz/gov/pki/kalkan/crypto/PasswordConverter$1.class
+SHA-256-Digest: Ehu+n0KNftemW4Q3IeNMf8byLW8qhxOVoFERTib3plw=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$15.class
+SHA-256-Digest: dWXQMT5o3luTSwCss3d54N1ck2twoFZO5mVep6+Azf8=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X9FieldElement.class
+SHA-256-Digest: fSo3LuGkPR6IFsRmfXeAtpYzmwnPhscGLjW8HZXYxG4=
+
+Name: kz/gov/pki/kalkan/crypto/paddings/PaddedBufferedBlockCipher.clas
+ s
+SHA-256-Digest: p9LV1Nr+vjJP8gxGgyJ5P9CEb0raITctmQ831eIV9RI=
+
+Name: kz/gov/pki/kalkan/crypto/engines/DESedeWrapEngine.class
+SHA-256-Digest: 8Ho5WI6Tm0xV3K9IW+h2XLYX/tFD+gPFTH/05p0D7Vs=
+
+Name: kz/gov/pki/kalkan/math/ec/ZTauElement.class
+SHA-256-Digest: 8onxFaoNwjSvY1PkGuOSj295KLb5lvxH8eGhfrM05i8=
+
+Name: kz/gov/pki/kalkan/tsp/GenTimeAccuracy.class
+SHA-256-Digest: hC8EUifp3LWstgMOaTbf4j67vN9mbWgHEeaGk7Rys5A=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyPairGenerator.class
+SHA-256-Digest: 311p65UNGtkEJMKTRQUhwpM5MQqsJFhvyfC3bCU2MdU=
+
+Name: kz/gov/pki/kalkan/crypto/engines/RC2Engine.class
+SHA-256-Digest: okcZzzY3ZpF08btSZ7nMwOR89b3LL4M8L8sRphsozrc=
+
+Name: kz/gov/pki/kalkan/crypto/params/DSAPublicKeyParameters.class
+SHA-256-Digest: MppCnSisuos3ueFiSUzkuYs9KYVAqv4yaJ6S6Kjg/uI=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/CertRepMessage.class
+SHA-256-Digest: 8pDkniSIYHyyavYT4MIx9k56LbwmkM+WufYNvedxUJI=
+
+Name: kz/gov/pki/kalkan/crypto/digests/GOST3411_2015_512Digest.class
+SHA-256-Digest: QWXxyg9sucpbgTC/PwJKmBj9sdwT9BvuWTv9+aHOaCs=
+
+Name: kz/gov/pki/kalkan/asn1/crmf/POPOSigningKeyInput.class
+SHA-256-Digest: lWE7X/Ny3mEHcrgpHB3vFcbIA2s3UNwHvuOirK4Qrl8=
+
+Name: kz/gov/pki/kalkan/util/io/Streams.class
+SHA-256-Digest: /e3v0Z86XOcNCyngA6ZowaGPprVcRCOAKjUqY1itGZE=
+
+Name: kz/gov/pki/kalkan/x509/X509Attribute.class
+SHA-256-Digest: fcNomfpJv+7pKXxc7efj58Res2OpRAsT1tMKJePaahs=
+
+Name: kz/gov/pki/kalkan/crypto/Signer.class
+SHA-256-Digest: i64tzx2si5VI1NcNgyxO/ghRYizbd4YyxdKf4w++Kxw=
+
+Name: kz/gov/pki/kalkan/util/BigIntegers.class
+SHA-256-Digest: KKO/orOtNWAaAafxSnxdrPmQ5OGHDmcA+76Eha1QJP8=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$HMACSHA1.class
+SHA-256-Digest: 7kbymkyu42EdkyKTbB7NzBYo98aXWYM5ZKTEjvS3JMk=
+
+Name: kz/gov/pki/kalkan/util/StreamParser.class
+SHA-256-Digest: 682Aa2OOCFrq5Qrg1gv66UkRWVCGojTbp06EzGbqYDo=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCESecretKeyFactory$PBEWithSHAAnd
+ 128BitRC2.class
+SHA-256-Digest: CxgWKhiOclFEIDDi/WxIxTlpbMY9AYT6qtjrSQRusqs=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/PollReqContent.class
+SHA-256-Digest: 5fg8eYxh6AWhVZlz+UMq1qmKaHtsERhWQIJqZKvnfrY=
+
+Name: kz/gov/pki/kalkan/jce/provider/CertStatus.class
+SHA-256-Digest: BdPX7qHoUmFUxqCaOGx3cHgND6ozb7ioKKgCStbyJXM=
+
+Name: kz/gov/pki/kalkan/crypto/SignerWithRecovery.class
+SHA-256-Digest: IyXbwSShvbMLEXQsgBCH+WT++U0MVlHLmiPB0pl3CFQ=
+
+Name: kz/gov/pki/kalkan/math/ec/ECFieldElement$Fp.class
+SHA-256-Digest: YDbynOSuf+78W2RUGnReZiupBlBiiTt5PWvH8wBxg9k=
+
+Name: kz/gov/pki/kalkan/i18n/filter/TrustedInput.class
+SHA-256-Digest: htmUH/Se0bWyL+JBu2Pbe/n63v1i7ReL8bdssvywK+Y=
+
+Name: kz/gov/pki/kalkan/x509/ExtendedPKIXBuilderParameters.class
+SHA-256-Digest: yPx1yOXP3yli4FZQqPzMlgfsRSj55n03Kmku7wnJDFk=
+
+Name: kz/gov/pki/kalkan/jce/interfaces/GOST3410Key.class
+SHA-256-Digest: GiLRkfnpBlyJ8/Q5tQMpxfLfTepf5VuGhnJPHE1cfCA=
+
+Name: kz/gov/pki/kalkan/asn1/DERInteger.class
+SHA-256-Digest: iRh+bNIqojIZR+lO3VzAdDSFeiW7MT1GjW7m6GAcK9Y=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/ECUtil.class
+SHA-256-Digest: a7De5w1xi5DVUQGtO7Vseuwv7mtH8QvEu6qOeXkMk/4=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$14.class
+SHA-256-Digest: LSRYHAshQvQ/flx3z2IuWAbRgt1q4PJ0xW9KCqCUaGo=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$SHA512.class
+SHA-256-Digest: od0gqxADOW+LTOT5yWChY6nNmQUhRldho657b2V/Xs4=
+
+Name: kz/gov/pki/kalkan/crypto/InvalidCipherTextException.class
+SHA-256-Digest: x1GeBxcciLGNqr+5y62LI6UFNLJy3FeEdS4K3geqSro=
+
+Name: kz/gov/pki/kalkan/crypto/signers/ECNRSigner.class
+SHA-256-Digest: 7VCOR8xV7VTf4SBo5837xAeU3y/rvCvtVKQKXGyS17Q=
+
+Name: kz/gov/pki/kalkan/jce/exception/ExtCertPathBuilderException.clas
+ s
+SHA-256-Digest: NuXEiShRfE89l/zCUbmH5FWgqJNUqaLYHpOl3YON4JM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKPKCS12KeyStore$DefPKCS12KeySto
+ re.class
+SHA-256-Digest: lzhMO9+xQRnpfelj8Jsr4uS37o3PekFjMVL7Wo2tEoo=
+
+Name: kz/gov/pki/kalkan/asn1/cms/KeyAgreeRecipientInfo.class
+SHA-256-Digest: ab7W2DdrFb+3YCPGGT2O7IlzZuUFIJzgbO0dMWlJxJk=
+
+Name: kz/gov/pki/kalkan/crypto/signers/ECGOST3410Signer.class
+SHA-256-Digest: RQYevxIwPkPGr6FAV8gYX8b3C/8SRJIG95qi9MNWroo=
+
+Name: kz/gov/pki/kalkan/x509/X509CertificatePair.class
+SHA-256-Digest: uflso8kaAdN/I+vH0LRIyRuYREDSqtsFZLDEWTMcowg=
+
+Name: kz/gov/pki/kalkan/crypto/modes/CBCBlockCipher.class
+SHA-256-Digest: MFwVIu+QYCn+lH40EbDqfw5ZcTzPCB0c4YuG7nd4NR4=
+
+Name: kz/gov/pki/kalkan/crypto/signers/GOST3410Signer.class
+SHA-256-Digest: zhJXbEuzmr1xvYx1SloOAk5YtihKcO4UEQHDGx5uFX8=
+
+Name: kz/gov/pki/kalkan/asn1/x509/qualified/MonetaryValue.class
+SHA-256-Digest: khIQvF0jRmgah+uTmdLxuYFCQuOAbHtmqMOw9uYJ7ms=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/dsa/DSASigner$dsa512.c
+ lass
+SHA-256-Digest: GaRkAK2Tydd4FHLl6z1zuEuXuO4MOm+uBcRnbCMpYLU=
+
+Name: kz/gov/pki/kalkan/asn1/cms/EnvelopedData.class
+SHA-256-Digest: NI02zmZZy2MzM66WvmLb73ZABF4t0IpFPvAN6kFCDXk=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSCompressedDataStreamGenera
+ tor.class
+SHA-256-Digest: eEu1cFW8621uanIG7lGhGsoY3Adz2dbK1H4j0yxbC4g=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$AESCBC.class
+SHA-256-Digest: +2siQslAApa0YVH+ye2B3tu99FsdMbXvr/cq6pYFtRM=
+
+Name: kz/gov/pki/kalkan/asn1/x509/PolicyQualifierId.class
+SHA-256-Digest: 2GzsluB95ZarwimrMJ7YTwYg2CTMsTH5x3P3V0FDXyg=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator$RC564.class
+SHA-256-Digest: IlVnCMMMPu56Ht6jzmWkn+U3s8+kThZ0rD/vUOOwWHg=
+
+Name: kz/gov/pki/kalkan/asn1/x509/Targets.class
+SHA-256-Digest: ubTzhAttexP6SqKo7YnnIXPCOVawprg1tln0MHYU5gI=
+
+Name: kz/gov/pki/kalkan/crypto/digests/SHA1Digest.class
+SHA-256-Digest: /D29PtpYrQyf/RPzFBKidIfI9v2N4iBiWnztK+ogZUE=
+
+Name: kz/gov/pki/kalkan/x509/NoSuchParserException.class
+SHA-256-Digest: r2kJUubV3XVuXl1kqwLa42nLaxlrL7f40ccHIH7lXCk=
+
+Name: kz/gov/pki/kalkan/asn1/DERFactory.class
+SHA-256-Digest: lU7JBhy877CBbTxr5/re2o+aMQ7pm9c15W9qDlbDy44=
+
+Name: kz/gov/pki/kalkan/jce/spec/GOST3410ParameterSpec.class
+SHA-256-Digest: DD5HiZgTCahfKwDfBtnlkvQkBMGCxJNwIn3Qj7nYqxo=
+
+Name: kz/gov/pki/kalkan/crypto/modes/EAXBlockCipher.class
+SHA-256-Digest: IutiuR7p5h5iF27KDV6FCu9Jj3mp4oc/u5VTkD+QWiw=
+
+Name: kz/gov/pki/kalkan/asn1/x509/qualified/BiometricData.class
+SHA-256-Digest: u4ZT69vNcfBaQtAX8dU3nglMzt+WQm8a0xdDzmcuKFk=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$30.class
+SHA-256-Digest: pLip8M7m3kRje1A/CEPMUT/YQkSEIc7yYBYRUivyBCo=
+
+Name: kz/gov/pki/kalkan/asn1/x509/CRLReason.class
+SHA-256-Digest: VkJdZFIdW5M/EUn56xy5DG87ShO9bEQ3zgCNMtNLh0Q=
+
+Name: kz/gov/pki/kalkan/x509/extension/SubjectKeyIdentifierStructure.c
+ lass
+SHA-256-Digest: QV3Lt6DG6S5LLPmVU99PDpYvk64QClCPcgiMLCFr8E4=
+
+Name: kz/gov/pki/kalkan/jce/provider/PBE$Util.class
+SHA-256-Digest: ERqmHQg1P9fsB8y5Q0Ba5LHq/HOpPyJ7UqnJF//bQoc=
+
+Name: kz/gov/pki/kalkan/util/Memoable.class
+SHA-256-Digest: REbrENKfPKTmFkDk27m1pYYIm63haxvmXmk3mvk/6Yg=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ecgost15/EcGost2015Sig
+ natureSpi$EcGost3410_2015_512.class
+SHA-256-Digest: l/TWqzggk7eKE7yhN/Zn79Enr8L+755TdC4VmMQj6Ec=
+
+Name: kz/gov/pki/kalkan/asn1/DERGenerator.class
+SHA-256-Digest: tUL5fEfpT+INR8HdcIb+t0vncd4HYSvKOxSKtkRMwBY=
+
+Name: kz/gov/pki/kalkan/jce/X509KeyUsage.class
+SHA-256-Digest: GZFiDgOsL2YOkl3Plo+IaiDO2yXVVL8ob2MljiC95IE=
+
+Name: kz/gov/pki/kalkan/asn1/cms/CompressedDataParser.class
+SHA-256-Digest: HZyBKcZ1avqY4MMF91wfyzBvUNtt9/YhRUhAukCemLg=
+
+Name: kz/gov/pki/kalkan/jce/provider/RFC3281CertPathUtilities.class
+SHA-256-Digest: kzkcrnKhVNt8Ag0uIAS8tLToRwAnA8nNh0gHIR6138I=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962Parameters.class
+SHA-256-Digest: XvXvHqUIJa9Cgh/3hNWZBldO62ltJH9P5cKY9X/lT8o=
+
+Name: kz/gov/pki/kalkan/crypto/engines/SEEDWrapEngine.class
+SHA-256-Digest: BcP3QpWT616/pDtnerLnS5x3/298RV1XRcY/DK1pwHw=
+
+Name: kz/gov/pki/kalkan/jce/provider/ProviderUtil.class
+SHA-256-Digest: nf7R5tSbm63aL7/zLeeAKkKbSUsxUnZxP6Ar43AEDWQ=
+
+Name: kz/gov/pki/kalkan/crypto/params/RC5Parameters.class
+SHA-256-Digest: Yksj4o9Qp7sjDRb+ol5ep83hfCvALR5epXO9NhFUzTM=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/SimpleAttributeTableGenerator
+ .class
+SHA-256-Digest: NELx/9As+pGMwOQv57ExFYPXlGEWEyS0MHoIKV3GX4o=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$11.class
+SHA-256-Digest: 7oNDC9w7HEi0fFKrL+HUkf3PjJwEt91ysIWZdKwkb80=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/ec/KeyFactory$EC.class
+SHA-256-Digest: 5q5q4i5nldh92LtWyqMuaA4vGUyD+tlQMkU8QG0EvFQ=
+
+Name: kz/gov/pki/kalkan/util/CollectionStore.class
+SHA-256-Digest: 9jngKhNxlAFByAV1T5Mh1Vboz59/H2FRx2nWCmJKE58=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/CertResponse.class
+SHA-256-Digest: ddVwdjvly12xf1lJVXYvAM5HpUXdEXY5Vl+SFsErIW4=
+
+Name: kz/gov/pki/kalkan/asn1/ntt/NTTObjectIdentifiers.class
+SHA-256-Digest: nGf+aJpDW+a8CRLpn4iv1c2VS3UOyWOVqVMu2QHKMRY=
+
+Name: kz/gov/pki/kalkan/asn1/DERConstructedSequence.class
+SHA-256-Digest: 7RBrn7OXBap381uGhF/pCQ/BypFLxp5ny+3VoQX4svM=
+
+Name: kz/gov/pki/kalkan/crypto/generators/DESedeKeyGenerator.class
+SHA-256-Digest: B8vHyMVImJ+Pz4xF1iRb6ILSLtXdN44deB3nZ5oUm34=
+
+Name: kz/gov/pki/kalkan/crypto/macs/ISO9797Alg3Mac.class
+SHA-256-Digest: 4Zy24El6vE1dOG5JqkdqfbNIlrhOXbgDHNcPwKM0rEU=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/PBES2Algorithms.class
+SHA-256-Digest: QMR9G+zNRz4S3yVYpnmUF7ToOv7NGLN/jhTSjQLXtDk=
+
+Name: kz/gov/pki/kalkan/crypto/generators/DESKeyGenerator.class
+SHA-256-Digest: p2uuDnp9v8GoetNY3E/dVVhJ8LoRp5dZnAHUX6ynKL0=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$19.class
+SHA-256-Digest: NNRkB4u2zg3iKP4YtxCcEnmzuI/m5XWjsV++iiLFPwQ=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/Pfx.class
+SHA-256-Digest: ZbN7HtuhyMo6Q23VdCG635/jLlb6wkFeKu6MOp49ULI=
+
+Name: kz/gov/pki/kalkan/util/encoders/Base64Encoder.class
+SHA-256-Digest: XhA32k7G+hPKlD5bSXrZVTcoe1eUdru04p8zpb7hyLY=
+
+Name: kz/gov/pki/kalkan/asn1/x509/AttributeCertificateInfo.class
+SHA-256-Digest: OlvgzCADBq+B06VYRshsK4tmVu7XU0VvskVel0FBcJM=
+
+Name: kz/gov/pki/kalkan/jce/exception/ExtIOException.class
+SHA-256-Digest: 9yauW5jIhWwQ6yfnf44o7LmZjCTEQtILb3lL27HXP+A=
+
+Name: kz/gov/pki/kalkan/crypto/digests/MD5Digest.class
+SHA-256-Digest: 5k6SUiNrZC5enZz5wGbuTFQzcIRgYlnjznvH4j32iB8=
+
+Name: kz/gov/pki/kalkan/crypto/engines/AESFastEngine.class
+SHA-256-Digest: GSYzKynQC43tkm6lgcczsFXaQN+AmvbU9UlbHDgIXH0=
+
+Name: kz/gov/pki/kalkan/jce/provider/asymmetric/dsa/DSASigner$stdDSA.c
+ lass
+SHA-256-Digest: 87RGMJyNeoRN7OpqcXuxOo8yKW+m3HQ+Y6d3yim0nMw=
+
+Name: kz/gov/pki/kalkan/math/ec/ECCurve$F2m.class
+SHA-256-Digest: fu5OWOacaj4EBvs+5Gl4xHdENPqfJV0ow1nIb1Wq+e0=
+
+Name: kz/gov/pki/kalkan/asn1/DERNull.class
+SHA-256-Digest: 125ppqURoP+1ouU0hAJZ18zm2NRT2RcEHxx33By9bO4=
+
+Name: kz/gov/pki/kalkan/asn1/cms/EncryptedData.class
+SHA-256-Digest: SJMS7OeLeRP9Rx41b/SZhUKTnBS9BM3CgupVJxYA18c=
+
+Name: kz/gov/pki/kalkan/asn1/x509/ExtendedKeyUsage.class
+SHA-256-Digest: wi5j7irmZVDFN85M1cffHvpa3tfAJqZWxX8tmRPcg5M=
+
+Name: kz/gov/pki/kalkan/crypto/digests/SHA384Digest.class
+SHA-256-Digest: QA+cwvN/GlQXgwzNU/Qveh+dF4YYqfcc9vmchbF+V34=
+
+Name: kz/gov/pki/kalkan/jce/spec/ECNamedCurveSpec.class
+SHA-256-Digest: naqLi97MAjmAE6CdUVHClRU/VsSrPwuSxLB9XgTJn+k=
+
+Name: kz/gov/pki/kalkan/i18n/filter/UntrustedInput.class
+SHA-256-Digest: dyhjzTLJpGTWats0/WXInfwR/RozAo1GvkjQlZb8gIU=
+
+Name: kz/gov/pki/kalkan/asn1/x509/RoleSyntax.class
+SHA-256-Digest: KP8owaHq7A7Q8B9QrSgZFhZLuDVjoVzURHwWkUnNp2Y=
+
+Name: kz/gov/pki/kalkan/crypto/engines/RSACoreEngine.class
+SHA-256-Digest: fXDh4h6pShzbOf5Zpfv1FmqmQpTFjTe94RmXmkkwPA0=
+
+Name: kz/gov/pki/kalkan/crypto/MaxBytesExceededException.class
+SHA-256-Digest: 7dyzVoe21WcaMKI1r+VEHoCCQEq1SL+AXc3rMszJYl0=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSSignedDataStreamGenerator$
+ 1.class
+SHA-256-Digest: SNkpE7B6+lXrGxa7U0VHauENywGoQmzxyA4wScsWUK0=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$RC5.class
+SHA-256-Digest: uJbdpLRHMdIXcQhSjotB5ImtsnvBzAeI3YZBD/Aa690=
+
+Name: kz/gov/pki/kalkan/asn1/x509/sigi/PersonalData.class
+SHA-256-Digest: vCN3L+gvT/ekUP8jbhLpuvoW0m0MqobNlKs8b2NdhSk=
+
+Name: kz/gov/pki/kalkan/crypto/engines/RC564Engine.class
+SHA-256-Digest: oD/OLfaMTOXkfT7H+EK2Cx4Or6CKaUrHzKUOlwx4GwY=
+
+Name: kz/gov/pki/kalkan/jce/provider/BrokenJCEBlockCipher$BrokePBEWith
+ SHAAndDES3Key.class
+SHA-256-Digest: pqukkglpykhZ3er/ez/s/a9OyDs+HxUOjjR3FLMpmxQ=
+
+Name: kz/gov/pki/kalkan/jce/provider/TumarBinStore.class
+SHA-256-Digest: jzxnmmPrv4wU14QeQHyJuvVVeZA8apYzwOswRViXgXU=
+
+Name: kz/gov/pki/kalkan/pcsc/Smartcard.class
+SHA-256-Digest: fibdR88VkoH1HPsOuQzdWCSeaolwm2SzwHiFxTr20cw=
+
+Name: kz/gov/pki/kalkan/asn1/x509/SubjectPublicKeyInfo.class
+SHA-256-Digest: kXFIkD6ehjSHWfayOpi4pEPkimNw+nX/DOxmIqDXtZU=
+
+Name: kz/gov/pki/kalkan/openssl/PEMUtilities.class
+SHA-256-Digest: PibaidKXGJVM3gU+uWu1lYalhcMhdhcB1dyTQsHmkm8=
+
+Name: kz/gov/pki/kalkan/jce/provider/X509CRLObject.class
+SHA-256-Digest: N0QVy5dARDdCzGsJsjeK0G350JAU3LnIB7TthahOZ1k=
+
+Name: kz/gov/pki/kalkan/openssl/PEMWriter.class
+SHA-256-Digest: me3uban21/U/2xIUQnHsL+Dgj8srQB2I3IlXVgz4Gho=
+
+Name: kz/gov/pki/kalkan/jce/provider/PBKDF2Key.class
+SHA-256-Digest: 5x5DH0lxDlRtdLlM0aQHDrcNsLQYvhvhZDpQIDA/y1I=
+
+Name: kz/gov/pki/kalkan/crypto/PasswordConverter$3.class
+SHA-256-Digest: E+CVVvFiv2tQZsg4SAcmGcbWi0OTwgEuaiMBd7JtyTc=
+
+Name: kz/gov/pki/kalkan/asn1/cryptopro/ECGOST3410NamedCurves.class
+SHA-256-Digest: EjSfqu7yU+/nUBQ7cjg8J+lOO/uLtkkpKsmr72zxkTo=
+
+Name: kz/gov/pki/kalkan/asn1/util/Dump.class
+SHA-256-Digest: 6xONExiZAUdr3aKBFfrfA0MVpL7n1QJ1WN3g9SelqR4=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/PKIConfirmContent.class
+SHA-256-Digest: eQJkT9pxQY+wX/hzgd+pM58ecjMsI9F4dQMWMNTL+S8=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKAlgorithmParameters$RC2Algorit
+ hmParameters.class
+SHA-256-Digest: Sz/IQ0Ci5Usr08gA5q5ggED4Ag/wzlkyxSj7dcTpgSk=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEStreamCipher$RC4.class
+SHA-256-Digest: kTOBklkLPzbjEHYjM226Q8DtCsU1arJzFmq/6vhN/po=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKMessageDigest$GOSTR341194.clas
+ s
+SHA-256-Digest: fsmrb4yVwmU0WiRD4TM8763oIOEbMMQzHGf6dV5Qy0s=
+
+Name: kz/gov/pki/kalkan/asn1/pkcs/PBKDF2Params.class
+SHA-256-Digest: sdU7xHHS/nWNK2n+67GACF/A6cL2GfqLWxKrdxrNfL0=
+
+Name: kz/gov/pki/kalkan/asn1/x509/qualified/Iso4217CurrencyCode.class
+SHA-256-Digest: q6OGE3WChAXDC1nu0ZxbBxRNJo6SLd7Q4ITm/CkjORM=
+
+Name: kz/gov/pki/kalkan/asn1/x9/X962NamedCurves$10.class
+SHA-256-Digest: KMqC85k3xpvGn+GC274CK2wYU46XKYxufNn0TCmv6aU=
+
+Name: kz/gov/pki/kalkan/asn1/util/ASN1Dump.class
+SHA-256-Digest: OEjHgOA08GO1IUty7X773RswcmyBHp6MOJAoLWAx+9Y=
+
+Name: kz/gov/pki/kalkan/asn1/cmp/RevReqContent.class
+SHA-256-Digest: Ey1E2UHhCT+uIJcR81c8yoPvBloBZg+/FtRITq08XRc=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKKeyFactory$EC.class
+SHA-256-Digest: pVyKXBXLtSVr846seyC2V8lq4/9OrhDXGts1ShZYKLM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKISOSignature$SHA1WithRSAEncryp
+ tion.class
+SHA-256-Digest: +kr5GHXSFiaph7QpgDt5n0bbs9i3WhuNfZBNzW2sC2E=
+
+Name: kz/gov/pki/kalkan/util/encoders/HexEncoder.class
+SHA-256-Digest: 7/Wo5tWSpAeDlCu2xtpa6/U+MvSRaRR64X8VZ7tBkTw=
+
+Name: kz/gov/pki/kalkan/crypto/params/ECKeyParameters.class
+SHA-256-Digest: YXxWEVP0J+6WGbgrZuuO8USON40XHFdVj33vfpjz7Lk=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$17.class
+SHA-256-Digest: 1FNCCPDyjIGaESqFqoJF2nPKkgG7uvjVB1rGg5IhPvM=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEMac$PBEWithSHAPublic.class
+SHA-256-Digest: z6M1ZAGOdDlRDWxSCjYnCm9jPkaHk88F7voWPt8wVns=
+
+Name: kz/gov/pki/kalkan/jce/provider/JDKDigestSignature$MD4WithRSAEncr
+ yption.class
+SHA-256-Digest: cfLda6GUHTweH53ZGAUnDcUTeMYf1jLuPN3v6LdirP4=
+
+Name: kz/gov/pki/kalkan/jce/X509LDAPCertStoreParameters.class
+SHA-256-Digest: c7vYMoz3Zi+kf6vLgvmh8emNR9cWDhqbxdkFHcOAxEk=
+
+Name: kz/gov/pki/kalkan/jce/provider/cms/CMSProcessableByteArray.class
+SHA-256-Digest: b6qWhRlI6DQdEyepDd2vE6arQ3xwD3Lmjmuxg/Cwzxc=
+
+Name: kz/gov/pki/kalkan/pcsc/AKGOST34310PrivateKey.class
+SHA-256-Digest: T0P0hq1CLY5odbPqXCPqKcrRKGcDiRhB46JDMW5SeGE=
+
+Name: kz/gov/pki/kalkan/asn1/cms/PasswordRecipientInfo.class
+SHA-256-Digest: ULGKwo+ZHcQmXUc4df5l6rclaIDQyqo18AUtEn0mQFs=
+
+Name: kz/gov/pki/kalkan/x509/X509V2AttributeCertificate.class
+SHA-256-Digest: EMCSDWGjfGiMwde8xbxMd7hq4Xm5EcerSILRJOaE2xs=
+
+Name: kz/gov/pki/kalkan/crypto/modes/CTSBlockCipher.class
+SHA-256-Digest: Czv4P8vjqqBw8FsNRSg2Q6NOtwXU+oC1xiPOzn4X/NE=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEKeyGenerator.class
+SHA-256-Digest: UGHplHybkjbrAFklD/LsSunK5UatD6H5IHgvSzsXUew=
+
+Name: kz/gov/pki/kalkan/jce/spec/PBKDF2KeySpec.class
+SHA-256-Digest: HMcQfgjakn0NEF9o2mFGFPK+QzQoil5N6W8H598241g=
+
+Name: kz/gov/pki/kalkan/crypto/encodings/PKCS1Encoding.class
+SHA-256-Digest: 6JQf2i7h8J1rv3qYdnFfjkt0m625Bk7cwofsbvOWs9U=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$PBEWithSHA1AndDES.
+ class
+SHA-256-Digest: 1QIO6YUQg4I16KNNK+3i1BLntwNHucUl6jVaGdNZUZ0=
+
+Name: kz/gov/pki/kalkan/crypto/PasswordConverter$2.class
+SHA-256-Digest: YUvpJtCHKhRjWc1pef7+6+dt69qimepooeUTwR9eoR4=
+
+Name: kz/gov/pki/kalkan/asn1/sec/SECNamedCurves$16.class
+SHA-256-Digest: 5N0AFLAvSRyi1mNS7u1doxa2QWMOBpBSu/HIa4I6WW0=
+
+Name: kz/gov/pki/kalkan/ocsp/CertificateID.class
+SHA-256-Digest: ORD0VNmyRByfm5wzO/2TYJKZ+mqjZy7xpc+/jDLrGqo=
+
+Name: kz/gov/pki/kalkan/jce/provider/JCEBlockCipher$DES.class
+SHA-256-Digest: rLBN5tjFSzk2YpFLlvpBHo9ZgK8zhMpQNPVJwE2LIyA=
+
+Name: kz/gov/pki/kalkan/ocsp/OCSPReq.class
+SHA-256-Digest: Lie9bMgG1Y94EVRNzS5sI6G/W/0Bh0XWPkVnfm5vXCU=
+
